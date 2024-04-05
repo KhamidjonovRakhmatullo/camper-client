@@ -4,6 +4,8 @@ import { DispJustAlgn,} from "../../styles/styled";
 import grommet1 from "../assets/grommet.svg";
 import cart1 from "../assets/cart.svg";
 import user1 from "../assets/user.svg";
+import {Link} from 'react-router-dom'
+
 
 const NavbarComponent = () => {
   return (
@@ -31,19 +33,27 @@ const NavbarComponent = () => {
           }}
         >
           <DispJustAlgn>
+            <Link to="/">
             <NavbarP>Motor</NavbarP>
+            </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
           <DispJustAlgn>
+            <Link to="caravan">
             <NavbarP>Caravan</NavbarP>
+            </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
           <DispJustAlgn>
+            <Link to="tuning">
             <NavbarP>Tuning</NavbarP>
+            </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
           <DispJustAlgn>
+            <Link to="usedCar">
             <NavbarP>Used Car</NavbarP>
+            </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
         </DispJustAlgn>

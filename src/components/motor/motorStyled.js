@@ -89,23 +89,23 @@ line-height: 100%; /* 14px */
 
 export const CarBoxContainer =styled.div`
 display: grid;
-grid-template-columns: auto auto auto auto;
+grid-template-columns: repeat(4, 1fr);
 gap: 20px;
 @media only screen and (max-width: 900px){
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
     .LeftSideBar{
         display: none;
     }
     
 }
 @media only screen and (max-width: 600px){
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 `
 
 export const CarBox =styled.div`
-max-width: 350px;
+/* max-width: 350px; */
 flex: 1;
 border-radius: 25px;
 padding: 15px 10px;

@@ -8,8 +8,8 @@ const CarDetailBoxesComponent = () => {
   const data = campcar.maindata;
   console.log("camp data:", data);
   return (
-    <CarBoxContainer style={{border: "1px solid red", padding: "37px 0px 60px 0px"}}>
-      {data.map((value, key) => {
+    <CarBoxContainer style={{border: "0px solid red", padding: "37px 0px 60px 0px"}}>
+      {data.map((value, key) => { 
         return (
           <CarBox key={key}>
             <img src={value.car.photo || "no photo"} alt="no photo1" />
@@ -27,7 +27,7 @@ const CarDetailBoxesComponent = () => {
               <CarBoxButton $paddingRwnL>COMPARE</CarBoxButton>
             </DispJustAlgn>
           </CarBox>
-        );
+        ); 
       })}
     </CarBoxContainer>
   );
