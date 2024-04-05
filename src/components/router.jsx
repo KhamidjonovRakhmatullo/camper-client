@@ -4,8 +4,8 @@ import NavbarComponent from "./navbar/navbar";
 import MotorComponent from "./motor/motor";
 import FooterComponent from "./footer/footer";
 import TuningComponent from "./tuning/tuning";
-import CaravanComponent from "./caravan/caravan";
 import UsedCarComponent from "./usedCar/usedCar";
+import CaravanComponent from "./caravan/caravan";
 
 const RouterComponent = () => {
   return (
@@ -13,11 +13,9 @@ const RouterComponent = () => {
     <NavbarComponent/>
       <Routes>
         <Route path="/" element={<MotorComponent/>}/>
-        <Route path="motor" element= {<CaravanComponent/>}/>
+        <Route path="caravan" element={<CaravanComponent/>}/>
         <Route path="tuning" element={<TuningComponent/>}/>
-        <Route path="tuning" element={<UsedCarComponent/>}/>
-
-
+        <Route path="usedCar" element={<UsedCarComponent/>}/>
 
       </Routes>
       <FooterComponent/>

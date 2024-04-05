@@ -1,11 +1,10 @@
 import React from "react";
 import { StdLogo, NavbarP } from "./NavStyled";
-import { DispJustAlgn,} from "../../styles/styled";
+import { DispJustAlgn } from "../../styles/styled";
 import grommet1 from "../assets/grommet.svg";
 import cart1 from "../assets/cart.svg";
 import user1 from "../assets/user.svg";
-import {Link} from 'react-router-dom'
-
+import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
@@ -18,7 +17,7 @@ const NavbarComponent = () => {
           // position: "sticky",
           // top: "20px",
           // width: "100%",
-          backgroundColor: "white"
+          backgroundColor: "white",
         }}
       >
         <DispJustAlgn $justifyStart style={{ flex: "1.5" }}>
@@ -34,25 +33,25 @@ const NavbarComponent = () => {
         >
           <DispJustAlgn>
             <Link to="/">
-            <NavbarP>Motor</NavbarP>
+              <NavbarP>Motor</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
           <DispJustAlgn>
             <Link to="caravan">
-            <NavbarP>Caravan</NavbarP>
+              <NavbarP>Caravan</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
           <DispJustAlgn>
             <Link to="tuning">
-            <NavbarP>Tuning</NavbarP>
+              <NavbarP>Tuning</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
           <DispJustAlgn>
             <Link to="usedCar">
-            <NavbarP>Used Car</NavbarP>
+              <NavbarP>Used Car</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
@@ -65,7 +64,7 @@ const NavbarComponent = () => {
         <DispJustAlgn style={{ flex: "0.6", justifyContent: "space-around" }}>
           <img src={cart1} alt="cart" />
           <img src={user1} alt="user" />
-          <DispJustAlgn style={{gap: "5px"}}>
+          <DispJustAlgn style={{ gap: "5px" }}>
             <p>En</p>
             <img src={grommet1} alt="icon" />
           </DispJustAlgn>
