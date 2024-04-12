@@ -31,6 +31,9 @@ background-color: #FAFAFA;
 padding: 60px 30px 0px 30px;
 width: 100%;
 gap: 30px;
+@media only screen and (max-width: 1000px){
+    gap: 0px;
+}
 `
 
 export const CostOfCarContainer=styled.div`
@@ -147,6 +150,11 @@ align-items: center;
 gap: 10px;
 `
 
+export const CarSortNavbarLeft_ItemAndButtons =styled.div`
+display: flex;
+justify-content: space-between;
+`
+
 export const StyledSelect =styled.select`
 padding: ${(props) => props.$padding ? ` 0px 100px 0px 10px` : ` 0px 30px 0px 10px`};
 border-radius: 5px;
@@ -168,6 +176,7 @@ display: flex;
 
 @media only screen and (max-width: 600px){
    display: ${(props)=> props.$hide ? `flex` : `none`};
+   margin-bottom: 10px;
 }
 
 `
@@ -197,6 +206,7 @@ cursor: pointer;
 `
 
 export const CarBoxContainer =styled.div`
+max-width: ${(props)=> props.$maxWidthForColumn ? `1400px` : ``};
 padding: 37px 0px 60px 0px;
 /* border: 1px solid red; */
 display: ${(props)=> props.$flex ? `flex` : `grid`};
@@ -223,6 +233,17 @@ padding: 15px 10px;
 border-radius: 20px;
 background: #FFF;
 box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+`
+
+export const CarBoxImgWrapper =styled.div`
+flex: 0.45;
+display: flex;
+justify-content: center;
+align-items: center;
+img{
+    width: 100%;
+    height: 150px;
+    }
 `
 
 export const CarBoxImage =styled.div`

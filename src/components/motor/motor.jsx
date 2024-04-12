@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Border, CarSortNavbar, CarSortNavbarLeft, CarSortNavbarRight, ColumnButton, CostText, CostTitle, GridButton, GridColumnButtonWrapper, MotorBgImage, MotorMainContainer, Price, SidebarAndCarBoxesContainer, StyledSelect } from '../../styles/motorStyled'
+import { Border, CarSortNavbar, CarSortNavbarLeft, CarSortNavbarLeft_ItemAndButtons, CarSortNavbarRight, ColumnButton, CostText, CostTitle, GridButton, GridColumnButtonWrapper, MotorBgImage, MotorMainContainer, Price, SidebarAndCarBoxesContainer, StyledSelect } from '../../styles/motorStyled'
 import CostComponent from './SideBar'
 import ColumnCarBoxComponent from './columnCarBox'
 import listColumn1 from '../assets/listColumn.svg'
@@ -12,7 +12,7 @@ const MotorComponent = () => {
 
    const [active, setActive] = useState(true)
 
-   const handleClicked = () =>{
+   const handleGridClicked = () =>{
     setActive(true)
 
    }
@@ -38,6 +38,7 @@ const MotorComponent = () => {
         <div>
       <CarSortNavbar>
 
+      <CarSortNavbarLeft_ItemAndButtons>
         <CarSortNavbarLeft>
         <CostTitle>
             Items
@@ -45,15 +46,16 @@ const MotorComponent = () => {
         <CostTitle $colorBlue>{data.length}</CostTitle>
         </CarSortNavbarLeft>
 
-        <GridColumnButtonWrapper $hide>
-          <GridButton onClick={handleClicked}>
+      <GridColumnButtonWrapper $hide>
+          <GridButton onClick={handleGridClicked}>
           <img src={listGrid1} alt="img" />
          </GridButton>
          <ColumnButton onClick={handleColumnClicked}>
           <img src={listColumn1} alt="img" />
          </ColumnButton>
          </GridColumnButtonWrapper>
-
+         </CarSortNavbarLeft_ItemAndButtons>
+       
 
         <CarSortNavbarRight>
           <CostText $fontSize>Sort by</CostText>
@@ -69,7 +71,7 @@ const MotorComponent = () => {
           </ StyledSelect>
 
           <GridColumnButtonWrapper >
-          <GridButton onClick={handleClicked}>
+          <GridButton onClick={handleGridClicked}>
           <img src={listGrid1} alt="img" />
          </GridButton>
          <ColumnButton onClick={handleColumnClicked}>

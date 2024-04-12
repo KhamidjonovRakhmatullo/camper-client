@@ -1,7 +1,7 @@
 import React from 'react'
 import { NotFoundContainer } from '../../styles/styled'
 import { StdLogo } from '../navbar/NavStyled'
-import { CarBoxButton, CostText, Price } from '../../styles/motorStyled'
+import { CarBoxButton, Price } from '../../styles/motorStyled'
 import { useNavigate } from 'react-router-dom'
 
 const Notfound = () => {

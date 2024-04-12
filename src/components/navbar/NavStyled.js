@@ -6,6 +6,9 @@ justify-content: space-around;
 align-items: center;
 padding: 22px 70px;
 background-color: white;
+@media only screen and (max-width: 600px){
+   padding: 15px 30px;
+}
 `
 
 export const LogoWrapper = styled.div`

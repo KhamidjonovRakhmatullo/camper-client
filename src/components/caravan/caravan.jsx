@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Border, CarSortNavbar, CarSortNavbarLeft, CarSortNavbarRight, ColumnButton, CostText, CostTitle, GridButton, MotorBgImage, MotorMainContainer, Price, SidebarAndCarBoxesContainer, StyledSelect } from '../../styles/motorStyled'
+import { Border, CarSortNavbar, CarSortNavbarLeft, CarSortNavbarLeft_ItemAndButtons, CarSortNavbarRight, ColumnButton, CostText, CostTitle, GridButton, GridColumnButtonWrapper, MotorBgImage, MotorMainContainer, Price, SidebarAndCarBoxesContainer, StyledSelect } from '../../styles/motorStyled'
 import CostComponent from './SideBar'
 import GridCarBoxComponent from './gridCarBox'
 import listColumn1 from '../assets/listColumn.svg'
@@ -31,12 +31,23 @@ const CaravanComponent = () => {
   <div style={{width: "100%"}}>
     <div>
       <CarSortNavbar>
+      <CarSortNavbarLeft_ItemAndButtons>
         <CarSortNavbarLeft>
-          <CostTitle>
+        <CostTitle>
             Items
-          </CostTitle>
-          <CostTitle $colorBlue>{data.length}</CostTitle>
+        </CostTitle>
+        <CostTitle $colorBlue>{data.length}</CostTitle>
         </CarSortNavbarLeft>
+
+      <GridColumnButtonWrapper $hide>
+          <GridButton onClick={handleGridClicked}>
+          <img src={listGrid1} alt="img" />
+         </GridButton>
+         <ColumnButton onClick={handleColumnClicked}>
+          <img src={listColumn1} alt="img" />
+         </ColumnButton>
+         </GridColumnButtonWrapper>
+         </CarSortNavbarLeft_ItemAndButtons>
 
         <CarSortNavbarRight>
           <CostText>Sort by</CostText>
@@ -50,14 +61,14 @@ const CaravanComponent = () => {
             <option>33</option>
             <option>22</option>
           </StyledSelect>
-          <div style={{display: "flex"}}>
-            <GridButton onClick={handleGridClicked}>
-              <img src={listGrid1} alt="icon"/>
-            </GridButton>
-            <ColumnButton onClick={handleColumnClicked}>
-               <img src={listColumn1} alt="icon"/>
-            </ColumnButton>
-          </div>
+          <GridColumnButtonWrapper >
+          <GridButton onClick={handleGridClicked}>
+          <img src={listGrid1} alt="img" />
+         </GridButton>
+         <ColumnButton onClick={handleColumnClicked}>
+          <img src={listColumn1} alt="img" />
+         </ColumnButton>
+         </GridColumnButtonWrapper>
         </CarSortNavbarRight>
       </CarSortNavbar>
       <Border $width100 $margin0 $marginTop6></Border>

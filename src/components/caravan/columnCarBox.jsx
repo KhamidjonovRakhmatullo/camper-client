@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from '../../styles/motorStyled'
+import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImgWrapper, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from '../../styles/motorStyled'
 import { caravan } from '../mock/caravandata'
 import star1 from '../assets/carStar.svg'
 
@@ -8,13 +8,13 @@ const ColumnCarBox = () => {
     const data = caravan.maindata
     console.log ("All result:", data)
     return(
-    <CarBoxContainer $flex $column>
+    <CarBoxContainer $flex $column $maxWidthForColumn>
         {data.map((value, key) => {
             return(
                 <CarBox $flexBox key={key}>
-                <CarBoxImage>
+                <CarBoxImgWrapper>
                     <img src={value.caravan.image} alt="car photo" />
-                </CarBoxImage>
+                </CarBoxImgWrapper>
                 <CarBoxInfo $paddingTwoSides> 
                     <CarBoxPriceWrapper>
                         <CostText $fontSize $fontWeight>{value.caravan.name}</CostText>

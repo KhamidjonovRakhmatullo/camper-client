@@ -1,6 +1,6 @@
 import React from "react";
 import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper,
-     CarBoxContainer, CarBoxImage, CarBoxInfo, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
+     CarBoxContainer, CarBoxImgWrapper, CarBoxInfo, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
 import star1 from '../assets/carStar.svg'
 import { caravan } from "../mock/caravandata";
 
@@ -13,9 +13,9 @@ const GridCarBoxComponent = () => {
       {data2.map((value, key) => { 
         return (
           <CarBox $maxWidth key={key}>
-                <CarBoxImage>
+                <CarBoxImgWrapper>
                     <img src={value.caravan.image || "no photo"} alt="no photo1"  style={{width: "100%"}}/>
-                </CarBoxImage>
+                </CarBoxImgWrapper>
                 <CarBoxInfo>
                     <CostText $fontSize $fontWeight>{value.caravan.name || "no data"}</CostText>
                     <BrandName>{value.caravan.company || "no data"}

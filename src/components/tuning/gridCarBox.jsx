@@ -1,6 +1,6 @@
 import React from "react";
 import { campcar } from "../mock/mockdata";
-import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxInfo, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
+import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImgWrapper, CarBoxInfo, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
 import star1 from '../assets/carStar.svg'
 
 const GridCarBoxComponent = () => {
@@ -14,9 +14,9 @@ const GridCarBoxComponent = () => {
       {data2.map((value, key) => { 
         return (
           <CarBox $maxWidth key={key}>
-              <CarBoxImage>
+              <CarBoxImgWrapper>
                   <img src={value.car.photo || "no photo"} alt="no photo1"  style={{width: "100%"}}/>
-              </CarBoxImage>
+              </CarBoxImgWrapper>
               <CarBoxInfo>
                   <CostText $fontSize $fontWeight>{value.car.name || "no data"}</CostText>
                   <BrandName>{value.car.company || "no data"}

@@ -7,7 +7,7 @@ const ColumnCarBoxComponent = () => {
   const data = campcar.maindata;
   console.log("camp data:", data);
   return (
-    <CarBoxContainer $flex $column>
+    <CarBoxContainer $flex $column $maxWidthForColumn>
       {data.map((value, key) => { 
         return (
           <CarBox $flexBox key={key}>
