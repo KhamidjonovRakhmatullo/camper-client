@@ -1,76 +1,68 @@
 import React from "react";
-import { StdLogo, NavbarP } from "./NavStyled";
-import { DispJustAlgn } from "../../styles/styled";
+import {  NavbarContainer, StdLogo, NavbarP, NavItemsWrapper, NavItemWrapper2, MenuImg, LogoWrapper, NavItemsContainer, NavRightWrapper } from "./NavStyled";
 import grommet1 from "../assets/grommet.svg";
 import cart1 from "../assets/cart.svg";
 import user1 from "../assets/user.svg";
 import { Link } from "react-router-dom";
+import menu1 from '../assets/menu.svg'
 
 const NavbarComponent = () => {
   return (
-    <div>
-      <DispJustAlgn
-        style={{
-          border: "0px solid red",
-          padding: "22px 70px",
-          justifyContent: "space-around",
-          // position: "sticky",
-          // top: "20px",
-          // width: "100%",
-          backgroundColor: "white",
-        }}
-      >
-        <DispJustAlgn $justifyStart style={{ flex: "1.5" }}>
-          <StdLogo>Camper</StdLogo>
-        </DispJustAlgn>
+      <NavbarContainer>
 
-        <DispJustAlgn
-          style={{
-            justifyContent: "space-around",
-            flex: "2.5",
-            border: "0px solid blue",
-          }}
-        >
-          <DispJustAlgn>
-            <Link to="/">
+        <LogoWrapper>
+          <MenuImg $marginRight>
+            <img src={menu1} alt="menu" />
+          </MenuImg>
+           <Link to="/" style={{textDecoration: "none"}}>
+          <StdLogo>Camper</StdLogo>
+           </Link>
+        </LogoWrapper>
+
+        <NavItemsContainer>
+          <NavItemsWrapper>
+            <Link to="motor" style={{textDecoration: "none"}}>
               <NavbarP>Motor</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
-          </DispJustAlgn>
-          <DispJustAlgn>
-            <Link to="caravan">
+          </NavItemsWrapper>
+          <NavItemsWrapper>
+            <Link to="caravan" style={{textDecoration: "none"}}>
               <NavbarP>Caravan</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
-          </DispJustAlgn>
-          <DispJustAlgn>
-            <Link to="tuning">
+          </NavItemsWrapper>
+          <NavItemsWrapper>
+            <Link to="tuning" style={{textDecoration: "none"}}>
               <NavbarP>Tuning</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
-          </DispJustAlgn>
-          <DispJustAlgn>
-            <Link to="usedCar">
+          </NavItemsWrapper>
+          <NavItemsWrapper>
+            <Link to="usedCar" style={{textDecoration: "none"}}>
               <NavbarP>Used Car</NavbarP>
             </Link>
             <img src={grommet1} alt="icon" />
-          </DispJustAlgn>
-        </DispJustAlgn>
+          </NavItemsWrapper>
+        </NavItemsContainer>
 
-        <DispJustAlgn style={{ flex: "1" }}>
+        <NavItemWrapper2>
           <NavbarP>Camping Place</NavbarP>
-        </DispJustAlgn>
+        </NavItemWrapper2>
 
-        <DispJustAlgn style={{ flex: "0.6", justifyContent: "space-around" }}>
+        <NavRightWrapper>
           <img src={cart1} alt="cart" />
           <img src={user1} alt="user" />
-          <DispJustAlgn style={{ gap: "5px" }}>
-            <p>En</p>
+          <div style={{ display: "flex",gap: "5px" }}>
+           <NavbarP>En</NavbarP>
             <img src={grommet1} alt="icon" />
-          </DispJustAlgn>
-        </DispJustAlgn>
-      </DispJustAlgn>
-    </div>
+          </div>
+        </NavRightWrapper>
+        <MenuImg $DisplayFlex $gap>
+            <img src={cart1} alt="cart" />
+            <img src={menu1} alt="menu" />
+          </MenuImg>
+      </NavbarContainer>
   );
 };
 
