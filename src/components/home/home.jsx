@@ -33,13 +33,22 @@ const HomeComponent = () => {
           </div>
         </Carousel>
       </HomeCarousel> */}
-      <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <div>
           <h1>Hello Wolrd</h1>
         </div>
-        <div style={{border: "1px solid red", width :"100%", maxWidth: "1400px"}}>
-         <MultiCarousel/>
-         </div>
+        <div
+          style={{ border: "1px solid red", width: "100%", maxWidth: "1400px" }}
+        >
+          <MultiCarousel />
+        </div>
       </div>
     </HomeContainer>
   );
