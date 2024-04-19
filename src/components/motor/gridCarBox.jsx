@@ -35,4 +35,30 @@ const GridCarBoxComponent = () => {
   );
 };
 
+// {campcar.map((value, key) => {
+//   return (
+//     <RecommendBox key={key}>
+//       <RecommendImgWrapper>
+//         <img src={value.car.photo || "no photo"} alt="camping-car" />
+//       </RecommendImgWrapper>
+//       <RecommendInfoWrapper>
+//       <RecommendBoxText>Name</RecommendBoxText>
+//       <Box sx={{ "& button": { m: 1 } }}>
+//         <Button
+//           variant="contained"
+//           size="medium"
+//           sx={{ transform: "skew(-20deg)", borderRadius: "0px" }}
+//         >
+//           Discover the range
+//         </Button>
+//       </Box>
+//       <div style={{ display: "flex", gap: "10px" }}>
+//         <p>Choose a model</p>
+//         <img src={gommet1} alt="icon" />
+//       </div>
+//     </RecommendInfoWrapper>
+//     </RecommendBox>
+//   );
+// })}
+
 export default GridCarBoxComponent;

@@ -4,13 +4,15 @@ import img1 from "../assets/mainBg.png";
 import img2 from "../assets/mainBg2.png";
 import img3 from "../assets/motorMain1.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { HomeCarousel, HomeContainer } from "../../styles/homeStyle";
+import { HomeCarousel, HomeContainer, HomeContainer2 } from "../../styles/homeStyle";
 import MultiCarousel from "./multiCarousel";
+import ModalComponent from "./modal";
+import BlogsComponent from "./blogs";
 
 const HomeComponent = () => {
   return (
     <HomeContainer>
-      {/* <HomeCarousel>
+      <HomeCarousel>
         <Carousel
           autoPlay
           showArrows={true}
@@ -32,24 +34,12 @@ const HomeComponent = () => {
             <p className="legend">Legend 3</p>
           </div>
         </Carousel>
-      </HomeCarousel> */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <div>
-          <h1>Hello Wolrd</h1>
-        </div>
-        <div
-          style={{ border: "1px solid red", width: "100%", maxWidth: "1400px" }}
-        >
-          <MultiCarousel />
-        </div>
-      </div>
+      </HomeCarousel>
+      <HomeContainer2>
+        <MultiCarousel />
+        <ModalComponent />
+        <BlogsComponent />
+      </HomeContainer2>
     </HomeContainer>
   );
 };
