@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Border,
+  CarSortButton,
   CarSortNavbar,
   CarSortNavbarLeft,
   CarSortNavbarLeft_ItemAndButtons,
@@ -60,13 +61,19 @@ const MotorComponent = () => {
         </div>
 
         <div style={{ width: "100%" }}>
+          {/* sortnavbar and its underline */}
           <div>
             <CarSortNavbar>
               <CarSortNavbarLeft_ItemAndButtons>
-                <CarSortNavbarLeft>
-                  <CostTitle>Items</CostTitle>
-                  <CostTitle $colorBlue>{data.length}</CostTitle>
-                </CarSortNavbarLeft>
+                <div style={{ display: "flex" }}>
+                  <CarSortButton>
+                    <p>A</p>
+                  </CarSortButton>
+                  <CarSortNavbarLeft>
+                    <CostTitle>Items</CostTitle>
+                    <CostTitle $colorBlue>{data.length}</CostTitle>
+                  </CarSortNavbarLeft>
+                </div>
 
                 <GridColumnButtonWrapper $hide>
                   <GridButton onClick={handleGridClicked}>

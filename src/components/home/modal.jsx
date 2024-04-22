@@ -37,8 +37,8 @@ const ModalComponent = () => {
           <PopupVideo>
             {" "}
             <iframe
-              style={{ borderRadius: "15px" }}
-              width="790"
+              style={{ borderRadius: "15px"}}
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -69,7 +69,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -100,7 +100,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -131,7 +131,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -162,7 +162,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -193,7 +193,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -224,7 +224,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"
@@ -255,7 +255,7 @@ const ModalComponent = () => {
             {" "}
             <iframe
               style={{ borderRadius: "15px" }}
-              width="790"
+              width="100%"
               height="360"
               src="https://www.youtube.com/embed/9NpSU-j6eV8?si=gLr6by06PlvAo_5O"
               title="YouTube video player"

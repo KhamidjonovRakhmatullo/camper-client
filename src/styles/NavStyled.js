@@ -32,7 +32,7 @@ export const MenuImg =styled.div`
 display: none;
 margin-right: ${(props)=> props.$marginRight ? `16px` : ``};
 gap: ${(props) => props.$gap ? `25px` : ``};
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1100px){
    display: ${(props)=> props.$DisplayFlex ? `none` : `flex`};
 }
 
@@ -45,7 +45,7 @@ export const NavItemsContainer= styled.div`
 flex: 2.5;
 display: flex;
 justify-content: space-around;
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1100px){
    display: none;
 }
 `
@@ -61,7 +61,7 @@ flex: 1;
 display: flex;
 justify-content: center;
 align-items: center;
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1100px){
    display: none;
 }
 `

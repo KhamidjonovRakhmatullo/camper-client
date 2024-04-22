@@ -1,6 +1,6 @@
 import React from 'react'
-import { StdLogo } from '../navbar/NavStyled'
-import { FooterContainer, FooterItems, FooterLogoWrapper, FooterRightFlex6, FooterText, FooterTitle } from './footerStyle'
+import { StdLogo } from "../../styles/NavStyled";
+import { FooterContainer, FooterItems, FooterLogoWrapper, FooterRightFlex6, FooterText, FooterTitle } from '../../styles/footerStyle'
 import youtube1 from '../assets/youtube.svg'
 import instagram1 from '../assets/instagram.svg'
 import naver1 from '../assets/naver.svg'

@@ -9,6 +9,7 @@ import CaravanComponent from "./caravan/caravan";
 import UseStateComponent from "./useState/useState";
 import HomeComponent from "./home/home";
 import Notfound from "./404/notfound";
+import CarInfo from "./others/carInfo";
 
 const RouterComponent = () => {
   const location = useLocation()
@@ -25,6 +26,7 @@ const RouterComponent = () => {
         <Route path="tuning" element={<TuningComponent/>}/>
         <Route path="usedCar" element={<UsedCarComponent/>}/>
         <Route path="useState" element={<UseStateComponent/>}/>
+        <Route path="motor/:id" element={<CarInfo/>}/>
       </Routes>
      
       {hideNavabr && <FooterComponent/>}

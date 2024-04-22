@@ -1,6 +1,6 @@
 import React from 'react'
 import { NotFoundContainer } from '../../styles/styled'
-import { StdLogo } from '../navbar/NavStyled'
+import { StdLogo } from "../../styles/NavStyled"
 import { CarBoxButton, Price } from '../../styles/motorStyled'
 import { useNavigate } from 'react-router-dom'
 

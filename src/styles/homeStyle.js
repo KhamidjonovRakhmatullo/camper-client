@@ -59,6 +59,8 @@ export const RecommendImgWrapper = styled.div`
   
   img {
     width: 100%;
+    max-width: 276px;
+    max-height: 319px;
   }
 `;
 
@@ -153,6 +155,7 @@ export const PopupVideo = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px 25px 30px 25px;
+  width: 100%;
 `;
 
 export const PopupInsideTitle = styled.div`
