@@ -4,7 +4,8 @@ import grommet1 from "../assets/grommet.svg";
 import cart1 from "../assets/cart.svg";
 import user1 from "../assets/user.svg";
 import { Link } from "react-router-dom";
-import menu1 from '../assets/menu.svg'
+import LeftMenuButton from "./pages/leftMenu";
+import RightMenuButton from "./pages/RightMenu";
 
 const NavbarComponent = () => {
   return (
@@ -12,7 +13,7 @@ const NavbarComponent = () => {
 
         <LogoWrapper>
           <MenuImg $marginRight>
-            <img src={menu1} alt="menu" />
+            <LeftMenuButton/>
           </MenuImg>
            <Link to="/" style={{textDecoration: "none"}}>
           <StdLogo>Camper</StdLogo>
@@ -60,7 +61,7 @@ const NavbarComponent = () => {
         </NavRightWrapper>
         <MenuImg $DisplayFlex $gap>
             <img src={cart1} alt="cart" />
-            <img src={menu1} alt="menu" />
+            <RightMenuButton/>
           </MenuImg>
       </NavbarContainer>
   );

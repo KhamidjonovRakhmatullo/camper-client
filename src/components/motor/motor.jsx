@@ -7,6 +7,7 @@ import {
   CarSortNavbarLeft_ItemAndButtons,
   CarSortNavbarRight,
   ColumnButton,
+  CostOfCarContainerHide,
   CostText,
   CostTitle,
   GridButton,
@@ -15,14 +16,16 @@ import {
   MotorMainContainer,
   Price,
   SidebarAndCarBoxesContainer,
+  SortByWrapper,
   StyledSelect,
 } from "../../styles/motorStyled";
-import CostComponent from "./SideBar";
 import ColumnCarBoxComponent from "./columnCarBox";
 import listColumn1 from "../assets/listColumn.svg";
 import listGrid1 from "../assets/listGrid.svg";
 import { campcar } from "../mock/mockdata";
 import GridCarBoxComponent from "./gridCarBox";
+import SortButton from "./pages/sortButton";
+import SideBarComponent from "./SideBar";
 
 const MotorComponent = () => {
   const data = campcar.maindata;
@@ -55,19 +58,21 @@ const MotorComponent = () => {
           Motors
         </Price>
       </MotorBgImage>
+      {/* all of components which are under the Main background image */}
       <SidebarAndCarBoxesContainer>
-        <div>
-          <CostComponent></CostComponent>
-        </div>
-
-        <div style={{ width: "100%" }}>
+        {/* its only sidebar wrapper */}
+        <CostOfCarContainerHide>
+          <SideBarComponent></SideBarComponent>
+        </CostOfCarContainerHide>
+        {/* sort navbar, grid and column wrapper */}
+        <div style={{width: "100%"}}>
           {/* sortnavbar and its underline */}
           <div>
             <CarSortNavbar>
               <CarSortNavbarLeft_ItemAndButtons>
                 <div style={{ display: "flex" }}>
                   <CarSortButton>
-                    <p>A</p>
+                    <SortButton></SortButton>
                   </CarSortButton>
                   <CarSortNavbarLeft>
                     <CostTitle>Items</CostTitle>
@@ -86,6 +91,7 @@ const MotorComponent = () => {
               </CarSortNavbarLeft_ItemAndButtons>
 
               <CarSortNavbarRight>
+                <SortByWrapper>
                 <CostText $fontSize>Sort by</CostText>
                 <StyledSelect $padding>
                   <option>Select</option>
@@ -97,6 +103,7 @@ const MotorComponent = () => {
                   <option>22</option>
                   <option>33</option>
                 </StyledSelect>
+                </SortByWrapper>
 
                 <GridColumnButtonWrapper>
                   <GridButton onClick={handleGridClicked}>

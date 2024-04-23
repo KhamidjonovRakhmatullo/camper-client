@@ -1,6 +1,6 @@
 import React from 'react'
 import { campcar } from "../mock/mockdata";
-import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
+import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxImgWrapper, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
 import star1 from '../assets/carStar.svg'
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ const ColumnCarBoxComponent = () => {
         return (
           <CarBox $flexBox key={key}>
               <Link to={`${value.id}`}>
-               <CarBoxImage>
+               <CarBoxImage $maxWidthForImage>
                    <img src={value.car.photo || "no photo"} alt="no photo1"  style={{width: "100%"}}/>
                </CarBoxImage>
                </Link>

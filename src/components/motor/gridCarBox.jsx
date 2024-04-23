@@ -24,7 +24,7 @@ const GridCarBoxComponent = () => {
         return (
             <CarBox $maxWidth key={key}>
             <Link to={`${value.id}`}>
-              <CarBoxImage>
+              <CarBoxImage $hight150px>
                 <img
                   src={value.car.photo || "no photo"}
                   alt="no photo1"

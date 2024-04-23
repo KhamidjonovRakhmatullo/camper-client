@@ -13,7 +13,7 @@ import { DispJustAlgn } from "../../styles/styled";
 import grommet2 from "../assets/grommet.svg";
 import compare22 from "../assets/compare2.png";
 
-const CostComponent = () => {
+const SideBarComponent = () => {
   return (
     <CostOfCarContainer>
       <CostCarBoxWrapper>
@@ -156,4 +156,4 @@ const CostComponent = () => {
   );
 };
 
-export default CostComponent;
+export default SideBarComponent;

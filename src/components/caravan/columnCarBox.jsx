@@ -12,7 +12,7 @@ const ColumnCarBox = () => {
         {data.map((value, key) => {
             return(
                 <CarBox $flexBox key={key}>
-                <CarBoxImgWrapper>
+                <CarBoxImgWrapper >
                     <img src={value.caravan.image} alt="car photo" />
                 </CarBoxImgWrapper>
                 <CarBoxInfo $paddingTwoSides> 

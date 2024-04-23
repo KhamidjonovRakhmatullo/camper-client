@@ -24,13 +24,15 @@ export const MotorBgImage = styled.div`
   justify-content: center;
 `;
 
+// main container
 export const SidebarAndCarBoxesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
   background-color: #fafafa;
   padding: 60px 30px 0px 30px;
-  /* width: 100%; */
+  width: 100%;
+  padding: 57px 10%;
   gap: 30px;
   @media only screen and (max-width: 1100px) {
     gap: 0px;
@@ -42,6 +44,13 @@ export const CostOfCarContainer = styled.div`
   flex-direction: column;
   align-items: start;
   gap: 50px;
+  @media only screen and (max-width: 1100px) {
+    display: ${(props) => props.$hideSideBar ? `none` : ``};
+  }
+`;
+
+export const CostOfCarContainerHide = styled.div`
+  display: flex;
   @media only screen and (max-width: 1100px) {
     display: none;
   }
@@ -128,19 +137,21 @@ export const CompareBox = styled.div`
   cursor: pointer;
 `;
 
-export const CarSortButton =styled.div`
-display: none;
-@media only screen and (max-width: 1100px) {
+//sort button
+export const CarSortButton = styled.div`
+  display: none;
+  @media only screen and (max-width: 1100px) {
     display: flex;
-    align-items: start;
+    align-items: center;
     margin-right: 10px;
   }
-`
+`;
 
 export const CarSortNavbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -3.5px;
   @media only screen and (max-width: 600px) {
     display: grid;
     grid-template-columns: repeat(1, 4fr);
@@ -153,10 +164,23 @@ export const CarSortNavbarRight = styled.div`
   gap: 10px;
 `;
 
+export const SortByWrapper =styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+gap: 10px;
+@media only screen and (max-width: 1100px) {
+   p{
+    display: none;
+   }
+  }
+`
+
 export const CarSortNavbarLeft = styled.div`
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 10px;
 `;
 
@@ -223,10 +247,14 @@ export const CarBoxContainer = styled.div`
   flex-direction: ${(props) => (props.$column ? `column` : ``)};
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+
+  @media only screen and (max-width: 1300px) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: "0px 70px";
+  }
   @media only screen and (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
-   padding: "0px 70px"
-    
+    padding: "0px 70px";
   }
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
@@ -234,7 +262,10 @@ export const CarBoxContainer = styled.div`
 `;
 
 export const CarBox = styled.div`
+  /* border: 1px solid black; */
   display: ${(props) => (props.$flexBox ? `flex` : ``)};
+  justify-content: center;
+  align-items: center;
   max-width: ${(props) => (props.$maxWidth ? `350px` : `100%`)};
   /* border: 2px solid red; */
   flex: 1;
@@ -245,17 +276,20 @@ export const CarBox = styled.div`
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
+//other container carbox img
 export const CarBoxImgWrapper = styled.div`
   flex: 0.45;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid red; */
   img {
     width: 100%;
-    /* max-height: 150px; */
+    max-height: 150px;
   }
 `;
 
+//motor img wrapper
 export const CarBoxImage = styled.div`
   flex: 0.45;
   display: flex;
@@ -264,7 +298,11 @@ export const CarBoxImage = styled.div`
   /* border: 1px solid blue; */
   img {
     width: 100%;
-    height: 150px;
+    height: ${(props) => (props.$hight150px ? `150px` : ``)};
+  }
+  @media only screen and (min-width: 700px) {
+    max-width: ${(props) => (props.$maxWidthForImage ? `280px` : ``)};
+    min-width: ${(props) => (props.$maxWidthForImage ? `280px` : ``)};
   }
 `;
 
@@ -296,7 +334,7 @@ export const Price = styled.p`
 export const CarBoxPriceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
 `;
 
@@ -350,3 +388,28 @@ export const CarBoxButton = styled.button`
     color: #fff;
   }
 `;
+
+
+export const MainDrawer =styled.div`
+
+.Button{
+    display:none;
+    /* border:1px solid red; */
+    padding:0;
+
+@media only screen and (max-width:900px) {
+    display:flex;
+    justify-content:start;
+}
+}
+`
+export const DrawerIcon =styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+height:30px;
+width:40px;
+border: 1px solid rgba(55, 55, 55, 0.30);
+border-radius:5px;
+
+`
