@@ -1,119 +1,152 @@
 import React from "react";
-import { Border, CompareBox, CostText, CostTitle, SearchButton, CostCarBoxWrapper, CostOfCarContainer, FromToBox } from "../../styles/motorStyled";
+import {
+  Border,
+  CompareBox,
+  CostText,
+  CostTitle,
+  SearchButton,
+  CostCarBoxWrapper,
+  CostOfCarContainer,
+  FromToBox,
+} from "../../styles/motorStyled";
 import { DispJustAlgn } from "../../styles/styled";
-import grommet2 from "../assets/grommet.svg";
 import compare22 from "../assets/compare2.png";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
-const CostComponent = () => {
+const SideBarComponent = () => {
   return (
     <CostOfCarContainer>
-
-      
       <CostCarBoxWrapper>
         <CostTitle>Cost of car</CostTitle>
         <Border></Border>
-        <DispJustAlgn style={{ padding: "20px 0px 50px 0px", gap: "25px",}}>
+        <DispJustAlgn style={{ padding: "20px 0px 50px 0px", gap: "0px" }}>
           <FromToBox>
             <CostText>from</CostText>
-            <input type="text"/>
+            <input type="text" />
           </FromToBox>
           <FromToBox>
             <CostText>to</CostText>
-            <input type="text"/>
+            <input type="text" />
           </FromToBox>
         </DispJustAlgn>
       </CostCarBoxWrapper>
 
       <CostCarBoxWrapper>
-        <DispJustAlgn style={{ justifyContent: "space-between", width: "100%"}}>
+      <Accordion defaultExpanded sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon/>}
+          aria-controls="panel2-content"
+          id="panel2-header"
+          sx={{padding: "0px",}}
+        >
           <CostTitle>Brand</CostTitle>
-          <img src={grommet2} alt="icon" />
-        </DispJustAlgn>
-        <Border></Border>
-        <DispJustAlgn $column $alignStart $gap>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Aidal</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Knal</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>escape</CostText>
-          </DispJustAlgn>
-        </DispJustAlgn>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:"0px"}}>
+          <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
+      <FormControlLabel required control={<Checkbox />} label="Required" />
+      <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
+    </FormGroup>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
       </CostCarBoxWrapper>
 
       <CostCarBoxWrapper>
-        <DispJustAlgn style={{ justifyContent: "space-between", width: "100%"}}>
+      <Accordion defaultExpanded sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon/>}
+          aria-controls="panel2-content"
+          id="panel2-header"
+          sx={{padding: "0px",}}
+        >
           <CostTitle>Company</CostTitle>
-          <img src={grommet2} alt="icon" />
-        </DispJustAlgn>
-        <Border></Border>
-        <DispJustAlgn $column $alignStart $gap>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Aidal</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Knal</CostText>
-          </DispJustAlgn>
-        </DispJustAlgn>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:"0px"}}>
+          <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Aidal" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Knal" />
+    </FormGroup>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
       </CostCarBoxWrapper>
-
       <CostCarBoxWrapper>
-        <DispJustAlgn style={{ justifyContent: "space-between", width: "100%" }}>
+      <Accordion defaultExpanded sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon/>}
+          aria-controls="panel2-content"
+          id="panel2-header"
+          sx={{padding: "0px",}}
+        >
           <CostTitle>License type</CostTitle>
-          <img src={grommet2} alt="icon" />
-        </DispJustAlgn>
-        <Border></Border>
-        <DispJustAlgn $column $alignStart $gap>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>1 year</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>2 year</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>1.5 year</CostText>
-          </DispJustAlgn>
-        </DispJustAlgn>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:"0px"}}>
+          <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="1 year" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="2 year" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="1.5 year" />
+    </FormGroup>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
       </CostCarBoxWrapper>
-
       <CostCarBoxWrapper>
-        <DispJustAlgn style={{ justifyContent: "space-between", width: "100%" }}>
+      <Accordion defaultExpanded sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon/>}
+          aria-controls="panel2-content"
+          id="panel2-header"
+          sx={{padding: "0px",}}
+        >
           <CostTitle>Number of travelers</CostTitle>
-          <img src={grommet2} alt="icon" />
-        </DispJustAlgn>
-        <Border></Border>
-        <DispJustAlgn $column $alignStart $gap>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>2</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>3-4</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>5+</CostText>
-          </DispJustAlgn>
-        </DispJustAlgn>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:"0px"}}>
+          <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="2" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="3-4" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="5+" />
+    </FormGroup>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
       </CostCarBoxWrapper>
-
       <CostCarBoxWrapper>
-        <DispJustAlgn style={{ justifyContent: "space-between", width: "100%" }}>
-          <CostTitle>Location</CostTitle>
-          <img src={grommet2} alt="icon" />
-        </DispJustAlgn>
-        <Border></Border>
-        <DispJustAlgn $column $alignStart $gap>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Seoul</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Deajon</CostText>
-          </DispJustAlgn>
-          <DispJustAlgn $gap>
-            <input type="checkbox" /> <CostText>Busan</CostText>
-          </DispJustAlgn>
-        </DispJustAlgn>
+      <Accordion defaultExpanded sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%"}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon/>}
+          aria-controls="panel2-content"
+          id="panel2-header"
+          sx={{padding: "0px",}}
+        >
+          <CostTitle>Number of travelers</CostTitle>
+        </AccordionSummary>
+        <AccordionDetails sx={{padding:"0px"}}>
+          <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Seoul" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Deajon" />
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Busan" />
+    </FormGroup>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
       </CostCarBoxWrapper>
 
       <DispJustAlgn $gap>
@@ -122,7 +155,7 @@ const CostComponent = () => {
       </DispJustAlgn>
 
       <DispJustAlgn $column $alignStart $gap>
-        <p style={{color: "#006DAB"}}>Compare</p>
+        <p style={{ color: "#006DAB" }}>Compare</p>
         <DispJustAlgn $gap $justifyStart>
           <CompareBox>
             <img src={compare22} alt="img" />
@@ -135,8 +168,8 @@ const CostComponent = () => {
           </CompareBox>
         </DispJustAlgn>
       </DispJustAlgn>
-      </CostOfCarContainer>
+    </CostOfCarContainer>
   );
 };
 
-export default CostComponent;
+export default SideBarComponent;

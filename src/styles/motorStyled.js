@@ -40,16 +40,19 @@ export const SidebarAndCarBoxesContainer = styled.div`
 `;
 
 export const CostOfCarContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 50px;
+  gap: 25px;
   @media only screen and (max-width: 1100px) {
-    display: ${(props) => props.$hideSideBar ? `none` : ``};
+    display: ${(props) => (props.$hideSideBar ? `none` : ``)};
   }
 `;
 
 export const CostOfCarContainerHide = styled.div`
+  width: 100%;
+  max-width: 23%;
   display: flex;
   @media only screen and (max-width: 1100px) {
     display: none;
@@ -60,6 +63,7 @@ export const CostCarBoxWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 100%;
 `;
 
 export const CostTitle = styled.h2`
@@ -74,13 +78,14 @@ export const CostTitle = styled.h2`
 `;
 
 export const Border = styled.div`
-  width: 240px;
+  width: 100%;
   width: ${(props) => (props.$width100 ? `100%` : ``)};
   height: 1px;
   background: rgba(55, 55, 55, 0.3);
   margin: 15px 0px 30px 0px;
   margin: ${(props) => (props.$margin0 ? `0px` : ``)};
   margin-top: ${(props) => (props.$marginTop6 ? `5px` : ``)};
+  margin: ${(props)=> props.$marginBottom30 ? `0px 0px 10px 0px` : ``};
 `;
 
 export const FromToBox = styled.div`
@@ -89,7 +94,7 @@ export const FromToBox = styled.div`
   align-items: start;
   input {
     height: 36px;
-    width: 91px;
+    width: 90%;
     border-radius: 10px;
   }
 `;
@@ -127,6 +132,7 @@ export const CompareBox = styled.div`
   img {
     width: 100%;
   }
+  width: 100%;
   padding: 16px 2px;
   display: flex;
   justify-content: center;
@@ -156,6 +162,11 @@ export const CarSortNavbar = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 4fr);
   }
+  @media only screen and (max-width: 330px) {
+    /* display: flex;
+    flex-direction: column; */
+
+  }
 `;
 export const CarSortNavbarRight = styled.div`
   display: flex;
@@ -164,18 +175,24 @@ export const CarSortNavbarRight = styled.div`
   gap: 10px;
 `;
 
-export const SortByWrapper =styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-gap: 10px;
-@media only screen and (max-width: 1100px) {
-   p{
-    display: none;
-   }
+export const SortByWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  @media only screen and (max-width: 1100px) {
+    p {
+      display: none;
+    }
   }
-`
+  @media only screen and (max-width: 330px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+  }
+`;
 
 export const CarSortNavbarLeft = styled.div`
   display: flex;
@@ -188,6 +205,18 @@ export const CarSortNavbarLeft_ItemAndButtons = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
+export const SidebarItemNumberTablet =styled.div`
+display: flex;
+@media only screen and (max-width: 330px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 10px;
+
+  }
+`
 
 export const StyledSelect = styled.select`
   padding: ${(props) =>
@@ -371,45 +400,49 @@ export const CarBoxButtonWrapper = styled.div`
 export const CarBoxButton = styled.button`
   width: 100%;
   padding: ${(props) => (props.$paddingRnL ? `2% 3.5%` : `3% 5%`)};
-  padding: ${(props) => (props.$paddingColumn ? `8px 18px` : ``)};
   border-radius: 10px;
   border: 1px solid var(--blue, #006dab);
+  border: ${(props) => props.$Border1 ? `2px solid white` : ``};
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   color: var(--blue, #006dab);
+  color: ${(props) => props.$colorWhite2 ? `white` : ``};
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background-color: #fff;
+  background-color: ${(props)=> props.$BgColorTransparent ? `transparent` : `#fff`};
   cursor: pointer;
   &:hover {
     background-color: #006dab;
     color: #fff;
+    border: 2px solid #006dab;
+
+  }
+  @media only screen and (min-width: 600px) {
+  padding: ${(props) => (props.$paddingColumn ? `8px 18px` : ``)};
+     
   }
 `;
 
-
-export const MainDrawer =styled.div`
-
-.Button{
-    display:none;
+export const MainDrawer = styled.div`
+  .Button {
+    display: none;
     /* border:1px solid red; */
-    padding:0;
+    padding: 0;
 
-@media only screen and (max-width:900px) {
-    display:flex;
-    justify-content:start;
-}
-}
-`
-export const DrawerIcon =styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-height:30px;
-width:40px;
-border: 1px solid rgba(55, 55, 55, 0.30);
-border-radius:5px;
-
-`
+    @media only screen and (max-width: 900px) {
+      display: flex;
+      justify-content: start;
+    }
+  }
+`;
+export const DrawerIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 40px;
+  border: 1px solid rgba(55, 55, 55, 0.3);
+  border-radius: 5px;
+`;

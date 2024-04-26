@@ -1,10 +1,11 @@
 import React from "react";
-import { CarSortNavbarLeft, CostTitle } from "../../styles/motorStyled";
-import { campcar } from "../mock/mockdata";
-import { CompanyName, DividerWrapper, NameOfCar } from "../../styles/carInfoStyle";
+import { CarSortNavbarLeft, CostTitle } from "../../../styles/motorStyled";
+import { campcar } from "../../mock/mockdata";
+import { CompanyName, DividerWrapper, NameOfCar } from "../../../styles/carInfoStyle";
 
 const ItemReviewsComponent = () => {
   const data = campcar.maindata;
+  const data1 = data.slice(1, 5)
   console.log("data is:", data);
   return (
     <div>
@@ -22,7 +23,7 @@ const ItemReviewsComponent = () => {
         </div>
         <div>Select button</div>
       </div>
-      {data.map((value, key) => {
+      {data1.map((value, key) => {
         return (
             <div>
           <div key={key} style={{display: "flex", justifyContent: "space-between", padding: "70px", height: "150px", marginTop: "36px"}}>

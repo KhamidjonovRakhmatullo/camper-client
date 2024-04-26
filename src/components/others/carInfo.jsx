@@ -5,7 +5,6 @@ import {
   CarBoxButtonWrapper2,
   CarInfoContainer,
   CompanyName,
-  Divider,
   DividerWrapper,
   DocsWrapper,
   HeadTitle,
@@ -25,7 +24,7 @@ import tidying1 from "../assets/tidying.png";
 import ventilated1 from "../assets/ventilated.png";
 import heating1 from "../assets/heating.png";
 import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
-import TabsComponent from "./tab";
+import TabsComponent from "./TabFile/tab";
 
 const CarInfo = () => {
   let { id } = useParams();
@@ -42,8 +41,8 @@ const CarInfo = () => {
           {resultData.car.name}
         </HeadTitle>
         <CarBoxButtonWrapper2 $MaxWidth>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+              <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>ADD TO CART</CarBoxButton>
+              <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>COMPARE</CarBoxButton>
             </CarBoxButtonWrapper2>
       </MotorBgImage>
       <ImageAndInfoContainer $AlignCenter>

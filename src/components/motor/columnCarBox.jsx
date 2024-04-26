@@ -30,7 +30,7 @@ const ColumnCarBoxComponent = () => {
                    </BrandName>
                    <CarBoxButtonWrapper $marginTop45>
                          <CarBoxButton $paddingColumn>ORDER</CarBoxButton>
-                         <CarBoxButton $paddingColumn>COMPARE</CarBoxButton>
+                         <CarBoxButton $$paddingRnL $paddingColumn>COMPARE</CarBoxButton>
                    </CarBoxButtonWrapper>
                </CarBoxInfo>
           </CarBox>

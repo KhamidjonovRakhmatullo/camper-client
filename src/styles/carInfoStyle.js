@@ -203,3 +203,110 @@ export const CarBoxButtonWrapper2 = styled.div`
 
   }
 `;
+
+export const TabContainer=styled.div`
+background-Color: rgba(0, 109, 171, 0.20);
+height: 60px;
+padding-Left: 70px;
+display: flex;
+@media only screen and (max-width: 600px) {
+   padding-left: 30px ;
+
+  }
+`
+
+export const FAQConrainer =styled.div`
+display: flex;
+gap: 50px;
+padding: 24px 54px;
+@media only screen and (max-width: 1000px) {
+   display: flex;
+   flex-direction: column;
+   padding: 24px 14px;
+
+  }
+`
+
+export const AskedQuestionsWrapper =styled.div`
+flex: 2;
+display: flex;
+flex-direction: column;
+gap: 20px;
+`
+export const SendQuestionWrapper =styled.div`
+flex: 1.2;
+display: flex;
+flex-direction: column;
+`
+export const InputWrapper =styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 1px solid blue;
+width: 100%;
+padding: 30px;
+border-radius: 10px;
+border: 1px solid rgba(0, 109, 171, 0.10);
+background-color: #ffff;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+gap: 20px;
+h1{
+  color: var(--text-color, #023047);
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 130%; /* 31.2px */
+}
+`
+
+export const MapWrapper =styled.div`
+flex: 2;
+display: flex;
+flex-direction: column;
+gap: 20px;
+img{
+  width: 100%;
+}
+`
+
+export const NumberAndEmailWrapper =styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 33px;
+@media only screen and (max-width: 600px) {
+   display: flex;
+   flex-direction: column;
+  }
+`
+export const NumberWrapper =styled.div`
+flex: 1;
+display: flex;
+flex-direction: column;
+background-color: #ffff;
+height: 109px;
+width: 100%;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+padding: 15px 0px 44px 25px;
+p{
+  color: var(--txt-color, #1E1C1C);
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 23.4px */
+}
+`
+
+export const GrayText =styled.div`
+margin-bottom: ${(props)=> props.$MarginBottom ? `10px` : ``};
+color: #666;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 18.2px */
+`

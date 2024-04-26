@@ -16,6 +16,7 @@ import {
   MotorMainContainer,
   Price,
   SidebarAndCarBoxesContainer,
+  SidebarItemNumberTablet,
   SortByWrapper,
   StyledSelect,
 } from "../../styles/motorStyled";
@@ -70,7 +71,8 @@ const MotorComponent = () => {
           <div>
             <CarSortNavbar>
               <CarSortNavbarLeft_ItemAndButtons>
-                <div style={{ display: "flex" }}>
+                {/* this shows from tablet */}
+                <SidebarItemNumberTablet>
                   <CarSortButton>
                     <SortButton></SortButton>
                   </CarSortButton>
@@ -78,7 +80,7 @@ const MotorComponent = () => {
                     <CostTitle>Items</CostTitle>
                     <CostTitle $colorBlue>{data.length}</CostTitle>
                   </CarSortNavbarLeft>
-                </div>
+                </SidebarItemNumberTablet>
 
                 <GridColumnButtonWrapper $hide>
                   <GridButton onClick={handleGridClicked}>
