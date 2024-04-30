@@ -9,7 +9,13 @@ import CaravanComponent from "./caravan/caravan";
 import UseStateComponent from "./useState/useState";
 import HomeComponent from "./home/home";
 import Notfound from "./404/notfound";
-import CarInfo from "./others/carInfo";
+import CaravanInfoComponent from "./others/caravanInfo";
+import CampingPlaceComponent from "./campingPlace/campingPlace";
+import TuningInfoComponent from "./others/tuningInfo";
+import UsedCarInfoComponent from "./others/usedCarInfo";
+import MotorInfoComponent from "./others/motorInfo";
+import CampingPlaceInfoComponent from "./others/campingPlaceInfo";
+import MultiCarouselInfoComponent from "./others/multiCarouselInfo";
 
 const RouterComponent = () => {
   const location = useLocation()
@@ -25,8 +31,14 @@ const RouterComponent = () => {
         <Route path="caravan" element={<CaravanComponent/>}/>
         <Route path="tuning" element={<TuningComponent/>}/>
         <Route path="usedCar" element={<UsedCarComponent/>}/>
+        <Route path="campingPlace" element={<CampingPlaceComponent/>}/>
         <Route path="useState" element={<UseStateComponent/>}/>
-        <Route path="motor/:id" element={<CarInfo/>}/>
+        <Route path="motor/:id" element={<MotorInfoComponent/>}/>
+        <Route path="caravan/:id" element={<CaravanInfoComponent/>}/>
+        <Route path="tuning/:id" element={< TuningInfoComponent/>}/>
+        <Route path="usedcar/:id" element={<UsedCarInfoComponent/>}/>
+        <Route path="campingPlace/:id" element={<CampingPlaceInfoComponent/>}/>
+        <Route path="multiCarousel/:id" element={< MultiCarouselInfoComponent/>}/>
       </Routes>
      
       {hideNavabr && <FooterComponent/>}

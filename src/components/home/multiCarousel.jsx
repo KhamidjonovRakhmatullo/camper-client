@@ -15,29 +15,35 @@ import {
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { campcar } from "../mock/mockdata";
+import { Link } from "react-router-dom";
 
 const MultiCarousel = () => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1400 },
       items: 4,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    desktop1: {
+      breakpoint: { max: 1400, min: 1100 },
+      items: 3,
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1100, min: 700 },
       items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+      breakpoint: { max: 700, min: 0 },
+      items: 1.5,
       slidesToSlide: 1, // optional, default to 1.
     },
   };
 
-  const data = campcar.maindata
-  const data1 = data.slice(24,45)
-  console.log ( "aaaa :", data)
+  const data = campcar.maindata;
+  const data1 = data.slice(24, 45);
+  console.log("data :", data);
 
   return (
     <RecommendContainer>
@@ -46,48 +52,42 @@ const MultiCarousel = () => {
         <UnderLine $width170></UnderLine>
       </ContainerTitleWrapper>
       <Carousel
-        swipeable={false}
-        draggable={true}
-        showDots={true}
+        // showDots={true}
         responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
-        infinite={true}
-        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+        infinite
+        autoPlay
         autoPlaySpeed={1000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={400}
+        transitionDuration={1500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
-        // deviceType={this.props.deviceType}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
       >
-       {data1.map((value, key) => { 
-        return (
-          <RecommendBox key={(key)}>
-            <RecommendImgWrapper>
-            <img src={value.car.photo} alt="camping-car" />
-          </RecommendImgWrapper>
-          <RecommendInfoWrapper>
-            <RecommendBoxText>{value.car.name}</RecommendBoxText>
-            <Box sx={{ "& button": { m: 1 } }}>
-              <Button
-                variant="contained"
-                size="medium"
-                sx={{ transform: "skew(-20deg)", borderRadius: "0px" }}
-              >
-                Discover the range
-              </Button>
-            </Box>
-            <div style={{ display: "flex", gap: "10px" }}>
-              <p>Choose a model</p>
-              <img src={gommet1} alt="icon" />
-            </div>
-          </RecommendInfoWrapper>
-          </RecommendBox>
-        ); 
-      })}
+        {data1.map((value, key) => {
+          return (
+            <Link to={`${value.id}`} style={{textDecoration: "none"}}>
+            <RecommendBox key={key}>
+              <RecommendImgWrapper>
+                <img src={value.car.photo} alt="camping-car" />
+              </RecommendImgWrapper>
+              <RecommendInfoWrapper>
+                <RecommendBoxText>{value.car.name}</RecommendBoxText>
+                <Box sx={{ "& button": { m: 1 } }}>
+                  <Button
+                    variant="contained"
+                    size="medium"
+                    sx={{ transform: "skew(-20deg)", borderRadius: "0px" }}
+                  >
+                    Discover the range
+                  </Button>
+                </Box>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <p>Choose a model</p>
+                  <img src={gommet1} alt="icon" />
+                </div>
+              </RecommendInfoWrapper>
+            </RecommendBox>
+          </Link>
+          );
+        })}
       </Carousel>
     </RecommendContainer>
   );

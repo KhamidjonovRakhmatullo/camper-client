@@ -48,7 +48,9 @@ const NavbarComponent = () => {
         </NavItemsContainer>
 
         <NavItemWrapper2>
+        <Link to="campingPlace" style={{textDecoration: "none"}}>
           <NavbarP>Camping Place</NavbarP>
+        </Link>
         </NavItemWrapper2>
 
         <NavRightWrapper>

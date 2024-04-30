@@ -1,21 +1,21 @@
 import React from 'react'
 import { campcar } from "../mock/mockdata";
-import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImgWrapper, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
+import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
 import star1 from '../assets/carStar.svg'
+import { Link } from 'react-router-dom';
 
 const ColumnCarBoxComponent = () => {
-  const data = campcar.maindata;
+  const data = campcar.maindata.slice(-12);
   console.log("camp data:", data);
-  console.log (data.slice (-12))
-  const data2 = data.slice (-12)
   return (
     <CarBoxContainer $flex $column $maxWidthForColumn>
-      {data2.map((value, key) => { 
+      {data.map((value, key) => { 
         return (
+          <Link to={`${value.id}`} style={{textDecoration: "none"}}>
           <CarBox $flexBox key={key}>
-               <CarBoxImgWrapper>
+               <CarBoxImage $maxWidthForImage>
                    <img src={value.car.photo || "no photo"} alt="no photo1"  style={{width: "100%"}}/>
-               </CarBoxImgWrapper>
+               </CarBoxImage>
                <CarBoxInfo $paddingTwoSides>
                   <CarBoxPriceWrapper>
                        <CostText $fontSize $fontWeight>{value.car.name || "no data"}</CostText>
@@ -28,11 +28,12 @@ const ColumnCarBoxComponent = () => {
                        </CarBoxRateWrapper>
                    </BrandName>
                    <CarBoxButtonWrapper $marginTop45>
-                         <CarBoxButton>ORDER</CarBoxButton>
-                         <CarBoxButton>COMPARE</CarBoxButton>
+                         <CarBoxButton $paddingColumn>ORDER</CarBoxButton>
+                         <CarBoxButton $$paddingRnL $paddingColumn>COMPARE</CarBoxButton>
                    </CarBoxButtonWrapper>
                </CarBoxInfo>
           </CarBox>
+        </Link>
         ); 
       })}
     </CarBoxContainer>

@@ -22,8 +22,6 @@ export const ImageAndInfoContainer = styled.div`
   justify-content: center;
   align-items: center;
   /* border: 1px solid black; */
-  /* gap: 20px; */
-  margin-top: "";
   @media only screen and (max-width: 1400px) {
     flex-direction: column;
     align-items: ${(props) => (props.$AlignCenter ? `center` : `start`)};
@@ -35,38 +33,39 @@ export const ImageAndInfoContainer = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  flex: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
   /* border: 1px solid blue; */
   img {
-    width: 626px;
-    height: 381px;
+  width: 100%;
+   max-width: 626px;
+   max-height: 381px;
   }
   @media only screen and (max-width: 1400px) {
-    img {
       margin-bottom: 35px;
-      width: 626px;
-      height: 381px;
-      /* width: 100%;
-      height: 100%; */
-    }
-  }
-  @media only screen and (max-width: 790px) {
-    img {
-      margin-bottom: 35px;
-      width: 354px;
-      height: 224px;
-    }
   }
 `;
+
+export const InfoWrapper2 =styled.div`
+flex: 10;
+display: flex;
+justify-content: start;
+align-items: center;
+@media only screen and (max-width: 1400px) {
+    width: 100%;
+justify-content: center;
+
+  }
+`
 
 export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid black; */
+  max-width: 600px;
   width: 600px;
   height: 360px;
   flex-shrink: 0;
@@ -117,6 +116,10 @@ export const NameOfCar = styled.p`
   @media only screen and (max-width: 790px) {
     font-size: ${(props) => (props.$Size30px ? `25px` : `22px`)};
   }
+  @media only screen and (max-width: 450px) {
+    font-size: ${(props) => (props.$Size30px ? `20px` : `17px`)};
+  }
+  
 `;
 
 export const CompanyName = styled.p`
@@ -126,6 +129,8 @@ export const CompanyName = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: ${(props) => props.$marginTnB ? `5px 0px 15px 0px` : ``};
+  
 `;
 
 export const DividerWrapper = styled.div`
@@ -158,7 +163,7 @@ export const DocsWrapper = styled.div`
   flex-direction: column;
   align-items: start;
   /* border: 1px solid red; */
-  padding: 70px 70px 0px 70px;
+  padding: 0px 70px 70px 70px;
   max-width: 683px;
   gap: 20px;
   /* border: "2px solid blue"; */
@@ -214,6 +219,76 @@ display: flex;
 
   }
 `
+export const ItemReviewsContainer =styled.div`
+/* border: 1px solid black; */
+padding: 0px 54px;
+@media only screen and (max-width: 836px) {
+    padding: 0px 14px;
+  }
+`
+
+export const ItemReviewsAndSelect =styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* border: 1px solid red; */
+margin-bottom: 30px;
+gap: 15px;
+`
+
+export const ItemReviewsCarBox =styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+@media only screen and ( max-width: 836px) {
+  flex-direction: column;
+ }
+`
+
+export const ItemReviewsCarBoxImage =styled.div`
+/* flex: 1; */
+/* width: 100%; */
+max-width: 350px;
+@media only screen and ( max-width: 836px) {
+  width: 100%;
+ }
+`
+
+export const ItemReviewsCarBoxLeft =styled.div`
+display: flex;
+align-items: center;
+gap: 10px;
+flex: 1;
+/* border: 1px solid red; */
+img{
+    width: 100%;
+    max-width: 195px;
+  }
+@media only screen and ( max-width: 836px) {
+  flex-direction: column;
+  img{
+    width: 100%;
+    max-width: 350px;
+  }
+ }
+`
+
+export const ItemReviewsCarBoxRight =styled.div`
+display: flex;
+flex-direction: column;
+/* border: 1px solid blue; */
+gap: 14px;
+@media only screen and ( max-width: 836px) {
+ display: flex;
+ flex-direction: unset;
+ justify-content: space-between;
+ width: 100%;
+ max-width: 515px;
+ margin-top: 20px;
+
+ }
+`
 
 export const FAQConrainer =styled.div`
 display: flex;
@@ -227,11 +302,42 @@ padding: 24px 54px;
   }
 `
 
+export const QnAWrapper =styled.div`
+display: flex;
+flex-direction: column;
+/* border: 1px solid blue; */
+margin-top: ${(props)=> props.$marginTop37 ? `37px` : `10px`};
+p{
+  color: rgba(55, 55, 55, 0.50);
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 5px;
+margin-left: 20px;
+}
+h3{
+  color: #373737;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left: 20px;
+}
+`
+
 export const AskedQuestionsWrapper =styled.div`
 flex: 2;
 display: flex;
 flex-direction: column;
 gap: 20px;
+`
+export const AnswerQuestionsWrapper =styled.div`
+flex: 2;
+display: flex;
+flex-direction: column;
 `
 export const SendQuestionWrapper =styled.div`
 flex: 1.2;

@@ -11,12 +11,11 @@ const ColumnCarBoxComponent = () => {
     <CarBoxContainer $flex $column $maxWidthForColumn>
       {data.map((value, key) => { 
         return (
+          <Link to={`${value.id}`} style={{textDecoration: "none"}}>
           <CarBox $flexBox key={key}>
-              <Link to={`${value.id}`}>
                <CarBoxImage $maxWidthForImage>
                    <img src={value.car.photo || "no photo"} alt="no photo1"  style={{width: "100%"}}/>
                </CarBoxImage>
-               </Link>
                <CarBoxInfo $paddingTwoSides>
                   <CarBoxPriceWrapper>
                        <CostText $fontSize $fontWeight>{value.car.name || "no data"}</CostText>
@@ -34,6 +33,7 @@ const ColumnCarBoxComponent = () => {
                    </CarBoxButtonWrapper>
                </CarBoxInfo>
           </CarBox>
+        </Link>
         ); 
       })}
     </CarBoxContainer>

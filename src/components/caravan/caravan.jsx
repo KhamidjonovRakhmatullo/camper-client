@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Border,
+  CarSortButton,
   CarSortNavbar,
   CarSortNavbarLeft,
   CarSortNavbarLeft_ItemAndButtons,
@@ -26,6 +27,7 @@ import GridCarBoxComponent from "./gridCarBox";
 // import SortButton from "./pages/sortButton";
 import SideBarComponent from "./SideBar";
 import { caravan } from "../mock/caravandata";
+import SortButton from "./pages/sortButton";
 
 const MotorComponent = () => {
   const data = caravan.maindata;
@@ -65,16 +67,16 @@ const MotorComponent = () => {
           <SideBarComponent></SideBarComponent>
         </CostOfCarContainerHide>
         {/* sort navbar, grid and column wrapper */}
-        <div style={{width: "100%"}}>
+        <div>
           {/* sortnavbar and its underline */}
           <div>
             <CarSortNavbar>
               <CarSortNavbarLeft_ItemAndButtons>
                 {/* this shows from tablet */}
                 <SidebarItemNumberTablet>
-                  {/* <CarSortButton>
+                  <CarSortButton>
                     <SortButton></SortButton>
-                  </CarSortButton> */}
+                  </CarSortButton>
                   <CarSortNavbarLeft>
                     <CostTitle>Items</CostTitle>
                     <CostTitle $colorBlue>{data.length}</CostTitle>

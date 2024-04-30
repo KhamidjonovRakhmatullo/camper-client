@@ -48,7 +48,7 @@ const ModalComponent = () => {
               allowfullscreen
             ></iframe>
           </PopupVideo>
-        </div>
+        </div> 
       )}
     </Popup>
     <Popup

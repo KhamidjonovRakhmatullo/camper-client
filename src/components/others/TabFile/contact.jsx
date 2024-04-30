@@ -7,6 +7,9 @@ import Textarea from '@mui/joy/Textarea';
 import Button from '@mui/joy/Button';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser'
+import Select, { selectClasses } from '@mui/joy/Select';
+import Option from '@mui/joy/Option';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 const ContactComponent = () => {
 
@@ -51,7 +54,7 @@ const ContactComponent = () => {
 
       <SendQuestionWrapper>
         <InputWrapper>
-        <h2>Have you got a question</h2>
+        <h2>For personal deals</h2>
     <form
     ref={form}
     onSubmit={sendEmail}
@@ -68,8 +71,31 @@ const ContactComponent = () => {
     >
       <TextField  name="user_name"fullWidth required label="Your name" id="fullWidth" sx={{border: "none",  backgroundColor: "#FAFAFA",}}/>
       <TextField name="user_email" fullWidth required label="Your email" id="fullWidth" sx={{border: "none", backgroundColor: "#FAFAFA",}}/>
-      <Textarea name="message" required placeholder="Your question" minRows={5} sx={{backgroundColor: "#FAFAFA",}}/>
-      <Button type="submit" value="Send" sx={{height:"50px"}}>Send question</Button>
+      <Select
+      placeholder="Select your wealth"
+      name="user_wealth"
+      indicator={<KeyboardArrowDown />}
+      sx={{
+        width: "100%",
+        backgroundColor: "#FAFAFA",
+        color: "black",
+        fontWeight: "400",
+
+        [`& .${selectClasses.indicator}`]: {
+          transition: '0.2s',
+          [`&.${selectClasses.expanded}`]: {
+            transform: 'rotate(-180deg)',
+          },
+        },
+      }}
+    >
+      <Option value="$">$10,000-$100,000</Option>
+      <Option value="$">$100,000-$500,000</Option>
+      <Option value="$">$500,000-$1mln</Option>
+      <Option value="$">soqqa more...</Option>
+    </Select>
+      <Textarea name="message" required placeholder="Your target" minRows={5} sx={{backgroundColor: "#FAFAFA",}}/>
+      <Button type="submit" value="Send" sx={{height:"50px"}}>Send message</Button>
     </Box>
     </form>
        </InputWrapper>

@@ -30,13 +30,15 @@ export const SidebarAndCarBoxesContainer = styled.div`
   justify-content: center;
   align-items: start;
   background-color: #fafafa;
-  padding: 60px 30px 0px 30px;
+  padding: 60px 10% 0px 10%;
   width: 100%;
-  padding: 57px 10%;
   gap: 30px;
   @media only screen and (max-width: 1100px) {
     gap: 0px;
   }
+  /* @media only screen and (min-width: 1500px) {
+     padding: 57px 15%;
+  } */
 `;
 
 export const CostOfCarContainer = styled.div`
@@ -52,7 +54,8 @@ export const CostOfCarContainer = styled.div`
 
 export const CostOfCarContainerHide = styled.div`
   width: 100%;
-  max-width: 23%;
+  max-width: 10%;
+  min-width: 212px;
   display: flex;
   @media only screen and (max-width: 1100px) {
     display: none;
@@ -303,6 +306,16 @@ export const CarBox = styled.div`
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  &:hover {
+        background-color: #FAFAFA;
+        transform: scale(1.05);
+        transition: 0.5s ease;
+        cursor: pointer;
+        /* border: 0.9px solid #006DAB; */
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    }
 `;
 
 //other container carbox img
@@ -416,7 +429,7 @@ export const CarBoxButton = styled.button`
   &:hover {
     background-color: #006dab;
     color: #fff;
-    border: 2px solid #006dab;
+    border: 1px solid #006dab;
 
   }
   @media only screen and (min-width: 600px) {

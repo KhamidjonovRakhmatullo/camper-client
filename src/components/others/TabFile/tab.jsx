@@ -16,9 +16,9 @@ export default function TabsComponent() {
       aria-label="Placement indicator tabs"
       value={placement}
       onChange={(event, newValue) => setPlacement(newValue)}
-      sx={{border: "0px solid red", width: "100%"}}
+      sx={{border: "px solid red", width: "100%", padding: "0px 0px"}}
     >
-      <TabList underlinePlacement={placement} sx={{border:"0px solid blue",backgroundColor: "rgba(0, 109, 171, 0.20)", height: "60px",}}>
+      <TabList underlinePlacement={placement} sx={{border:"px solid blue",backgroundColor: "rgba(0, 109, 171, 0.20)", height: "60px", padding: "0px 30px"}}>
         <Tab disableIndicator value="review" sx={{width: "170px"}}>
         Item reviews
         </Tab>

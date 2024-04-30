@@ -1,58 +1,107 @@
 import React from "react";
-import { CarSortNavbarLeft, CostTitle } from "../../../styles/motorStyled";
+import { CostTitle } from "../../../styles/motorStyled";
 import { campcar } from "../../mock/mockdata";
-import { CompanyName, DividerWrapper, NameOfCar } from "../../../styles/carInfoStyle";
+import { CompanyName, DividerWrapper, ItemReviewsAndSelect, ItemReviewsCarBox, ItemReviewsCarBoxImage, ItemReviewsCarBoxLeft, ItemReviewsCarBoxRight, ItemReviewsContainer, NameOfCar } from "../../../styles/carInfoStyle";
+import { useTheme } from '@mui/material/styles';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 const ItemReviewsComponent = () => {
   const data = campcar.maindata;
   const data1 = data.slice(1, 5)
   console.log("data is:", data);
+
+  const ITEM_HEIGHT = 35;
+  const ITEM_PADDING_TOP = 8;
+  const MenuProps = {
+    PaperProps: {
+      style: {
+        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+        width: 177,
+      },
+    },
+  };
+  
+  function getStyles(name, personName, theme) {
+    return {
+      fontWeight:
+        personName.indexOf(name) === -1
+          ? theme.typography.fontWeightRegular
+          : theme.typography.fontWeightMedium,
+    };
+  }
+
+  const theme = useTheme();
+  const [personName, setPersonName] = React.useState([]);
+
+  const handleChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setPersonName(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "45px 70px 0px 70px",
-        }}
-      >
+    <ItemReviewsContainer>
+      <ItemReviewsAndSelect>
         <div style={{ display: "flex", gap: "10px" }}>
           <CostTitle>Premium Review</CostTitle>
           <CostTitle $colorBlue>{data.length}</CostTitle>
         </div>
-        <div>Select button</div>
-      </div>
+        <FormControl sx={{ width: 177, }}>
+        <InputLabel id="demo-multiple-name-label">Name</InputLabel>
+        <Select
+          labelId="demo-multiple-name-label"
+          id="demo-multiple-name"
+          multiple
+          value={personName}
+          onChange={handleChange}
+          input={<OutlinedInput label="Name" />}
+          MenuProps={MenuProps}
+        >
+          {data.map((value, key) => (
+            <MenuItem
+              style={getStyles(value, personName, theme)}
+            >
+              {value.car.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </ItemReviewsAndSelect>
       {data1.map((value, key) => {
         return (
             <div>
-          <div key={key} style={{display: "flex", justifyContent: "space-between", padding: "70px", height: "150px", marginTop: "36px"}}>
-            <div style={{display: "flex", alignItems: "center"}}>
-            <div>
-              <div>
-                <img src={value.car.photo} alt="" style={{maxWidth: "195px"}}/>
-              </div>
-            </div>
+          <ItemReviewsCarBox key={key}>
+            <ItemReviewsCarBoxLeft>
+              <ItemReviewsCarBoxImage>
+                <img src={value.car.photo} alt="img"/>
+              </ItemReviewsCarBoxImage>
             <div>
               <NameOfCar>{value.car.name}</NameOfCar>
-              <CompanyName>{value.car.company}</CompanyName>
+              <CompanyName $marginTnB>{value.car.company}</CompanyName>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sapiente.
             </div>
-            </div>
+            </ItemReviewsCarBoxLeft>
             
 
-            <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                <CompanyName $Color000 $ Size18px>ID:{value.id}</CompanyName>
-                <CompanyName $Color000 $ Size18px>Data:{value.car.date}</CompanyName>
-                <CompanyName $Color000 $ Size18px>Rate:{value.car.rate}</CompanyName>
-            </div>
-          </div>
+            <ItemReviewsCarBoxRight>
+                <CompanyName $Color000 $ Size18px>ID: {value.id}</CompanyName>
+                <CompanyName $Color000 $ Size18px>Data: {value.car.date}</CompanyName>
+                <CompanyName $Color000 $ Size18px>Rate: {value.car.rate}</CompanyName>
+            </ItemReviewsCarBoxRight>
+          </ItemReviewsCarBox>
           <DividerWrapper></DividerWrapper>
           </div>
 
         );
       })}
-    </div>
+    </ItemReviewsContainer>
   );
 };
 

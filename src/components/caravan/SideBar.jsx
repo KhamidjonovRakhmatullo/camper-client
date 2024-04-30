@@ -52,9 +52,9 @@ const SideBarComponent = () => {
           <Typography>
           <Border $marginBottom30></Border>
           <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
-      <FormControlLabel required control={<Checkbox />} label="Required" />
-      <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
+      <FormControlLabel control={<Checkbox/>} label="Label" />
+      <FormControlLabel control={<Checkbox/>} label="Required" />
+      <FormControlLabel control={<Checkbox/>} label="Disabled" />
     </FormGroup>
           </Typography>
         </AccordionDetails>
@@ -75,8 +75,8 @@ const SideBarComponent = () => {
           <Typography>
           <Border $marginBottom30></Border>
           <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Aidal" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Knal" />
+      <FormControlLabel control={<Checkbox/>} label="Aidal" />
+      <FormControlLabel control={<Checkbox/>} label="Knal" />
     </FormGroup>
           </Typography>
         </AccordionDetails>
@@ -96,9 +96,9 @@ const SideBarComponent = () => {
           <Typography>
           <Border $marginBottom30></Border>
           <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="1 year" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="2 year" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="1.5 year" />
+      <FormControlLabel control={<Checkbox/>} label="1 year" />
+      <FormControlLabel control={<Checkbox/>} label="2 year" />
+      <FormControlLabel control={<Checkbox/>} label="1.5 year" />
     </FormGroup>
           </Typography>
         </AccordionDetails>
@@ -118,9 +118,9 @@ const SideBarComponent = () => {
           <Typography>
           <Border $marginBottom30></Border>
           <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="2" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="3-4" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="5+" />
+      <FormControlLabel control={<Checkbox/>} label="2" />
+      <FormControlLabel control={<Checkbox/>} label="3-4" />
+      <FormControlLabel control={<Checkbox/>} label="5+" />
     </FormGroup>
           </Typography>
         </AccordionDetails>
@@ -140,9 +140,9 @@ const SideBarComponent = () => {
           <Typography>
           <Border $marginBottom30></Border>
           <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Seoul" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Deajon" />
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Busan" />
+      <FormControlLabel control={<Checkbox/>} label="Seoul" />
+      <FormControlLabel control={<Checkbox/>} label="Deajon" />
+      <FormControlLabel control={<Checkbox/>} label="Busan" />
     </FormGroup>
           </Typography>
         </AccordionDetails>

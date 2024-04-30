@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { campcar } from "../mock/mockdata";
 import {
   CarBoxButtonWrapper2,
   CarInfoContainer,
@@ -14,6 +13,7 @@ import {
   InfoText,
   InfoTitle,
   InfoWrapper,
+  InfoWrapper2,
   NameAndPriceWrapper,
   NameOfCar,
   OtherInfosContainer,
@@ -25,11 +25,12 @@ import ventilated1 from "../assets/ventilated.png";
 import heating1 from "../assets/heating.png";
 import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
+import { caravan } from "../mock/caravandata";
 
-const CarInfo = () => {
+const CarvanInfoComponent = () => {
   let { id } = useParams();
   console.log("userId:", id);
-  const resultData = campcar.maindata.find(
+  const resultData = caravan.maindata.find(
     (value) => value.id === parseInt(id)
   );
   console.log("id Info:", resultData);
@@ -38,27 +39,31 @@ const CarInfo = () => {
     <CarInfoContainer>
        <MotorBgImage>
         <HeadTitle>
-          {resultData.car.name}
+          {resultData.caravan.name}
         </HeadTitle>
         <CarBoxButtonWrapper2 $MaxWidth>
               <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>ADD TO CART</CarBoxButton>
               <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>COMPARE</CarBoxButton>
             </CarBoxButtonWrapper2>
       </MotorBgImage>
+      <div style={{padding: '30px 0px 0px 0px'}}>
       <ImageAndInfoContainer $AlignCenter>
+        <InfoWrapper2>
         <ImageWrapper>
-          <img src={resultData.car.photo || "Data not found"} alt="car image" />
+          <img src={resultData.caravan.image || "Data not found"} alt="car image" />
         </ImageWrapper>
+        </InfoWrapper2>
+        <InfoWrapper2>
         <InfoWrapper>
           <NameAndPriceWrapper>
             <div>
               <NameOfCar $MarginBottom10px>
-                {resultData.car.name || "Data not found"}
+                {resultData.caravan.name || "Data not found"}
               </NameOfCar>
-              <div>{resultData.car.type || "Data not found"}</div>
+              <div>{resultData.caravan.type || "Data not found"}</div>
             </div>
             <NameOfCar $ColorBlue $Size30px>
-              {resultData.car.cost || "Data not found"}
+              {resultData.caravan.cost || "Data not found"}
             </NameOfCar>
           </NameAndPriceWrapper>
           <DividerWrapper></DividerWrapper>
@@ -76,12 +81,13 @@ const CarInfo = () => {
             </OtherInfosWrapper>
 
             <OtherInfosWrapper>
-              <CompanyName>{resultData.car.company}</CompanyName>
-              <CompanyName>{resultData.car.people}</CompanyName>
-              <CompanyName>{resultData.car.license}</CompanyName>
+              <CompanyName>{resultData.caravan.company}</CompanyName>
+              <CompanyName>{resultData.caravan.people}</CompanyName>
+              <CompanyName>{resultData.caravan.license}</CompanyName>
             </OtherInfosWrapper>
           </OtherInfosContainer>
         </InfoWrapper>
+        </InfoWrapper2>
       </ImageAndInfoContainer>
 
       <div style={{ marginTop: "70px" }}>
@@ -163,9 +169,10 @@ const CarInfo = () => {
           </DocsWrapper>
         </ImageAndInfoContainer>
       </div>
+      </div>
       <TabsComponent></TabsComponent>
     </CarInfoContainer>
   );
 };
 
-export default CarInfo;
+export default CarvanInfoComponent;

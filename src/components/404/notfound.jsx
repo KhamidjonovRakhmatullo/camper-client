@@ -15,7 +15,7 @@ const Notfound = () => {
         <NotFoundContainer>
             <Price $fontSize80>404</Price>
             <StdLogo>Page Not Found </StdLogo>
-            <CarBoxButton onClick={handleBack}>Back Home</CarBoxButton>
+            <CarBoxButton onClick={handleBack} style={{padding: "16px 10%"}}>Back Home</CarBoxButton>
             <p style={{color: "#006DAB"}}>Click the button to go back</p>
         </NotFoundContainer>
     </div>

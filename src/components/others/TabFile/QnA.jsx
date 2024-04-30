@@ -10,7 +10,7 @@ import Textarea from '@mui/joy/Textarea';
 import Button from '@mui/joy/Button';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser'
-import { AskedQuestionsWrapper, FAQConrainer, InputWrapper, SendQuestionWrapper } from '../../../styles/carInfoStyle';
+import { AnswerQuestionsWrapper, AskedQuestionsWrapper, DividerWrapper, FAQConrainer, InputWrapper, QnAWrapper, SendQuestionWrapper } from '../../../styles/carInfoStyle';
 
 export default function QnAComponent() {
     const form = useRef();
@@ -34,9 +34,39 @@ export default function QnAComponent() {
       };
   return (
     <FAQConrainer>
-   <AskedQuestionsWrapper>
-    
-   </AskedQuestionsWrapper>
+   <AnswerQuestionsWrapper>
+      <QnAWrapper $marginTop37>
+        <p>Name</p>
+        <h3>Question Lorem ipsum dolor sit amet ?</h3>
+        <DividerWrapper></DividerWrapper>
+        
+      </QnAWrapper>
+      <QnAWrapper>
+        <p>Name</p>
+        <h3>Question Lorem ipsum dolor sit amet ?</h3>
+        <DividerWrapper></DividerWrapper>
+        
+      </QnAWrapper>
+      <QnAWrapper>
+        <p>Name</p>
+        <h3>Question Lorem ipsum dolor sit amet ?</h3>
+        <DividerWrapper></DividerWrapper>
+        
+      </QnAWrapper>
+      <QnAWrapper>
+        <p>Name</p>
+        <h3>Question Lorem ipsum dolor sit amet ?</h3>
+        <DividerWrapper></DividerWrapper>
+        
+      </QnAWrapper>
+
+      <QnAWrapper>
+        <p>Name</p>
+        <h3>Question Lorem ipsum dolor sit amet ?</h3>
+        <DividerWrapper></DividerWrapper>
+        
+      </QnAWrapper>
+   </AnswerQuestionsWrapper>
 
     <SendQuestionWrapper>
         <InputWrapper>

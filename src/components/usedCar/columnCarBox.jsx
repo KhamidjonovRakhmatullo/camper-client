@@ -1,41 +1,44 @@
 import React from 'react'
-import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImgWrapper, CarBoxInfo, CarBoxPriceWrapper, 
-    CarBoxRateWrapper, CostText, Price } from '../../styles/motorStyled'
-import { caravan } from '../mock/caravandata'
+import { campcar } from "../mock/mockdata";
+import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxImgWrapper, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
 import star1 from '../assets/carStar.svg'
+import { Link } from 'react-router-dom';
 
-const ColumnCarBox = () => {
-    const data = caravan.maindata
-    console.log ("All result:", data)
-    return(
+const ColumnCarBoxComponent = () => {
+    const data = campcar.maindata.slice(10,19)
+
+  console.log("camp data:", data);
+  return (
     <CarBoxContainer $flex $column $maxWidthForColumn>
-        {data.map((value, key) => {
-            return(
-                <CarBox $flexBox key={key}>
-                <CarBoxImgWrapper>
-                    <img src={value.caravan.image} alt="car photo" />
-                </CarBoxImgWrapper>
-                <CarBoxInfo $paddingTwoSides> 
-                    <CarBoxPriceWrapper>
-                        <CostText $fontSize $fontWeight>{value.caravan.name}</CostText>
-                        <Price>{value.caravan.price}</Price>
-                    </CarBoxPriceWrapper>
-                    <BrandName>{value.caravan.company}
-                        <CarBoxRateWrapper>
-                            <p>{value.caravan.rate}</p>
-                            <img src={star1} alt="starIcon" />
-                        </CarBoxRateWrapper>
-                    </BrandName>
-                    <CarBoxButtonWrapper $marginTop45>
-                        <CarBoxButton>ORDER</CarBoxButton>
-                        <CarBoxButton>COMPARE</CarBoxButton>
-                    </CarBoxButtonWrapper>
-                </CarBoxInfo>
-            </CarBox>
-            )
-        })}
+      {data.map((value, key) => { 
+        return (
+          <Link to={`${value.id}`} style={{textDecoration: "none"}}>
+          <CarBox $flexBox key={key}>
+               <CarBoxImage $maxWidthForImage>
+                   <img src={value.car.photo || "no photo"} alt="no photo1"  style={{width: "100%"}}/>
+               </CarBoxImage>
+               <CarBoxInfo $paddingTwoSides>
+                  <CarBoxPriceWrapper>
+                       <CostText $fontSize $fontWeight>{value.car.name || "no data"}</CostText>
+                       <Price>{value.car.cost || "no data"}</Price>
+                  </CarBoxPriceWrapper>
+                   <BrandName>{value.car.company || "no data"}
+                       <CarBoxRateWrapper>
+                           <p> {value.car.rate || "no data"}</p>
+                           <img src={star1} alt="starIcon" />
+                       </CarBoxRateWrapper>
+                   </BrandName>
+                   <CarBoxButtonWrapper $marginTop45>
+                         <CarBoxButton $paddingColumn>ORDER</CarBoxButton>
+                         <CarBoxButton $$paddingRnL $paddingColumn>COMPARE</CarBoxButton>
+                   </CarBoxButtonWrapper>
+               </CarBoxInfo>
+          </CarBox>
+        </Link>
+        ); 
+      })}
     </CarBoxContainer>
-  )
-}
+  );
+}   
 
-export default ColumnCarBox
+export default ColumnCarBoxComponent
