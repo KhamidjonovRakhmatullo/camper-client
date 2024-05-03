@@ -42,7 +42,7 @@ const GridCarBoxComponent = () => {
                     <img src={star1} alt="starIcon" />
                   </CarBoxRateWrapper>
                 </BrandName>
-                <Price>{value.caravan.cost || "no data"}</Price>
+                <Price>{value.caravan.price || "no data"}</Price>
                 <CarBoxButtonWrapper>
                   <CarBoxButton>ORDER</CarBoxButton>
                   <CarBoxButton $paddingRwnL>COMPARE</CarBoxButton>

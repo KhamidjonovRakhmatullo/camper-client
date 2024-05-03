@@ -45,6 +45,10 @@ export const CampingPlaceImgWrappper = styled.div`
     max-width: 395px;
     max-height: 300px;
     border-radius: 10px;
+    /* &:hover{
+      color: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+    } */
   }
 `;
 
@@ -97,7 +101,7 @@ export const CampPlaceImgWrapper = styled.div`
   img {
     width: 100%;
     max-width: 194px;
-    max-height: 147px;
+    height: 147px;
     border-radius: 10px;
     background: linear-gradient(
         0deg,
@@ -139,7 +143,7 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 400px) {
   flex-direction: column;
   gap: 17px;
   }
@@ -159,6 +163,7 @@ align-items: start;
 /* border: 1px solid black; */
 gap: 17px;
 `
+
 export const LocationInfoRight =styled.div`
 flex: 4;
 display: flex;
@@ -203,13 +208,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
+height: 522px;
 margin-top: 50px;
 margin-bottom: 80px;
-img{
-  border-radius: 10px;
-  width: 100%;
-  max-width: 1226px;
-  max-height: 552px;
-}
+@media only screen and (max-width: 700px) {
+    height: 322px;
+  }
 `
 

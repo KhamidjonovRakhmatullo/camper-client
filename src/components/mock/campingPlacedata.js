@@ -1,8 +1,14 @@
 // import place1 from "../assets/img-1.png"
-import place1 from '../assets/place1.webp'
-import place2 from '../assets/campsite1.png'
-import place3 from '../assets/campsite2.png'
-import place4 from '../assets/campsite3.png'
+// import place1 from '../assets/place1.webp'
+import place1 from '../assets/campsite1.png'
+import place2 from '../assets/campsite2.png'
+import place3 from '../assets/campsite3.png'
+import place4 from '../assets/campingPlace-4.jpeg'
+import place5 from '../assets/campingPlace-5.jpeg'
+import place6 from '../assets/campingPlace-6.png'
+import place7 from '../assets/campingPlace-7.jpeg'
+import place8 from '../assets/campingPlace-8.jpeg'
+import place9 from '../assets/campingPlace-9.jpeg'
 
 export const campingPlace = {
   maindata: [
@@ -10,20 +16,20 @@ export const campingPlace = {
       id: 1,
       campingPlace: {
         name: "Campsite A",
-        location: "대구 중구",
-        city: "대구",
+        location: "충청남도 천안시",
+        city: "천안",
         photo: `${place1}`,
-        phone_number: "010-1234-5678",
+        phone_number: "010-7890-1234",
         working_hour: {
-          from: "11:00",
-          to: "20:00",
+          from: "10:00",
+          to: "22:00",
         },
         home_page: "campsiteA.com",
         description:
-          "Campsite A offers serene camping spots nestled in the heart of Daegu. Enjoy breathtaking views and a peaceful atmosphere perfect for relaxation.",
+          "Campsite A in Cheonan, Chungcheongnam-do, offers a perfect blend of nature and convenience. Enjoy camping in a serene environment with easy access to city amenities.",
         map: {
-          latitude: "35.848199",
-          longitude: "128.589667",
+          latitude: "36.815673",
+          longitude: "127.113049",
         },
       },
     },
@@ -97,7 +103,7 @@ export const campingPlace = {
         name: "Campsite E",
         location: "전라남도 여수시",
         city: "여수",
-        photo: `${place1}`,
+        photo: `${place5}`,
         phone_number: "010-5678-9012",
         working_hour: {
           from: "07:00",
@@ -118,7 +124,7 @@ export const campingPlace = {
         name: "Campsite F",
         location: "경기도 수원시",
         city: "수원",
-        photo: `${place1}`,
+        photo: `${place6}`,
         phone_number: "010-6789-0123",
         working_hour: {
           from: "12:00",
@@ -139,7 +145,7 @@ export const campingPlace = {
         name: "Campsite G",
         location: "충청남도 천안시",
         city: "천안",
-        photo: `${place1}`,
+        photo: `${place7}`,
         phone_number: "010-7890-1234",
         working_hour: {
           from: "10:00",
@@ -160,7 +166,7 @@ export const campingPlace = {
         name: "Campsite H",
         location: "경상북도 포항시",
         city: "포항",
-        photo: ` ${place1}`,
+        photo: ` ${place8}`,
         phone_number: "010-8901-2345",
         working_hour: {
           from: "09:00",
@@ -181,7 +187,7 @@ export const campingPlace = {
         name: "Campsite I",
         location: "경상남도 진주시",
         city: "진주",
-        photo: `${place1}`,
+        photo: `${place9}`,
         phone_number: "010-9012-3456",
         working_hour: {
           from: "08:00",

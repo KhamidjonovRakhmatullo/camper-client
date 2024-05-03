@@ -1,8 +1,5 @@
-import React from "react";
-import campsite1 from "../assets/place1.webp";
 import {
   CampPlaceImgWrapper,
-  CampPlaceImgWrapper2,
   CampPlaceInfoContainer,
   CampPlaceInfoContainer2,
   CampPlaceLocation,
@@ -24,10 +21,21 @@ import location1 from '../assets/carbon_location.svg'
 import phone1 from '../assets/carbon_phone.svg'
 import clock1 from '../assets/bi_clock.svg'
 import home1 from '../assets/codicon_home.svg'
-import koreamap1 from '../assets/Screenshot 2024-04-30 at 8.08.45 PM.png'
+import { useEffect } from "react";
+import place1 from '../assets/campsite1.png'
+import place2 from '../assets/campsite2.png'
+import place3 from '../assets/campsite3.png'
+import place4 from '../assets/campingPlace-4.jpeg'
+import place5 from '../assets/campingPlace-5.jpeg'
+import place6 from '../assets/campingPlace-6.png'
+import place7 from '../assets/campingPlace-7.jpeg'
+import place8 from '../assets/campingPlace-8.jpeg'
+import place9 from '../assets/campingPlace-9.jpeg'
 
 
 const CampingPlaceInfoComponent = () => {
+
+  //multi carousel
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -46,6 +54,7 @@ const CampingPlaceInfoComponent = () => {
     },
   };
 
+  //use params 
   const {id} = useParams();
   console.log ("userId", id)
   const data1 =campingPlace.maindata
@@ -53,6 +62,51 @@ const CampingPlaceInfoComponent = () => {
     (value) => value.id === parseInt(id)
   );
   console.log("id Info:", resultData);
+
+//map edits
+  const new_script = (src) => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.addEventListener("load", () => {
+        resolve();
+      });
+      script.addEventListener("error", (e) => {
+        reject(e);
+      });
+      document.head.appendChild(script);
+    });
+  };
+
+  useEffect(() => {
+    const my_script = new_script(
+      "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=c98f8997cad4ba538b73bfec3d6153dc"
+    );
+    my_script.then(() => {
+      console.log("script loaded!!!");
+      const kakao = window["kakao"];
+      const latitude = resultData.campingPlace.map.latitude
+      const longitude = resultData.campingPlace.map.longitude
+      
+      kakao.maps.load(() => {
+        const mapContainer = document.getElementById("map");
+        const options = {
+          center: new kakao.maps.LatLng(latitude, longitude),
+          level: 3,
+        };
+        const map = new kakao.maps.Map(mapContainer, options);
+
+        const markerPositions = [new kakao.maps.LatLng(latitude, longitude)];
+
+        markerPositions.forEach((position) => {
+          const marker = new kakao.maps.Marker({
+            position: position,
+          });
+          marker.setMap(map);
+        });
+      });
+    });
+  }, [resultData.campingPlace.map.latitude, resultData.campingPlace.map.longitude]);
 
   return (
     <CampPlaceInfoContainer>
@@ -69,28 +123,31 @@ const CampingPlaceInfoComponent = () => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place1} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place2} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place3} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place4} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place5} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place6} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place7} alt="img" />
         </CampPlaceImgWrapper>
         <CampPlaceImgWrapper>
-          <img src={campsite1} alt="img" />
+          <img src={place8} alt="img" />
+        </CampPlaceImgWrapper>
+        <CampPlaceImgWrapper>
+          <img src={place9} alt="img" />
         </CampPlaceImgWrapper>
       </Carousel>
       <CampPlaceName>
@@ -140,7 +197,7 @@ const CampingPlaceInfoComponent = () => {
       </DescriptionWrapper>
 
       <MapWrapper1>
-        <img src={koreamap1} alt="img" />
+        <div id="map" className="map" />
       </MapWrapper1>
 
 

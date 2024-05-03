@@ -16,10 +16,12 @@ import UsedCarInfoComponent from "./others/usedCarInfo";
 import MotorInfoComponent from "./others/motorInfo";
 import CampingPlaceInfoComponent from "./others/campingPlaceInfo";
 import MultiCarouselInfoComponent from "./others/multiCarouselInfo";
+import CreateAccountComponent from "./navbar/pages/createAccount";
 
 const RouterComponent = () => {
   const location = useLocation()
-  const hideNavabr = location.pathname !=="/notfound"
+  const hideNavabr = location.pathname !=="/notfound" && location.pathname !== "/createAccount"; 
+  // const hide = location.pathname !== "createAccount"; 
   return (
     <>
    
@@ -39,6 +41,8 @@ const RouterComponent = () => {
         <Route path="usedcar/:id" element={<UsedCarInfoComponent/>}/>
         <Route path="campingPlace/:id" element={<CampingPlaceInfoComponent/>}/>
         <Route path="multiCarousel/:id" element={< MultiCarouselInfoComponent/>}/>
+
+        <Route path="/createAccount" element={<CreateAccountComponent/>}/>
       </Routes>
      
       {hideNavabr && <FooterComponent/>}

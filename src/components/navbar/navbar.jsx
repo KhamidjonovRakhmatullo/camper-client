@@ -2,10 +2,10 @@ import React from "react";
 import {  NavbarContainer, StdLogo, NavbarP, NavItemsWrapper, NavItemWrapper2, MenuImg, LogoWrapper, NavItemsContainer, NavRightWrapper } from "../../styles/NavStyled";
 import grommet1 from "../assets/grommet.svg";
 import cart1 from "../assets/cart.svg";
-import user1 from "../assets/user.svg";
 import { Link } from "react-router-dom";
 import LeftMenuButton from "./pages/leftMenu";
 import RightMenuButton from "./pages/RightMenu";
+import SignInComponent from "./pages/signIn";
 
 const NavbarComponent = () => {
   return (
@@ -55,8 +55,8 @@ const NavbarComponent = () => {
 
         <NavRightWrapper>
           <img src={cart1} alt="cart" />
-          <img src={user1} alt="user" />
-          <div style={{ display: "flex",gap: "5px" }}>
+          <SignInComponent/>
+          <div style={{ display: "flex", gap: "5px" }}>
            <NavbarP>En</NavbarP>
             <img src={grommet1} alt="icon" />
           </div>

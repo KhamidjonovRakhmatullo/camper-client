@@ -91,4 +91,46 @@ cursor: pointer;
 }
 `
 
+export const SignInTitle =styled.div`
+color: var(--text, #373737);
+font-family: "Open Sans";
+font-size: 27px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 25px;
+`
 
+export const SignInInput=styled.div`
+display: flex;
+flex-direction: column;
+align-items: start;
+/* border: 1px solid red; */
+gap: 10px;
+width: 100%;
+
+p{
+color: rgba(55, 55, 55, 0.80);
+font-family: "Open Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+`
+
+export const SignInCheckBox =styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+
+color: #373737;
+font-family: "Open Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+`
+
+// export const Dec
