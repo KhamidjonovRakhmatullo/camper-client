@@ -6,6 +6,11 @@ justify-content: space-around;
 align-items: center;
 padding: 22px 70px;
 background-color: white;
+/* border: 1px solid red; */
+/* position: fixed;
+width: 100%;
+z-index: 1100; */
+box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
 @media only screen and (max-width: 600px){
    padding: 15px 30px;
 }
@@ -26,6 +31,9 @@ font-size: 38px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+@media only screen and (max-width: 600px){
+   font-size: 28px;
+}
 `
 
 export const MenuImg =styled.div`

@@ -81,12 +81,14 @@ export const CampingPlaceLocation = styled.div`
 export const CampPlaceInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #fafafa;
   
 `
 
 export const CampPlaceInfoContainer2 = styled.div`
-  padding: 0px 10% 0px 10%;
+  padding: 0px 100px 0px 100px;
+  max-width: 1390px;
 `;
 
 

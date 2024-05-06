@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import video1 from "../components/assets/video-1.png";
 
 export const HomeCarousel = styled.div`
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
@@ -66,9 +65,9 @@ export const RecommendImgWrapper = styled.div`
   }
   @media only screen and (max-width: 600px) {
     img {
-    max-width: 220px;
-    max-height: 100px;
-  }
+      max-width: 220px;
+      max-height: 100px;
+    }
   }
 `;
 
@@ -125,6 +124,8 @@ export const VideoContainer = styled.div`
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     border-radius: 15px;
+    /* transform: scale(1.05);
+    transition: 0.5s ease; */
   }
   @media only screen and (max-width: 1000px) {
     grid-template-columns: auto auto;
@@ -195,10 +196,13 @@ export const VideoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${video1});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 292px;
+  color: white;
   img {
     width: 100%;
     cursor: pointer;

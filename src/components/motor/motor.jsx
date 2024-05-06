@@ -65,9 +65,10 @@ const MotorComponent = () => {
         <CostOfCarContainerHide>
           <SideBarComponent></SideBarComponent>
         </CostOfCarContainerHide>
+
         {/* sort navbar, grid and column wrapper */}
-        
-        <div style={{width: ""}}>
+        <div style={{width: "100%", maxWidth: "1250px"}}>
+          
           {/* sortnavbar and its underline */}
           <div>
             <CarSortNavbar>

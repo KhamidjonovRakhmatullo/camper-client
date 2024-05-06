@@ -17,6 +17,7 @@ import MotorInfoComponent from "./others/motorInfo";
 import CampingPlaceInfoComponent from "./others/campingPlaceInfo";
 import MultiCarouselInfoComponent from "./others/multiCarouselInfo";
 import CreateAccountComponent from "./navbar/pages/createAccount";
+import CartComponent from "./cart/cart";
 
 const RouterComponent = () => {
   const location = useLocation()
@@ -29,20 +30,27 @@ const RouterComponent = () => {
       <Routes>
         <Route path="*" element={<Notfound/>} />
         <Route path="/" element={<HomeComponent/>}/>
+
         <Route path="/motor" element={<MotorComponent/>}/>
         <Route path="caravan" element={<CaravanComponent/>}/>
         <Route path="tuning" element={<TuningComponent/>}/>
         <Route path="usedCar" element={<UsedCarComponent/>}/>
         <Route path="campingPlace" element={<CampingPlaceComponent/>}/>
+
         <Route path="useState" element={<UseStateComponent/>}/>
+
         <Route path="motor/:id" element={<MotorInfoComponent/>}/>
         <Route path="caravan/:id" element={<CaravanInfoComponent/>}/>
         <Route path="tuning/:id" element={< TuningInfoComponent/>}/>
         <Route path="usedcar/:id" element={<UsedCarInfoComponent/>}/>
         <Route path="campingPlace/:id" element={<CampingPlaceInfoComponent/>}/>
         <Route path="multiCarousel/:id" element={< MultiCarouselInfoComponent/>}/>
-
+        
+        {/* <Route path="signIn" element={<SignInComponent/>}/> */}
         <Route path="/createAccount" element={<CreateAccountComponent/>}/>
+
+        <Route path="motor/:id/cart" element={<CartComponent/>}/>
+        
       </Routes>
      
       {hideNavabr && <FooterComponent/>}

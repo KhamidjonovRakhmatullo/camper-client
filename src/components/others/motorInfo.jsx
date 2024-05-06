@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { campcar } from "../mock/mockdata";
 import {
   CarBoxButtonWrapper2,
@@ -19,6 +19,7 @@ import {
   NameOfCar,
   OtherInfosContainer,
   OtherInfosWrapper,
+  WhiteButton,
 } from "../../styles/carInfoStyle";
 import comfort1 from "../assets/comfort.png";
 import tidying1 from "../assets/tidying.png";
@@ -152,8 +153,9 @@ const MotorInfoComponent = () => {
             <InfoTitle>Heating when driving</InfoTitle>
             <InfoText>{resultData.docs.heating}</InfoText>
             <CarBoxButtonWrapper2>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+            <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
+              <WhiteButton>ADD TO CART</WhiteButton></Link>
+              <WhiteButton>COMPARE</WhiteButton>
             </CarBoxButtonWrapper2>
           </DocsWrapper>
           <ImgWrapper>
@@ -163,8 +165,10 @@ const MotorInfoComponent = () => {
             <InfoTitle>Heating when driving</InfoTitle>
             <InfoText>{resultData.docs.heating}</InfoText>
             <CarBoxButtonWrapper2>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+            <Link to={`cart`} style={{textDecoration: "none",width: "100%"}}>
+              <WhiteButton>ADD TO CART</WhiteButton>
+            </Link>
+              <WhiteButton>COMPARE</WhiteButton>
             </CarBoxButtonWrapper2>
           </DocsWrapper>
         </ImageAndInfoContainer>

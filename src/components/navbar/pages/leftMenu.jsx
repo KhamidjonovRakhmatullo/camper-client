@@ -163,7 +163,7 @@ export default function LeftMenuButton() {
         <Divider />
 
         <Link
-          to="account"
+          to="createAccount"
           style={{ textDecoration: "none", color: "#006DAB" }}
         >
           <ListItem sx={{ margin: "10px 0px" }}>

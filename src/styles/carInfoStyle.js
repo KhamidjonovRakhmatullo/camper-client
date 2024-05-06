@@ -209,6 +209,32 @@ export const CarBoxButtonWrapper2 = styled.div`
   }
 `;
 
+export const WhiteButton =styled.button`
+  width: 100%;
+  padding: 14px 4%;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid var(--blue, #006dab);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+
+  color: #006DAB;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  cursor: pointer;
+  &:hover {
+    background-color: #006dab;
+    color: #fff;
+    border: 1px solid #006dab;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+`
+
+
 export const TabContainer=styled.div`
 background-Color: rgba(0, 109, 171, 0.20);
 height: 60px;
@@ -221,7 +247,9 @@ display: flex;
 `
 export const ItemReviewsContainer =styled.div`
 /* border: 1px solid black; */
-padding: 0px 54px;
+width: 100%;
+max-width: 1366px;
+/* padding: 0px 54px; */
 @media only screen and (max-width: 836px) {
     padding: 0px 14px;
   }
@@ -293,7 +321,9 @@ gap: 14px;
 export const FAQConrainer =styled.div`
 display: flex;
 gap: 50px;
-padding: 24px 54px;
+width: 100%;
+max-width: 1366px;
+padding: 24px 0px;
 @media only screen and (max-width: 1000px) {
    display: flex;
    flex-direction: column;
@@ -348,7 +378,7 @@ export const InputWrapper =styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-border: 1px solid blue;
+/* border: 1px solid blue; */
 width: 100%;
 padding: 30px;
 border-radius: 10px;
@@ -371,9 +401,15 @@ flex: 2;
 display: flex;
 flex-direction: column;
 gap: 20px;
-img{
-  width: 100%;
-}
+width: 100%;
+`
+export const MapWrapper1 =styled.div`
+width: 100%;
+height: 359px;
+/* border: 1px solid red; */
+@media only screen and (max-width: 600px) {
+   height: 250px;
+  }
 `
 
 export const NumberAndEmailWrapper =styled.div`

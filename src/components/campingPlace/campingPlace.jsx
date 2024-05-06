@@ -15,7 +15,7 @@ const CampingPlaceComponent = () => {
          <MotorBgImage $CaravanBg>
           <CostText $fontSize $colorWhite>Home/Camping Place</CostText>
           <CostTitle $fontSize27 $fontWeight700 $paddingTop style={{color: "#fff"}} >Our Ranges</CostTitle>
-          <Price $fontSize80 $colorWhiteH1>Camping Places</Price>
+          <Price $fontSize80 $colorWhiteH1 $fontSize30>Camping Places</Price>
          </MotorBgImage>
          <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
          <CampingPlaceBoxContainer>

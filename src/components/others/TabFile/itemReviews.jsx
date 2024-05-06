@@ -47,61 +47,61 @@ const ItemReviewsComponent = () => {
     );
   };
   return (
-    <ItemReviewsContainer>
-      <ItemReviewsAndSelect>
-        <div style={{ display: "flex", gap: "10px" }}>
-          <CostTitle>Premium Review</CostTitle>
-          <CostTitle $colorBlue>{data.length}</CostTitle>
-        </div>
-        <FormControl sx={{ width: 177, }}>
-        <InputLabel id="demo-multiple-name-label">Name</InputLabel>
-        <Select
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Name" />}
-          MenuProps={MenuProps}
-        >
-          {data.map((value, key) => (
-            <MenuItem
-              style={getStyles(value, personName, theme)}
-            >
-              {value.car.name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </ItemReviewsAndSelect>
-      {data1.map((value, key) => {
-        return (
-            <div>
-          <ItemReviewsCarBox key={key}>
-            <ItemReviewsCarBoxLeft>
-              <ItemReviewsCarBoxImage>
-                <img src={value.car.photo} alt="img"/>
-              </ItemReviewsCarBoxImage>
-            <div>
-              <NameOfCar>{value.car.name}</NameOfCar>
-              <CompanyName $marginTnB>{value.car.company}</CompanyName>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sapiente.
-            </div>
-            </ItemReviewsCarBoxLeft>
-            
-
-            <ItemReviewsCarBoxRight>
-                <CompanyName $Color000 $ Size18px>ID: {value.id}</CompanyName>
-                <CompanyName $Color000 $ Size18px>Data: {value.car.date}</CompanyName>
-                <CompanyName $Color000 $ Size18px>Rate: {value.car.rate}</CompanyName>
-            </ItemReviewsCarBoxRight>
-          </ItemReviewsCarBox>
-          <DividerWrapper></DividerWrapper>
+    <div style={{display: 'flex', justifyContent :"center", alignItems: 'center'}}>
+      <ItemReviewsContainer>
+        <ItemReviewsAndSelect>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <CostTitle>Premium Review</CostTitle>
+            <CostTitle $colorBlue>{data.length}</CostTitle>
           </div>
-
-        );
-      })}
-    </ItemReviewsContainer>
+          <FormControl sx={{ width: 177, }}>
+          <InputLabel id="demo-multiple-name-label">Name</InputLabel>
+          <Select
+            labelId="demo-multiple-name-label"
+            id="demo-multiple-name"
+            multiple
+            value={personName}
+            onChange={handleChange}
+            input={<OutlinedInput label="Name" />}
+            MenuProps={MenuProps}
+          >
+            {data.map((value, key) => (
+              <MenuItem
+                style={getStyles(value, personName, theme)}
+              >
+                {value.car.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </ItemReviewsAndSelect>
+        {data1.map((value, key) => {
+          return (
+              <div>
+            <ItemReviewsCarBox key={key}>
+              <ItemReviewsCarBoxLeft>
+                <ItemReviewsCarBoxImage>
+                  <img src={value.car.photo} alt="img"/>
+                </ItemReviewsCarBoxImage>
+              <div>
+                <NameOfCar>{value.car.name}</NameOfCar>
+                <CompanyName $marginTnB>{value.car.company}</CompanyName>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sapiente.
+              </div>
+              </ItemReviewsCarBoxLeft>
+      
+              <ItemReviewsCarBoxRight>
+                  <CompanyName $Color000 $ Size18px>ID: {value.id}</CompanyName>
+                  <CompanyName $Color000 $ Size18px>Data: {value.car.date}</CompanyName>
+                  <CompanyName $Color000 $ Size18px>Rate: {value.car.rate}</CompanyName>
+              </ItemReviewsCarBoxRight>
+            </ItemReviewsCarBox>
+            <DividerWrapper></DividerWrapper>
+            </div>
+          );
+        })}
+      </ItemReviewsContainer>
+    </div>
   );
 };
 

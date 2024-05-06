@@ -33,66 +33,66 @@ export default function QnAComponent() {
           );
       };
   return (
-    <FAQConrainer>
-   <AnswerQuestionsWrapper>
-      <QnAWrapper $marginTop37>
-        <p>Name</p>
-        <h3>Question Lorem ipsum dolor sit amet ?</h3>
-        <DividerWrapper></DividerWrapper>
-        
-      </QnAWrapper>
-      <QnAWrapper>
-        <p>Name</p>
-        <h3>Question Lorem ipsum dolor sit amet ?</h3>
-        <DividerWrapper></DividerWrapper>
-        
-      </QnAWrapper>
-      <QnAWrapper>
-        <p>Name</p>
-        <h3>Question Lorem ipsum dolor sit amet ?</h3>
-        <DividerWrapper></DividerWrapper>
-        
-      </QnAWrapper>
-      <QnAWrapper>
-        <p>Name</p>
-        <h3>Question Lorem ipsum dolor sit amet ?</h3>
-        <DividerWrapper></DividerWrapper>
-        
-      </QnAWrapper>
-
-      <QnAWrapper>
-        <p>Name</p>
-        <h3>Question Lorem ipsum dolor sit amet ?</h3>
-        <DividerWrapper></DividerWrapper>
-        
-      </QnAWrapper>
-   </AnswerQuestionsWrapper>
-
-    <SendQuestionWrapper>
-        <InputWrapper>
-        <h2>Have you got a question</h2>
-    <form
-    ref={form}
-    onSubmit={sendEmail}
-    style={{width: "100%"}}
-    >
-          <Box
-        sx={{
-          width: "100%",
-          border: "none",
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px"
-        }}
-    >
-      <TextField  name="user_name"fullWidth required label="Your name" id="fullWidth" sx={{border: "none",  backgroundColor: "#FAFAFA",}}/>
-      <TextField name="user_email" fullWidth required label="Your email" id="fullWidth" sx={{border: "none", backgroundColor: "#FAFAFA",}}/>
-      <Textarea name="message" required placeholder="Your question" minRows={5} sx={{backgroundColor: "#FAFAFA",}}/>
-      <Button type="submit" value="Send" sx={{height:"50px"}}>Send question</Button>
-    </Box>
-    </form>
-       </InputWrapper>
-    </SendQuestionWrapper>
-    </FAQConrainer>
+    <div style={{display: "flex", justifyContent: "center"}}>
+      <FAQConrainer>
+         <AnswerQuestionsWrapper>
+        <QnAWrapper $marginTop37>
+          <p>Name</p>
+          <h3>Question Lorem ipsum dolor sit amet ?</h3>
+          <DividerWrapper></DividerWrapper>
+      
+        </QnAWrapper>
+        <QnAWrapper>
+          <p>Name</p>
+          <h3>Question Lorem ipsum dolor sit amet ?</h3>
+          <DividerWrapper></DividerWrapper>
+      
+        </QnAWrapper>
+        <QnAWrapper>
+          <p>Name</p>
+          <h3>Question Lorem ipsum dolor sit amet ?</h3>
+          <DividerWrapper></DividerWrapper>
+      
+        </QnAWrapper>
+        <QnAWrapper>
+          <p>Name</p>
+          <h3>Question Lorem ipsum dolor sit amet ?</h3>
+          <DividerWrapper></DividerWrapper>
+      
+        </QnAWrapper>
+        <QnAWrapper>
+          <p>Name</p>
+          <h3>Question Lorem ipsum dolor sit amet ?</h3>
+          <DividerWrapper></DividerWrapper>
+      
+        </QnAWrapper>
+         </AnswerQuestionsWrapper>
+      <SendQuestionWrapper>
+          <InputWrapper>
+          <h2>Have you got a question</h2>
+      <form
+      ref={form}
+      onSubmit={sendEmail}
+      style={{width: "100%"}}
+      >
+            <Box
+          sx={{
+            width: "100%",
+            border: "none",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px"
+          }}
+      >
+        <TextField  name="user_name"fullWidth required label="Your name" id="fullWidth" sx={{border: "none",  backgroundColor: "#FAFAFA",}}/>
+        <TextField name="user_email" fullWidth required label="Your email" id="fullWidth" sx={{border: "none", backgroundColor: "#FAFAFA",}}/>
+        <Textarea name="message" required placeholder="Your question" minRows={5} sx={{backgroundColor: "#FAFAFA",}}/>
+        <Button type="submit" value="Send" sx={{height:"50px"}}>Send question</Button>
+      </Box>
+      </form>
+         </InputWrapper>
+      </SendQuestionWrapper>
+      </FAQConrainer>
+    </div>
   );
 }

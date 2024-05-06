@@ -33,131 +33,127 @@ export default function FAQComponent() {
           );
       };
   return (
-    <FAQConrainer>
-    <AskedQuestionsWrapper>
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+      <FAQConrainer>
+      <AskedQuestionsWrapper>
       
-      <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>How to order camping car?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Does my money returns if i cancel order?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Frequently asked questions </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Do Camping Places are avaliable on weekends?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Is there any driving experience requirements for caravans</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Frequently asked questions </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </AskedQuestionsWrapper>
-
-    <SendQuestionWrapper>
-        <InputWrapper>
-        <h2>Have you got a question</h2>
-    <form
-    ref={form}
-    onSubmit={sendEmail}
-    style={{width: "100%"}}
-    >
-          <Box
-        sx={{
-          width: "100%",
-          border: "none",
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px"
-        }}
-    >
-      <TextField  name="user_name"fullWidth required label="Your name" id="fullWidth" sx={{border: "none",  backgroundColor: "#FAFAFA",}}/>
-      <TextField name="user_email" fullWidth required label="Your email" id="fullWidth" sx={{border: "none", backgroundColor: "#FAFAFA",}}/>
-      <Textarea name="message" required placeholder="Your question" minRows={5} sx={{backgroundColor: "#FAFAFA",}}/>
-      <Button type="submit" value="Send" sx={{height:"50px"}}>Send question</Button>
-    </Box>
-    </form>
-       </InputWrapper>
-    </SendQuestionWrapper>
-    </FAQConrainer>
+        <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography>How to order camping car?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography>Does my money returns if i cancel order?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography>Frequently asked questions </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography>Do Camping Places are avaliable on weekends?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography>Is there any driving experience requirements for caravans</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{borderRadius: "10px", border: "none", boxShadow: "none", boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.10)",}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{color:"#006DAB"}}/>}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography>Frequently asked questions </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </AskedQuestionsWrapper>
+      <SendQuestionWrapper>
+          <InputWrapper>
+          <h2>Have you got a question</h2>
+      <form
+      ref={form}
+      onSubmit={sendEmail}
+      style={{width: "100%"}}
+      >
+            <Box
+          sx={{
+            width: "100%",
+            border: "none",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px"
+          }}
+      >
+        <TextField  name="user_name"fullWidth required label="Your name" id="fullWidth" sx={{border: "none",  backgroundColor: "#FAFAFA",}}/>
+        <TextField name="user_email" fullWidth required label="Your email" id="fullWidth" sx={{border: "none", backgroundColor: "#FAFAFA",}}/>
+        <Textarea name="message" required placeholder="Your question" minRows={5} sx={{backgroundColor: "#FAFAFA",}}/>
+        <Button type="submit" value="Send" sx={{height:"50px"}}>Send question</Button>
+      </Box>
+      </form>
+         </InputWrapper>
+      </SendQuestionWrapper>
+      </FAQConrainer>
+    </div>
   );
 }

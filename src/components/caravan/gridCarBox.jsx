@@ -19,40 +19,48 @@ const GridCarBoxComponent = () => {
   const data = caravan.maindata;
   console.log("camp data:", data);
   return (
-    <CarBoxContainer>
-      {data.map((value, key) => {
-        return (
-          <Link to={`${value.id}`} style={{textDecoration: "none"}}>
-            <CarBox $maxWidth key={key}>
-              <CarBoxImage $hight150px>
-                <img
-                  src={value.caravan.image || "no photo"}
-                  alt="no photo1"
-                  style={{ width: "100%" }}
-                />
-              </CarBoxImage>
-              <CarBoxInfo>
-                <CostText $fontSize $fontWeight>
-                  {value.caravan.name || "no data"}
-                </CostText>
-                <BrandName>
-                  {value.caravan.company || "no data"}
-                  <CarBoxRateWrapper>
-                    <p> {value.caravan.rate || "no data"}</p>
-                    <img src={star1} alt="starIcon" />
-                  </CarBoxRateWrapper>
-                </BrandName>
-                <Price>{value.caravan.price || "no data"}</Price>
-                <CarBoxButtonWrapper>
-                  <CarBoxButton>ORDER</CarBoxButton>
-                  <CarBoxButton $paddingRwnL>COMPARE</CarBoxButton>
-                </CarBoxButtonWrapper>
-              </CarBoxInfo>
-            </CarBox>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <CarBoxContainer>
+        {data.map((value, key) => {
+          return (
+            <Link to={`${value.id}`} style={{ textDecoration: "none" }}>
+              <CarBox $maxWidth key={key}>
+                <CarBoxImage $hight150px>
+                  <img
+                    src={value.caravan.image || "no photo"}
+                    alt="no photo1"
+                    style={{ width: "100%" }}
+                  />
+                </CarBoxImage>
+                <CarBoxInfo>
+                  <CostText $fontSize $fontWeight>
+                    {value.caravan.name || "no data"}
+                  </CostText>
+                  <BrandName>
+                    {value.caravan.company || "no data"}
+                    <CarBoxRateWrapper>
+                      <p> {value.caravan.rate || "no data"}</p>
+                      <img src={star1} alt="starIcon" />
+                    </CarBoxRateWrapper>
+                  </BrandName>
+                  <Price>{value.caravan.price || "no data"}</Price>
+                  <CarBoxButtonWrapper>
+                    <CarBoxButton>ORDER</CarBoxButton>
+                    <CarBoxButton $paddingRwnL>COMPARE</CarBoxButton>
+                  </CarBoxButtonWrapper>
+                </CarBoxInfo>
+              </CarBox>
             </Link>
-        );
-      })}
-    </CarBoxContainer>
+          );
+        })}
+      </CarBoxContainer>
+    </div>
   );
 };
 

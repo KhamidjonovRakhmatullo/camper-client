@@ -12,7 +12,7 @@ export const MotorMainContainer = styled.div`
 export const MotorBgImage = styled.div`
   background-image: ${(props) =>
     props.$CaravanBg ? `url(${CaravanBgImg})` : `url(${MotorBgImg})`};
-  height: 350px;
+  height: 500px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,7 +30,7 @@ export const SidebarAndCarBoxesContainer = styled.div`
   justify-content: center;
   align-items: start;
   background-color: #fafafa;
-  padding: 60px 10% 0px 10%;
+  padding: 60px 12% 0px 12%;
   width: 100%;
   gap: 30px;
   @media only screen and (max-width: 1100px) {
@@ -78,6 +78,10 @@ export const CostTitle = styled.h2`
   font-style: normal;
   font-weight: ${(props) => (props.$fontWeight700 ? `700` : `600`)};
   line-height: 100%; /* 18px */
+  @media only screen and (max-width: 600px) {
+    font-size: ${(props) => (props.$fontSize27 ? `22px` : ``)};
+
+  }
 `;
 
 export const Border = styled.div`
@@ -290,6 +294,10 @@ export const CarBoxContainer = styled.div`
   }
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; */
   }
 `;
 
@@ -298,8 +306,7 @@ export const CarBox = styled.div`
   display: ${(props) => (props.$flexBox ? `flex` : ``)};
   justify-content: center;
   align-items: center;
-  max-width: ${(props) => (props.$maxWidth ? `350px` : `100%`)};
-  /* border: 2px solid red; */
+  max-width: ${(props) => (props.$maxWidth ? `300px` : `100%`)};
   flex: 1;
   border-radius: 25px;
   padding: 15px 10px;
@@ -318,7 +325,7 @@ export const CarBox = styled.div`
     }
 `;
 
-//other container carbox img
+//other components' container of the carbox img
 export const CarBoxImgWrapper = styled.div`
   flex: 0.45;
   display: flex;
@@ -367,8 +374,12 @@ export const Price = styled.p`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
     font-size: ${(props) => (props.$fontSize80 ? `80px` : `16px`)};
+    font-size: ${(props) => (props.$fontSize80 ? `40px` : ``)};
+  }
+  @media only screen and (max-width: 350px) {
+    font-size: ${(props) => (props.$fontSize80 ? `25px` : ``)};
   }
 `;
 
