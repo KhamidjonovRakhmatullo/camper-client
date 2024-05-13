@@ -18,6 +18,7 @@ import CampingPlaceInfoComponent from "./others/campingPlaceInfo";
 import MultiCarouselInfoComponent from "./others/multiCarouselInfo";
 import CreateAccountComponent from "./navbar/pages/createAccount";
 import CartComponent from "./cart/cart";
+import CheckBoxComponent from "./useState/checkBox";
 
 const RouterComponent = () => {
   const location = useLocation()
@@ -38,6 +39,7 @@ const RouterComponent = () => {
         <Route path="campingPlace" element={<CampingPlaceComponent/>}/>
 
         <Route path="useState" element={<UseStateComponent/>}/>
+        <Route path="checkBox" element={<CheckBoxComponent/>}/>
 
         <Route path="motor/:id" element={<MotorInfoComponent/>}/>
         <Route path="caravan/:id" element={<CaravanInfoComponent/>}/>

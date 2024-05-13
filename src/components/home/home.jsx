@@ -14,6 +14,7 @@ const HomeComponent = () => {
     <HomeContainer>
       <HomeCarousel>
         <Carousel
+          infinite
           autoPlay
           showArrows={true}
           showThumbs={false}

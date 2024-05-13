@@ -88,6 +88,7 @@ export const CampPlaceInfoContainer = styled.div`
 
 export const CampPlaceInfoContainer2 = styled.div`
   padding: 0px 100px 0px 100px;
+  width: 100%;
   max-width: 1390px;
 `;
 

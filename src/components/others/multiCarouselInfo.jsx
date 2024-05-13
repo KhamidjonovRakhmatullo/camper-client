@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { campcar } from "../mock/mockdata";
 import {
   CarBoxButtonWrapper2,
@@ -19,6 +19,7 @@ import {
   NameOfCar,
   OtherInfosContainer,
   OtherInfosWrapper,
+  WhiteButton,
 } from "../../styles/carInfoStyle";
 import comfort1 from "../assets/comfort.png";
 import tidying1 from "../assets/tidying.png";
@@ -27,11 +28,10 @@ import heating1 from "../assets/heating.png";
 import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
 
-const MultiCarouselInfoComponent = () => {
+const MotorInfoComponent = () => {
   let { id } = useParams();
   console.log("userId:", id);
-  const data2 = campcar.maindata.slice(24,45)
-  const resultData = data2.find(
+  const resultData = campcar.maindata.find(
     (value) => value.id === parseInt(id)
   );
   console.log("id Info:", resultData);
@@ -45,7 +45,7 @@ const MultiCarouselInfoComponent = () => {
         <CarBoxButtonWrapper2 $MaxWidth>
               <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>ADD TO CART</CarBoxButton>
               <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>COMPARE</CarBoxButton>
-        </CarBoxButtonWrapper2>
+            </CarBoxButtonWrapper2>
       </MotorBgImage>
       <div style={{padding: '30px 0px 0px 0px'}}>
       <ImageAndInfoContainer $AlignCenter>
@@ -153,8 +153,9 @@ const MultiCarouselInfoComponent = () => {
             <InfoTitle>Heating when driving</InfoTitle>
             <InfoText>{resultData.docs.heating}</InfoText>
             <CarBoxButtonWrapper2>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+            <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
+              <WhiteButton>ADD TO CART</WhiteButton></Link>
+              <WhiteButton>COMPARE</WhiteButton>
             </CarBoxButtonWrapper2>
           </DocsWrapper>
           <ImgWrapper>
@@ -164,8 +165,10 @@ const MultiCarouselInfoComponent = () => {
             <InfoTitle>Heating when driving</InfoTitle>
             <InfoText>{resultData.docs.heating}</InfoText>
             <CarBoxButtonWrapper2>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+            <Link to={`cart`} style={{textDecoration: "none",width: "100%"}}>
+              <WhiteButton>ADD TO CART</WhiteButton>
+            </Link>
+              <WhiteButton>COMPARE</WhiteButton>
             </CarBoxButtonWrapper2>
           </DocsWrapper>
         </ImageAndInfoContainer>
@@ -176,4 +179,4 @@ const MultiCarouselInfoComponent = () => {
   );
 };
 
-export default MultiCarouselInfoComponent;
+export default MotorInfoComponent;

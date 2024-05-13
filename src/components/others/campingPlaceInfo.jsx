@@ -196,9 +196,11 @@ const CampingPlaceInfoComponent = () => {
         {resultData.campingPlace.description}
       </DescriptionWrapper>
 
-      <MapWrapper1>
-        <div id="map" className="map" />
-      </MapWrapper1>
+      {/* <div style={{width: "100%"}}> */}
+        <MapWrapper1>
+          <div id="map" className="map" />
+        </MapWrapper1>
+      {/* </div> */}
 
 
 

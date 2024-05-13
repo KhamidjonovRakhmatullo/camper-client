@@ -42,8 +42,7 @@ const MultiCarousel = () => {
   };
 
   const data = campcar.maindata;
-  const data1 = data.slice(24, 45);
-  console.log("data :", data);
+  console.log("camp data:", data);
 
   return (
     <RecommendContainer>
@@ -61,7 +60,7 @@ const MultiCarousel = () => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
       >
-        {data1.map((value, key) => {
+        {data.map((value, key) => {
           return (
             <Link to={`${value.id}`} style={{textDecoration: "none"}}>
             <RecommendBox key={key}>

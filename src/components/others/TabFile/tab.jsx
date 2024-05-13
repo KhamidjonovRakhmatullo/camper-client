@@ -23,9 +23,10 @@ export default function TabsComponent() {
         sx={{
           backgroundColor: "rgba(0, 109, 171, 0.20)",
           height: "60px",
-          display: 'flex',
-          justifyContent: "center",
-          marginLeft: "-700px"
+          // display: 'flex',
+          // justifyContent: "center",
+          // marginLeft: "-700px"
+          
         }}
       >
         <Tab disableIndicator value="review" sx={{ width: "170px",}}>

@@ -1,7 +1,8 @@
 import React from "react";
-// import { useParams } from 'react-router-dom'
-// import { campcar } from '../mock/mockdata'
+import { useParams } from 'react-router-dom'
+import { campcar } from '../mock/mockdata'
 import {
+  CarouselImage,
   CartCarDescription,
   CartCarName,
   CartCarPrice,
@@ -16,42 +17,88 @@ import {
   PurchasePrice,
   UnderLine2,
 } from "../../styles/cartStyle";
-import image1 from "../assets/campingPlace-5.jpeg";
+import image1 from "../assets/img-13.png";
+import image2 from "../assets/campingPlace-5.jpeg";
+import image3 from "../assets/campingPlace-8.jpeg";
+import image4 from "../assets/campingPlace-4.jpeg";
+import image5 from "../assets/campingPlace-7.jpeg";
+import image6 from "../assets/campingPlace-5.jpeg";
+import image7 from "../assets/campingPlace-9.jpeg";
 import Select, { selectClasses } from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const CartComponent = () => {
-  // const {id} = useParams
-  // console.log("userId:", id);
-  // const data = campcar.maindata.find( (value) => value.id === parseInt(id) );
-  // console.log("id Info:", resultData);
+  const { id } = useParams ();
+  console.log("userId:", id);
+  const data = campcar.maindata.find(
+    (value) => value.id === parseInt(id));
+  console.log("id Info:", data);
+
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1400 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
 
   return (
-    <div style={{display: "flex", justifyContent :"center", flex: "1", alignItems: "", backgroundColor: "#fafafa"}}>
-    <CartContainer>
-      <CartTitle>
-        Cart
-        <UnderLine2 $width100px />
-      </CartTitle>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flex: "1",
+        alignItems: "",
+        backgroundColor: "#fafafa",
+      }}
+    >
+      <CartContainer>
+        <CartTitle>
+          Cart
+          <UnderLine2 $width100px />
+        </CartTitle>
 
-      <CartLeftandRightContainer>
-        <CartLeftContainer>
-          <img src={image1} alt="" />
-          <PurchasePrice>
-            <p>Purchase Price</p>
-            <b>12331$</b>
-          </PurchasePrice>
-        </CartLeftContainer>
+        <CartLeftandRightContainer>
+          <CartLeftContainer>
+           <Carousel
+                   // showDots={true}
+                   responsive={responsive}
+                   infinite
+                  //  autoPlay
+                  //  autoPlaySpeed={1000}
+                  //  transitionDuration={1500}
+                   containerClass="carousel-container"
+                   removeArrowOnDeviceType={["tablet", "mobile"]}
+                 >
+       
+            <CarouselImage><img src={image1} alt="" /></CarouselImage>
+            <CarouselImage><img src={image2} alt="" /></CarouselImage>
+            <CarouselImage><img src={image3} alt="" /></CarouselImage>
+            <CarouselImage><img src={image4} alt="" /></CarouselImage>
+            <CarouselImage><img src={image5} alt="" /></CarouselImage>
+            <CarouselImage><img src={image6} alt="" /></CarouselImage>
+            <CarouselImage><img src={image7} alt="" /></CarouselImage>
+            </Carousel> 
+            <div style={{display: "flex", justifyContent :"center"}}>
+            <PurchasePrice>
+              <p>Purchase Price</p>
+              <b>{data.car.cost}</b>
+            </PurchasePrice>
+            </div>
+          </CartLeftContainer>
 
           <CartRightContainer>
-            <CartCarName>Car Name</CartCarName>
-            <CartCarPrice>00000$</CartCarPrice>
+            <CartCarName>{data.car.name}</CartCarName>
+            <CartCarPrice>{data.car.cost}</CartCarPrice>
             <CartCarDescription>
               <h3>Description</h3>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
-              viverra amet, tortor tristique odio scelerisque aenean sodales. Nunc
-              risus dolor amet porttitor tellus
+              viverra amet, tortor tristique odio scelerisque aenean sodales.
+              Nunc risus dolor amet porttitor tellus
             </CartCarDescription>
             <PaymentButton>Continue to Payment</PaymentButton>
             <div style={{ margin: "42px 0px 0px 0px", width: "100%" }}>
@@ -176,13 +223,12 @@ const CartComponent = () => {
                   type="number"
                 />
               </div>
-              <PaymentButton $marginTop58>Continue to Payment</PaymentButton>
+              <PaymentButton $marginTop58>Place Order</PaymentButton>
             </div>
           </CartRightContainer>
-       
-      </CartLeftandRightContainer>
-    </CartContainer>
-     </div>
+        </CartLeftandRightContainer>
+      </CartContainer>
+    </div>
   );
 };
 

@@ -39,10 +39,10 @@ export const CartLeftContainer = styled.div`
   /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 2;
   padding: 20px 64px;
   max-height: 476px;
+  width: 100%;
   max-width: 811px;
   background-color: #ffff;
   border-radius: 10px;
@@ -55,6 +55,16 @@ export const CartLeftContainer = styled.div`
     max-height: 406px;
   }
 `;
+
+export const CarouselImage =styled.div`
+margin-top: 50px;
+/* border: 1px solid green; */
+img {
+    width: 100%;
+    max-width: 683px;
+    max-height: 406px;
+  }
+`
 export const PurchasePrice = styled.div`
   display: flex;
   justify-content: center;
@@ -84,6 +94,8 @@ export const CartRightContainer = styled.div`
   align-items: start;
   flex: 1;
   padding: 17px 0px 0px 0px;
+  max-height: 600px;
+  overflow: scroll;
 `;
 
 export const CartCarName = styled.div`
