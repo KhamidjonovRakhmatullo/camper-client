@@ -23,7 +23,7 @@ const CheckBoxComponent = () => {
 
       <div>
         {filteredData.map((value, key) => {
-          return <div key={key}>{value.car.company}</div>;
+          return <div key={key}>{value.car.location}</div>;
         })}
       </div>
     </div>

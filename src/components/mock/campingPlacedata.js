@@ -208,7 +208,7 @@ export const campingPlace = {
         name: "Campsite J",
         location: "제주특별자치도 제주시",
         city: "제주",
-        photo: ` ${place1}`,
+        photo: ` ${place4}`,
         phone_number: "010-0123-4567",
         working_hour: {
           from: "07:00",
@@ -229,7 +229,7 @@ export const campingPlace = {
         name: "Campsite K",
         location: "인천 중구",
         city: "인천",
-        photo: ` ${place1}`,
+        photo: ` ${place3}`,
         phone_number: "010-2345-6789",
         working_hour: {
           from: "10:00",

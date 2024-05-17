@@ -12,11 +12,11 @@ export const CampingPlaceBoxContainer = styled.div`
   /* border: 1px solid red; */
   padding: 60px 10% 60px 10%;
 
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
     padding: "0px 70px";
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
@@ -44,7 +44,11 @@ export const CampingPlaceImgWrappper = styled.div`
     width: 100%;
     max-width: 395px;
     max-height: 300px;
+    min-height: 300px;
     border-radius: 10px;
+      @media only screen and (max-width: 800px) {
+    height: 100%;
+  }
     /* &:hover{
       color: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);
     transform: skewX(-25deg);
@@ -90,6 +94,12 @@ export const CampPlaceInfoContainer2 = styled.div`
   padding: 0px 100px 0px 100px;
   width: 100%;
   max-width: 1390px;
+  @media only screen and (max-width: 1024px) {
+    padding: 0px 70px 0px 70px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding: 0px 30px 0px 30px;
+  }
 `;
 
 

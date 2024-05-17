@@ -15,14 +15,14 @@ import {
 import star1 from "../assets/carStar.svg";
 import { Link } from "react-router-dom";
 
-const GridCarBoxComponent = () => {
+const GridCarBoxComponent = ({exportedData}) => {
   const data = campcar.maindata;
-  console.log("camp data:", data);
+  // console.log("camp data:", data);
   return (
 
     <div style={{display: 'flex', justifyContent: "center", alignItems: 'center'}}>
       <CarBoxContainer>
-        {data.map((value, key) => {
+        {exportedData.map((value, key) => {
           return (
             <Link to={`${value.id}`} style={{textDecoration: "none"}}>
               <CarBox $maxWidth key={key}>

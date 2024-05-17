@@ -1,16 +1,11 @@
 import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Textarea from '@mui/joy/Textarea';
 import Button from '@mui/joy/Button';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser'
-import { AnswerQuestionsWrapper, AskedQuestionsWrapper, DividerWrapper, FAQConrainer, InputWrapper, QnAWrapper, SendQuestionWrapper } from '../../../styles/carInfoStyle';
+import { AnswerQuestionsWrapper, DividerWrapper, FAQConrainer, InputWrapper, QnAWrapper, SendQuestionWrapper } from '../../../styles/carInfoStyle';
 
 export default function QnAComponent() {
     const form = useRef();

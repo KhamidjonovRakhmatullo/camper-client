@@ -26,6 +26,7 @@ import ventilated1 from "../assets/ventilated.png";
 import heating1 from "../assets/heating.png";
 import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
+import img111 from '../assets/campCarOboi-10.jpg'
 
 const TuningInfoComponent = () => {
   let { id } = useParams();
@@ -39,7 +40,7 @@ const TuningInfoComponent = () => {
 
   return (
     <CarInfoContainer>
-       <MotorBgImage>
+       <MotorBgImage style={{backgroundImage: `url(${img111})`}}>
         <HeadTitle>
           {resultData.car.name}
         </HeadTitle>

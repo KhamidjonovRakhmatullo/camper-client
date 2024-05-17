@@ -43,7 +43,7 @@ export default function FAQComponent() {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography>How to order camping car?</Typography>
+            <Typography sx={{fontWeight: "550"}}>How to order camping car?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -58,7 +58,7 @@ export default function FAQComponent() {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography>Does my money returns if i cancel order?</Typography>
+            <Typography sx={{fontWeight: "550"}}>Does my money returns if i cancel order?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -73,7 +73,7 @@ export default function FAQComponent() {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography>Frequently asked questions </Typography>
+            <Typography sx={{fontWeight: "550"}}>Frequently asked questions </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -88,7 +88,7 @@ export default function FAQComponent() {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography>Do Camping Places are avaliable on weekends?</Typography>
+            <Typography  sx={{fontWeight: "550"}}>Do Camping Places are avaliable on weekends?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -103,7 +103,7 @@ export default function FAQComponent() {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography>Is there any driving experience requirements for caravans</Typography>
+            <Typography  sx={{fontWeight: "550"}}>Is there any driving experience requirements for caravans</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -118,7 +118,7 @@ export default function FAQComponent() {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography>Frequently asked questions </Typography>
+            <Typography  sx={{fontWeight: "550"}}>Frequently asked questions </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>

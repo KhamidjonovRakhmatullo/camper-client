@@ -117,8 +117,8 @@ const CampingPlaceInfoComponent = () => {
         responsive={responsive}
         infinite
         autoPlay
-        autoPlaySpeed={1000}
-        transitionDuration={1500}
+        autoPlaySpeed={2000}
+        transitionDuration={2000}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
       >

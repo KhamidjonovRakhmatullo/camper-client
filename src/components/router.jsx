@@ -19,6 +19,7 @@ import MultiCarouselInfoComponent from "./others/multiCarouselInfo";
 import CreateAccountComponent from "./navbar/pages/createAccount";
 import CartComponent from "./cart/cart";
 import CheckBoxComponent from "./useState/checkBox";
+import ChatGPTComponent from "./useState/chatGPT";
 
 const RouterComponent = () => {
   const location = useLocation()
@@ -40,13 +41,14 @@ const RouterComponent = () => {
 
         <Route path="useState" element={<UseStateComponent/>}/>
         <Route path="checkBox" element={<CheckBoxComponent/>}/>
+        <Route path="chatGPT" element={<ChatGPTComponent/>}/>
 
         <Route path="motor/:id" element={<MotorInfoComponent/>}/>
         <Route path="caravan/:id" element={<CaravanInfoComponent/>}/>
         <Route path="tuning/:id" element={< TuningInfoComponent/>}/>
         <Route path="usedcar/:id" element={<UsedCarInfoComponent/>}/>
         <Route path="campingPlace/:id" element={<CampingPlaceInfoComponent/>}/>
-        <Route path="multiCarousel/:id" element={< MultiCarouselInfoComponent/>}/>
+        <Route path="multiCarouselInfo/:id" element={< MultiCarouselInfoComponent/>}/>
         
         {/* <Route path="signIn" element={<SignInComponent/>}/> */}
         <Route path="/createAccount" element={<CreateAccountComponent/>}/>

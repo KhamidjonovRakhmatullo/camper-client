@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import MotorBgImg from "../components/assets/motorMain1.png";
-import CaravanBgImg from "../components/assets/CaravanBgMain.png";
+import MotorBgImg from "../components/assets/campCarOboi-8.jpg";
+import CaravanBgImg from "../components/assets/campCarOboi-9.jpg";
 
 export const MotorMainContainer = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const MotorMainContainer = styled.div`
 export const MotorBgImage = styled.div`
   background-image: ${(props) =>
     props.$CaravanBg ? `url(${CaravanBgImg})` : `url(${MotorBgImg})`};
-  height: 500px;
+  height: 600px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;

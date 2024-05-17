@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { campcar } from "../mock/mockdata";
 
-const CheckBoxComponent = () => {
+const ChatGPTComponent = () => {
+
+  ///////
   const data = campcar.maindata;
   const [selectedCompanies, setSelectedCompanies] = useState([]);
-
+  //////
   const handleCompanyChange = (companyName) => {
     const isSelected = selectedCompanies.includes(companyName);
     setSelectedCompanies(
@@ -18,7 +20,11 @@ const CheckBoxComponent = () => {
     (item) =>
       selectedCompanies.length === 0 ||
       selectedCompanies.includes(item.car.company)
+
   );
+
+
+  
 
   return (
     <div>
@@ -60,4 +66,4 @@ const CheckBoxComponent = () => {
   );
 };
 
-export default CheckBoxComponent;
+export default ChatGPTComponent;

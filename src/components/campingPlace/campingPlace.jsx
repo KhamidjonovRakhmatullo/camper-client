@@ -7,12 +7,13 @@ import place1 from '../assets/place1.webp'
 // import place4 from '../assets/campsite3.png'
 import { CampingPlaceBox, CampingPlaceBoxContainer, CampingPlaceContainer, CampingPlaceImgWrappper, CampingPlaceInfoWrappper, CampingPlaceLocation, CampingPlaceName } from '../../styles/campingPlaceStyle'
 import { Link } from 'react-router-dom'
+import campSite from '../assets/campCarOboi-12.jpg'
 
 const CampingPlaceComponent = () => {
     const data = campingPlace.maindata
   return (
     <CampingPlaceContainer>
-         <MotorBgImage $CaravanBg>
+         <MotorBgImage style={{backgroundImage: `url(${campSite})`}}>
           <CostText $fontSize $colorWhite>Home/Camping Place</CostText>
           <CostTitle $fontSize27 $fontWeight700 $paddingTop style={{color: "#fff"}} >Our Ranges</CostTitle>
           <Price $fontSize80 $colorWhiteH1 $fontSize30>Camping Places</Price>
@@ -23,7 +24,7 @@ const CampingPlaceComponent = () => {
             return(
               <Link to={`${value.id}`} style={{textDecoration: "none"}}>
                 <CampingPlaceBox key={key}>
-                  <CampingPlaceImgWrappper><img src={place1} alt="Camping Place1" /></CampingPlaceImgWrappper>
+                  <CampingPlaceImgWrappper><img src={ value.campingPlace.photo ||place1} alt="Camping Place1" /></CampingPlaceImgWrappper>
                   <CampingPlaceInfoWrappper>
                   <CampingPlaceName> {value.campingPlace.name}</CampingPlaceName>
                   <CampingPlaceLocation>{value.campingPlace.location}</CampingPlaceLocation>

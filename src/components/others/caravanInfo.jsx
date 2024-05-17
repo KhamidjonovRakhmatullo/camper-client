@@ -26,6 +26,7 @@ import heating1 from "../assets/heating.png";
 import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
 import { caravan } from "../mock/caravandata";
+import img111 from '../assets/campCarOboi-12.jpg'
 
 const CarvanInfoComponent = () => {
   let { id } = useParams();
@@ -37,7 +38,7 @@ const CarvanInfoComponent = () => {
 
   return (
     <CarInfoContainer>
-       <MotorBgImage>
+       <MotorBgImage  style={{backgroundImage: `url(${img111})`}}>
         <HeadTitle>
           {resultData.caravan.name}
         </HeadTitle>

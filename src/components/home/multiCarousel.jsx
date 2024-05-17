@@ -55,7 +55,7 @@ const MultiCarousel = () => {
         responsive={responsive}
         infinite
         autoPlay
-        autoPlaySpeed={1000}
+        autoPlaySpeed={3000}
         transitionDuration={1500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -75,7 +75,7 @@ const MultiCarousel = () => {
                     size="medium"
                     sx={{ transform: "skew(-20deg)", borderRadius: "0px" }}
                   >
-                    Discover the range
+                   <p style={{ transform: "skew(+20deg)"}}>Discover the range</p> 
                   </Button>
                 </Box>
                 <div style={{ display: "flex", gap: "10px" }}>

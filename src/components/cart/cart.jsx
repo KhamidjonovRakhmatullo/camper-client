@@ -18,11 +18,11 @@ import {
   UnderLine2,
 } from "../../styles/cartStyle";
 import image1 from "../assets/img-13.png";
-import image2 from "../assets/campingPlace-5.jpeg";
-import image3 from "../assets/campingPlace-8.jpeg";
-import image4 from "../assets/campingPlace-4.jpeg";
-import image5 from "../assets/campingPlace-7.jpeg";
-import image6 from "../assets/campingPlace-5.jpeg";
+import image2 from "../assets/comfort.png";
+import image3 from "../assets/heating.png";
+import image4 from "../assets/ventilated.png";
+import image5 from "../assets/tidying.png";
+import image6 from "../assets/homeBg.png";
 import image7 from "../assets/campingPlace-9.jpeg";
 import Select, { selectClasses } from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
@@ -75,7 +75,7 @@ const CartComponent = () => {
                    removeArrowOnDeviceType={["tablet", "mobile"]}
                  >
        
-            <CarouselImage><img src={image1} alt="" /></CarouselImage>
+            <CarouselImage><img src={data.car.photo ||image1} alt="" /></CarouselImage>
             <CarouselImage><img src={image2} alt="" /></CarouselImage>
             <CarouselImage><img src={image3} alt="" /></CarouselImage>
             <CarouselImage><img src={image4} alt="" /></CarouselImage>

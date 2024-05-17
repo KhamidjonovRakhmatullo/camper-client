@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import {
   Border,
   CompareBox,
@@ -19,13 +18,13 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { useState } from "react";
 
 const SideBarComponent = () => {
-  // const [showFilteredCompany, setShowFilteredCompany] = useState(false)
 
-  // console.log (showFilteredCompany)
-  // const filteredData = showFilteredCompany ? data
-
+  const [showFilteredCompany, setShowFilteredCompany] = useState(false)
+  
+  // const filteredData = showFilteredCompany ? data0.filter((item) => item.car.company === "다온티앤티") : data
   return (
     <CostOfCarContainer>
       <CostCarBoxWrapper>
@@ -60,7 +59,7 @@ const SideBarComponent = () => {
             <Typography>
               <Border $marginBottom30></Border>
               <FormGroup>
-                <FormControlLabel control={<Checkbox />} label="다온티앤티" />
+                <FormControlLabel control={<Checkbox />} label="다온티앤티"  onChange={(e) => setShowFilteredCompany(e.target.checked)}/>
                 <FormControlLabel control={<Checkbox />} label="제일모빌" />
                 <FormControlLabel control={<Checkbox />} label="영남캠핑카" />
                 <FormControlLabel control={<Checkbox />} label="한울캠핑카" />

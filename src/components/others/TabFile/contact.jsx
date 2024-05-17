@@ -67,12 +67,12 @@ const ContactComponent = () => {
       kakao.maps.load(() => {
         const mapContainer = document.getElementById("map");
         const options = {
-          center: new kakao.maps.LatLng(36.815673, 127.113049),
+          center: new kakao.maps.LatLng(37.566536, 126.977966),
           level: 3,
         };
         const map = new kakao.maps.Map(mapContainer, options);
 
-        const markerPositions = [new kakao.maps.LatLng(36.815673, 127.113049)];
+        const markerPositions = [new kakao.maps.LatLng(37.566536, 126.977966)];
 
         markerPositions.forEach((position) => {
           const marker = new kakao.maps.Marker({
@@ -93,12 +93,12 @@ const ContactComponent = () => {
           <NumberAndEmailWrapper>
             <NumberWrapper>
               <GrayText $MarginBottom>Phone number</GrayText>
-              <p>+7 237 181 181</p>
-              <p>+7 123 181 175</p>
+              <p>+8210 5860 7017</p>
+              <p>+998 90 222 1676</p>
             </NumberWrapper>
             <NumberWrapper>
               <GrayText $MarginBottom>E-mail</GrayText>
-              <p>logo.uz</p>
+              <p>richman.uzb1676@mail.ru</p>
             </NumberWrapper>
           </NumberAndEmailWrapper>
         </MapWrapper>
@@ -148,10 +148,10 @@ const ContactComponent = () => {
                     },
                   }}
                 >
-                  <Option value="$">$10,000-$100,000</Option>
-                  <Option value="$">$100,000-$500,000</Option>
-                  <Option value="$">$500,000-$1mln</Option>
-                  <Option value="$">soqqa more...</Option>
+                  <Option value="$10,000-$100,000">$10,000-$100,000</Option>
+                  <Option value="$100,000-$500,000">$100,000-$500,000</Option>
+                  <Option value="$500,000-$1mln">$500,000-$1mln</Option>
+                  <Option value="more...">more...</Option>
                 </Select>
                 <Textarea
                   name="message"

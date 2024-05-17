@@ -28,7 +28,7 @@ import heating1 from "../assets/heating.png";
 import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
 
-const MotorInfoComponent = () => {
+const MultiCarouselInfoComponent = () => {
   let { id } = useParams();
   console.log("userId:", id);
   const resultData = campcar.maindata.find(
@@ -37,7 +37,7 @@ const MotorInfoComponent = () => {
   console.log("id Info:", resultData);
 
   return (
-    <CarInfoContainer>
+    <CarInfoContainer style={{border:"2px solid red"}}>
        <MotorBgImage>
         <HeadTitle>
           {resultData.car.name}
@@ -179,4 +179,4 @@ const MotorInfoComponent = () => {
   );
 };
 
-export default MotorInfoComponent;
+export default MultiCarouselInfoComponent;

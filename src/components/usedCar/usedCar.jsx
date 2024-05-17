@@ -27,7 +27,7 @@ import { campcar } from "../mock/mockdata";
 import GridCarBoxComponent from "./gridCarBox";
 import SortButton from "./pages/sortButton";
 import SideBarComponent from "./SideBar";
-import usedCarBg from '../assets/mainBg2.png'
+import usedCarBg from '../assets/campCarOboi-11.jpg'
 
 const MotorComponent = () => {
   const data = campcar.maindata.slice(10,19)
