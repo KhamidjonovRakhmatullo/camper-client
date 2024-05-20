@@ -27,8 +27,10 @@ export const caravan = {
         image: `${img1}`,
         name: "Camp Caravan 1",
         price: "2,123,000",
-        company: "Camp-Caravan",
+        company: "깜찍한 캠핑카",
         rating: "5.3",
+        license: "1종 보통",
+        people: "6인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -51,8 +53,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img11}`,
         name: "Camp Caravan 2",
         price: "1,230,000",
-        company: "Camp-Caravan",
+        company: "깜찍한 캠핑카",
         rating: "5.0",
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -75,8 +79,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img14}`,
         name: "Camp Caravan 3",
         price: "999,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "8.9",
+        license: "2종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -99,8 +105,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img4}`,
         name: "Camp Caravan 4",
         price: "3,000,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "2.7",
+        license: "1종 보통",
+        people: "5인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -123,8 +131,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img17}`,
         name: "Camp Caravan 5",
         price: "1,000,000",
-        company: "Camp-Caravan",
+        company: "깜찍한 캠핑카",
         rating: "9.5",
+        license: "1종 보통",
+        people: "3인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -147,8 +157,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img15}`,
         name: "Camp Caravan 6",
         price: "859,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "9.1",
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -171,8 +183,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img7}`,
         name: "Camp Caravan 7",
         price: "2,000,000",
-        company: "Camp-Caravan",
+        company: "깜찍한 캠핑카",
         rating: "5.5",
+        license: "2종 보통",
+        people: "3인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -195,8 +209,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img18}`,
         name: "Camp Caravan 8",
         price: "450,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "3.1",
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -219,8 +235,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img9}`,
         name: "Camp Caravan 9",
         price: "830,500",
-        company: "Camp-Caravan",
+        company: "행복 바퀴벌레",
         rating: "8.9",
+        license: "2종 보통",
+        people: "3인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -243,8 +261,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img10}`,
         name: "Camp Caravan 10",
         price: "250,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "4.5",
+        license: "1종 보통",
+        people: "5인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -267,8 +287,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img11}`,
         name: "Camp Caravan 11",
         price: "450,000",
-        company: "Camp-Caravan",
+        company: "행복 바퀴벌레",
         rating: "6.4",
+        license: "2종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -291,8 +313,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img12}`,
         name: "Camp Caravan 12",
         price: "100,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "1.0",
+        license: "1종 보통",
+        people: "3인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -315,8 +339,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img13}`,
         name: "Camp Caravan 13",
         price: "900,250",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "9.8",
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -339,8 +365,11 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img14}`,
         name: "Camp Caravan 14",
         price: "2,000,000",
-        company: "Camp-Caravan",
+        company: "행복 바퀴벌레",
         rating: "10",
+
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -363,8 +392,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img15}`,
         name: "Camp Caravan 15",
         price: "650,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "5.2",
+        license: "2종 보통",
+        people: "5인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -387,8 +418,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img16}`,
         name: "Camp Caravan 16",
         price: "850,000",
-        company: "Camp-Caravan",
+        company: "행복 바퀴벌레",
         rating: "9.0",
+        license: "2종 보통",
+        people: "6인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -411,8 +444,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img17}`,
         name: "Camp Caravan 17",
         price: "745,000",
-        company: "Camp-Caravan",
+        company: "캐러반 여행",
         rating: "7,6",
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -435,8 +470,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img18}`,
         name: "Camp Caravan 18",
         price: "125,000",
-        company: "Camp-Caravan",
+        company: "캐러반 여행",
         rating: "1.5",
+        license: "1종 보통",
+        people: "3인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -459,8 +496,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img19}`,
         name: "Camp Caravan 19",
         price: "520,000",
-        company: "Camp-Caravan",
+        company: "모험의 바퀴",
         rating: "6.3",
+        license: "1종 보통",
+        people: "4인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.
@@ -483,8 +522,10 @@ Camper relies on legendary Seitz windows. They offer the best insulation and are
         image: `${img20}`,
         name: "Camp Caravan 20",
         price: "600,500",
-        company: "Camp-Caravan",
+        company: "캐러반 여행",
         rating: "9.5",
+        license: "2종 보통",
+        people: "6인",
       },
       docs: {
         comfort: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi. Turpis ac ut metus, amet, pulvinar. Eget amet dictum luctus quis molestie tellus vitae.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id in proin sed proin iaculis mi.

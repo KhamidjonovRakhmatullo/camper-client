@@ -31,7 +31,7 @@ const MultiCarousel = () => {
     },
     tablet: {
       breakpoint: { max: 1100, min: 700 },
-      items: 2,
+      items: 2.5,
       slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {

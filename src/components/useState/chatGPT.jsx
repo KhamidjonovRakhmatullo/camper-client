@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { campcar } from "../mock/mockdata";
+import { caravan } from "../mock/caravandata";
 
 const ChatGPTComponent = () => {
 
   ///////
-  const data = campcar.maindata;
+  const data = caravan.maindata;
+  
   const [selectedCompanies, setSelectedCompanies] = useState([]);
-  //////
+
   const handleCompanyChange = (companyName) => {
     const isSelected = selectedCompanies.includes(companyName);
     setSelectedCompanies(
@@ -19,7 +21,7 @@ const ChatGPTComponent = () => {
   const filteredData = data.filter(
     (item) =>
       selectedCompanies.length === 0 ||
-      selectedCompanies.includes(item.car.company)
+      selectedCompanies.includes(item.caravan.company)
   );
 
 
@@ -58,7 +60,7 @@ const ChatGPTComponent = () => {
 
       <div>
         {filteredData.map((value, key) => {
-          return <div key={key}>{value.car.company}</div>;
+          return <div key={key}>{value.caravan.company}</div>;
         })}
       </div>
     </div>

@@ -11,6 +11,7 @@ import {
   HomeCarousel,
   HomeContainer,
   HomeContainer2,
+  ResponsiveOfCarausel,
 } from "../../styles/homeStyle";
 import MultiCarousel from "./multiCarousel";
 import ModalComponent from "./modal";
@@ -39,8 +40,10 @@ const HomeComponent = () => {
           <img src={img6} alt="img" />
         </Carousel>
       </HomeCarousel>
+      <ResponsiveOfCarausel>
+      <MultiCarousel />
+      </ResponsiveOfCarausel>
       <HomeContainer2>
-        <MultiCarousel />
         <ModalComponent />
         <BlogsComponent />
       </HomeContainer2>

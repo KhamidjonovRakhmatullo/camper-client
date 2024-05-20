@@ -197,7 +197,7 @@ export const CarBoxButtonWrapper2 = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: ${(props)=> props.$MaxWidth ? `30%` : `70%`};
+  width: ${(props)=> props.$MaxWidth ? `40%` : `100%`};
   margin-top: 50px;
   button{
   /* max-width: ${(props)=> props.$MaxWidth ? `181px` : ``};
@@ -208,6 +208,32 @@ export const CarBoxButtonWrapper2 = styled.div`
 
   }
 `;
+
+
+export const TransParentButton =styled.button`
+  width: 100%;
+  padding: 14px 5%;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  cursor: pointer;
+  &:hover {
+    background-color: #006dab;
+    color: #fff;
+    border: 2px solid #006dab;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+`
 
 export const WhiteButton =styled.button`
   width: 100%;

@@ -2,14 +2,11 @@ import React from 'react'
 import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, CarBoxImage, CarBoxImgWrapper, CarBoxInfo, CarBoxPriceWrapper, CarBoxRateWrapper, CostText, Price } from "../../styles/motorStyled";
 import star1 from '../assets/carStar.svg'
 import { Link } from 'react-router-dom';
-import { caravan } from '../mock/caravandata';
 
-const ColumnCarBox = () => {
-  const data = caravan.maindata;
-  console.log("camp data:", data);
+const ColumnCarBox = ({exportedData}) => {
   return (
     <CarBoxContainer $flex $column $maxWidthForColumn>
-      {data.map((value, key) => { 
+      {exportedData.map((value, key) => { 
         return (
           <Link to={`${value.id}`} style={{textDecoration: "none"}}>
           <CarBox $flexBox key={key}>
@@ -19,11 +16,11 @@ const ColumnCarBox = () => {
                <CarBoxInfo $paddingTwoSides>
                   <CarBoxPriceWrapper>
                        <CostText $fontSize $fontWeight>{value.caravan.name || "no data"}</CostText>
-                       <Price>{value.caravan.cost || "no data"}</Price>
+                       <Price>{value.caravan.price || "no data"}</Price>
                   </CarBoxPriceWrapper>
                    <BrandName>{value.caravan.company || "no data"}
                        <CarBoxRateWrapper>
-                           <p> {value.caravan.rate || "no data"}</p>
+                           <p> {value.caravan.rate || "no rate"}</p>
                            <img src={star1} alt="starIcon" />
                        </CarBoxRateWrapper>
                    </BrandName>

@@ -28,6 +28,15 @@ export const HomeContainer2 = styled.div`
     padding: 0px 30px;
   }
 `;
+export const ResponsiveOfCarausel = styled.div`
+  padding: 0px 10%;
+  @media only screen and (max-width: 1000px) {
+    padding: 0px 0px 0px 30px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding: 0px 0px 0px 30px;
+  }
+`;
 
 export const RecommendContainer = styled.div`
   display: flex;
@@ -129,7 +138,7 @@ export const VideoContainer = styled.div`
     /* transform: scale(1.05);
     transition: 0.5s ease; */
   }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1100px) {
     grid-template-columns: auto auto;
   }
   @media only screen and (max-width: 600px) {
@@ -168,6 +177,10 @@ export const PopupVideo = styled.div`
   align-items: center;
   padding: 20px 25px 30px 25px;
   width: 100%;
+  @media only screen and (max-width: 700px) {
+  padding: 10px 15px 20px 15px;
+   
+  }
 `;
 
 export const PopupInsideTitle = styled.div`
@@ -216,7 +229,7 @@ export const BlogsContainer = styled.div`
   justify-content: center;
   align-items: start;
   padding-bottom: 80px;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1100px) {
     display: grid;
     grid-template-columns: auto;
   }

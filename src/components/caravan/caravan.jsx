@@ -25,9 +25,27 @@ import listColumn1 from "../assets/listColumn.svg";
 import listGrid1 from "../assets/listGrid.svg";
 import GridCarBoxComponent from "./gridCarBox";
 // import SortButton from "./pages/sortButton";
-import SideBarComponent from "./SideBar";
 import { caravan } from "../mock/caravandata";
 import SortButton from "./pages/sortButton";
+
+import {
+  CompareBox,
+  SearchButton,
+  CostCarBoxWrapper,
+  CostOfCarContainer,
+  FromToBox,
+} from "../../styles/motorStyled";
+import { DispJustAlgn } from "../../styles/styled";
+import compare22 from "../assets/compare2.png";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import { campcar } from "../mock/mockdata";
 
 const MotorComponent = () => {
   const data = caravan.maindata;
@@ -41,6 +59,27 @@ const MotorComponent = () => {
   const handleColumnClicked = () => {
     setActive(false);
   };
+
+
+  const [selectedLabel, setSelectedLabel] = useState([])
+
+  const handleCheckBoxChange = (labelName) => {
+   const isSelected = selectedLabel.includes(labelName)
+   setSelectedLabel(
+     isSelected 
+     ? selectedLabel.filter((itsName) => itsName !== labelName)
+     : [...selectedLabel, labelName]
+   )
+  }
+ 
+  const filteredData = data.filter(
+   (item) => 
+   selectedLabel.length === 0 ||
+   selectedLabel.includes(item.caravan.company)||
+   selectedLabel.includes(item.caravan.license)||
+   selectedLabel.includes(item.caravan.people)||
+   selectedLabel.includes(item.caravan.location)
+  )
 
   return (
     <MotorMainContainer>
@@ -64,7 +103,149 @@ const MotorComponent = () => {
       <SidebarAndCarBoxesContainer>
         {/* its only sidebar wrapper */}
         <CostOfCarContainerHide>
-          <SideBarComponent></SideBarComponent>
+        <CostOfCarContainer>
+    <CostOfCarContainer>
+  <CostCarBoxWrapper>
+    <CostTitle>Cost of car</CostTitle>
+    <Border></Border>
+    <DispJustAlgn style={{ padding: "20px 0px 50px 0px", gap: "0px" }}>
+      <FromToBox>
+        <CostText>from</CostText>
+        <input type="text" style={{ border: "1px solid black" }} />
+      </FromToBox>
+      <FromToBox>
+        <CostText>to</CostText>
+        <input type="text" style={{ border: "1px solid black" }} />
+      </FromToBox>
+    </DispJustAlgn>
+  </CostCarBoxWrapper>
+
+  <CostCarBoxWrapper>
+    <Accordion
+      defaultExpanded
+      sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%" }}
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel2-content"
+        id="panel2-header"
+        sx={{ padding: "0px" }}
+      >
+        <CostTitle>Company</CostTitle>
+      </AccordionSummary>
+      <AccordionDetails sx={{ padding: "0px" }}>
+        <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+            <FormControlLabel control={<Checkbox />} label="깜찍한 캠핑카" onChange={() => handleCheckBoxChange("깜찍한 캠핑카")}/>
+            <FormControlLabel control={<Checkbox />} label="모험의 바퀴"  onChange={() => handleCheckBoxChange("모험의 바퀴")}/>
+            <FormControlLabel control={<Checkbox />} label="행복 바퀴벌레"  onChange={() => handleCheckBoxChange("행복 바퀴벌레")}/>
+            <FormControlLabel control={<Checkbox />} label="캐러반 여행" onChange={() => handleCheckBoxChange("캐러반 여행")}/>
+          </FormGroup>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  </CostCarBoxWrapper>
+  <CostCarBoxWrapper>
+    <Accordion
+      defaultExpanded
+      sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%" }}
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel2-content"
+        id="panel2-header"
+        sx={{ padding: "0px" }}
+      >
+        <CostTitle>License type</CostTitle>
+      </AccordionSummary>
+      <AccordionDetails sx={{ padding: "0px" }}>
+        <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+            <FormControlLabel control={<Checkbox />} label="1종 보통" onChange={() => handleCheckBoxChange("1종 보통")}/>
+            <FormControlLabel control={<Checkbox />} label="2종 보통" onChange={() => handleCheckBoxChange("2종 보통")}/>
+            <FormControlLabel control={<Checkbox />} label="3종 보통" onChange={() => handleCheckBoxChange("3종 보통")}/>
+          </FormGroup>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  </CostCarBoxWrapper>
+  <CostCarBoxWrapper>
+    <Accordion
+      defaultExpanded
+      sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%" }}
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel2-content"
+        id="panel2-header"
+        sx={{ padding: "0px" }}
+      >
+        <CostTitle>Number of travelers</CostTitle>
+      </AccordionSummary>
+      <AccordionDetails sx={{ padding: "0px" }}>
+        <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+            <FormControlLabel control={<Checkbox />} label="3인"  onChange={() => handleCheckBoxChange("3인")}/>
+            <FormControlLabel control={<Checkbox />} label="4인"  onChange={() => handleCheckBoxChange("4인")}/>
+            <FormControlLabel control={<Checkbox />} label="5인"  onChange={() => handleCheckBoxChange("5인")}/>
+            <FormControlLabel control={<Checkbox />} label="6인"  onChange={() => handleCheckBoxChange("6인")}/>
+          </FormGroup>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  </CostCarBoxWrapper>
+  <CostCarBoxWrapper>
+    <Accordion
+      defaultExpanded
+      sx={{ boxShadow: "none", backgroundColor: "#FAFAFA", width: "100%" }}
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel2-content"
+        id="panel2-header"
+        sx={{ padding: "0px" }}
+      >
+        <CostTitle>Location</CostTitle>
+      </AccordionSummary>
+      <AccordionDetails sx={{ padding: "0px" }}>
+        <Typography>
+          <Border $marginBottom30></Border>
+          <FormGroup>
+            <FormControlLabel control={<Checkbox />} label="경상권" onChange={() => handleCheckBoxChange("경상권")}/>
+            <FormControlLabel control={<Checkbox />} label="수도권" onChange={() => handleCheckBoxChange("수도권")}/>
+            <FormControlLabel control={<Checkbox />} label="경상권" onChange={() => handleCheckBoxChange("경상권")}/>
+            <FormControlLabel control={<Checkbox />} label="충청권" onChange={() => handleCheckBoxChange("충청권")}/>
+    
+          </FormGroup>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  </CostCarBoxWrapper>
+
+  <DispJustAlgn $gap>
+    <SearchButton>Cancel</SearchButton>
+    <SearchButton>Search</SearchButton>
+  </DispJustAlgn>
+
+  <DispJustAlgn $column $alignStart $gap>
+    <p style={{ color: "#006DAB" }}>Compare</p>
+    <DispJustAlgn $gap $justifyStart>
+      <CompareBox>
+        <img src={compare22} alt="img" />
+      </CompareBox>
+      <CompareBox>
+        <img src={compare22} alt="img" />
+      </CompareBox>
+      <CompareBox>
+        <img src={compare22} alt="img" />
+      </CompareBox>
+    </DispJustAlgn>
+  </DispJustAlgn>
+</CostOfCarContainer>
+    </CostOfCarContainer>
         </CostOfCarContainerHide>
         {/* sort navbar, grid and column wrapper */}
         <div  style={{width: "100%", maxWidth: "1250px"}}>
@@ -121,7 +302,7 @@ const MotorComponent = () => {
             <Border $width100 $margin0 $marginTop6></Border>
           </div>
 
-          {active ? <GridCarBoxComponent /> : <ColumnCarBoxComponent />}
+          {active ? <GridCarBoxComponent exportedData={filteredData} /> : <ColumnCarBoxComponent exportedData={filteredData}/>}
         </div>
       </SidebarAndCarBoxesContainer>
     </MotorMainContainer>

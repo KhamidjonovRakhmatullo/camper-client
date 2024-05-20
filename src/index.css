@@ -64,7 +64,7 @@
 .my-popup-content {
   margin: auto;
   background: rgb(255, 255, 255);
-  width: 50%;
+  width: 65%;
   padding: 5px;
 }
 .my-popup-arrow {
@@ -126,6 +126,16 @@ html[data-theme='light'] .popup-arrow > svg {
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 
+}
+
+@media only screen and (max-width: 700px) {
+  .popup-content {
+    /* border-radius: 100px; */
+    margin: auto;
+    background: rgb(255, 255, 255);
+    width: 80%;
+    padding: 5px;
+  }
 }
 
 

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-  /* border: 1px solid red; */
+  border: 1px solid red;
   background-color: #fafafa;
   padding: 40px 10%;
+  width: 100%;
   /* max-width: 1300px; */
 `;
 
@@ -25,40 +26,48 @@ export const UnderLine2 = styled.div`
 `;
 
 export const CartLeftandRightContainer = styled.div`
-  /* border: 1px solid red; */
+  border: 1px solid red;
   display: flex;
   margin-top: 30px;
   gap: 45px;
-  @media only screen and (max-width: 1300px) {
+  width: 100%;
+  @media only screen and (max-width: 1400px) {
     flex-direction: column;
     gap: 30px;
   }
 `;
 
 export const CartLeftContainer = styled.div`
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   flex: 2;
   padding: 20px 64px;
-  max-height: 476px;
   width: 100%;
   max-width: 811px;
+  max-height: 476px;
   background-color: #ffff;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-
-
   img {
     width: 100%;
     max-width: 683px;
     max-height: 406px;
   }
+  @media only screen and (max-width: 700px) {
+    padding: 10px 30px;
+
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 8px 18px;
+
+  }
 `;
 
 export const CarouselImage =styled.div`
 margin-top: 50px;
-/* border: 1px solid green; */
+border: 1px solid green;
+width: 100%;
 img {
     width: 100%;
     max-width: 683px;

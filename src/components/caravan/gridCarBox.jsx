@@ -13,11 +13,8 @@ import {
 } from "../../styles/motorStyled";
 import star1 from "../assets/carStar.svg";
 import { Link } from "react-router-dom";
-import { caravan } from "../mock/caravandata";
 
-const GridCarBoxComponent = () => {
-  const data = caravan.maindata;
-  console.log("camp data:", data);
+const GridCarBoxComponent = ({exportedData}) => {
   return (
     <div
       style={{
@@ -27,7 +24,7 @@ const GridCarBoxComponent = () => {
       }}
     >
       <CarBoxContainer>
-        {data.map((value, key) => {
+        {exportedData.map((value, key) => {
           return (
             <Link to={`${value.id}`} style={{ textDecoration: "none" }}>
               <CarBox $maxWidth key={key}>
@@ -45,7 +42,7 @@ const GridCarBoxComponent = () => {
                   <BrandName>
                     {value.caravan.company || "no data"}
                     <CarBoxRateWrapper>
-                      <p> {value.caravan.rate || "no data"}</p>
+                      <p> {value.caravan.rate || "no rate"}</p>
                       <img src={star1} alt="starIcon" />
                     </CarBoxRateWrapper>
                   </BrandName>
