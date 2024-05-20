@@ -20,7 +20,6 @@ const ChatGPTComponent = () => {
     (item) =>
       selectedCompanies.length === 0 ||
       selectedCompanies.includes(item.car.company)
-
   );
 
 

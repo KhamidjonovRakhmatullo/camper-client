@@ -317,7 +317,7 @@ const MotorComponent = () => {
                   </CarSortButton>
                   <CarSortNavbarLeft>
                     <CostTitle>Items</CostTitle>
-                    <CostTitle $colorBlue>{data.length}</CostTitle>
+                    <CostTitle $colorBlue>{filteredData.length}</CostTitle>
                   </CarSortNavbarLeft>
                 </SidebarItemNumberTablet>
 
