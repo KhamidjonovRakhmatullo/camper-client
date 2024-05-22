@@ -42,7 +42,7 @@ const MultiCarousel = () => {
   };
 
   const data = campcar.maindata;
-  console.log("camp data:", data);
+  console.log("camp carausel data:", data);
 
   return (
     <RecommendContainer>

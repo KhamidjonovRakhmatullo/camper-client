@@ -25,7 +25,7 @@ export default function CreateAccountComponent() {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          padding: "140px 0px",
+          padding: "140px 30px",
         }}
       >
         <div

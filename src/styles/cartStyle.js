@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-color: #fafafa;
   padding: 40px 10%;
   width: 100%;
   /* max-width: 1300px; */
+  margin-top: 70px;
 `;
 
 export const CartTitle = styled.div`
@@ -26,7 +27,7 @@ export const UnderLine2 = styled.div`
 `;
 
 export const CartLeftandRightContainer = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   margin-top: 30px;
   gap: 45px;
@@ -34,11 +35,12 @@ export const CartLeftandRightContainer = styled.div`
   @media only screen and (max-width: 1400px) {
     flex-direction: column;
     gap: 30px;
+    align-items: center;
   }
 `;
 
 export const CartLeftContainer = styled.div`
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   flex: 2;
@@ -66,7 +68,7 @@ export const CartLeftContainer = styled.div`
 
 export const CarouselImage =styled.div`
 margin-top: 50px;
-border: 1px solid green;
+/* border: 1px solid green; */
 width: 100%;
 img {
     width: 100%;
@@ -105,7 +107,24 @@ export const CartRightContainer = styled.div`
   padding: 17px 0px 0px 0px;
   max-height: 600px;
   overflow: scroll;
+  width: 100%;
+  max-width: 311px;
+  @media only screen and (max-width: 1400px) {}
+  max-width: 811px;
+
 `;
+
+export const NameAndPriceWrapper =styled.div`
+display: flex;
+flex-direction: column;
+  @media only screen and (max-width: 1400px) {
+    display: flex;
+    flex-direction: unset;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+`
 
 export const CartCarName = styled.div`
   margin-bottom: ${(props) => (props.$marginBottom10 ? `10px` : ``)};
@@ -118,7 +137,6 @@ export const CartCarName = styled.div`
 `;
 export const CartCarPrice = styled.div`
   margin: 12px 0px 20px 0px;
-
   color: var(--blue, #006dab);
   font-family: Montserrat;
   font-size: 30px;
@@ -131,7 +149,6 @@ export const CartCarDescription = styled.div`
   flex-direction: column;
   gap: 11px;
   width: 100%;
-  max-width: 311px;
 
   color: rgba(55, 55, 55, 0.7);
   font-family: Montserrat;
@@ -152,7 +169,7 @@ export const CartCarDescription = styled.div`
 
 export const PaymentButton = styled.button`
   width: 100%;
-  max-width: 311px;
+  /* max-width: 311px; */
   padding: 10px 3.5%;
   border-radius: 10px;
   background-color: #006dab;
@@ -190,7 +207,7 @@ export const InputText = styled.div`
 
 export const InputStyled = styled.input`
   width: 100%;
-  max-width: 311px;
+  /* max-width: 311px; */
   height: 50px;
   border-radius: 10px;
   background: rgba(55, 55, 55, 0.1);

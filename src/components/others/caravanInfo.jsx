@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   CarBoxButtonWrapper2,
   CarInfoContainer,
@@ -18,6 +18,8 @@ import {
   NameOfCar,
   OtherInfosContainer,
   OtherInfosWrapper,
+  TransParentButton,
+  WhiteButton,
 } from "../../styles/carInfoStyle";
 import comfort1 from "../assets/comfort.png";
 import tidying1 from "../assets/tidying.png";
@@ -43,8 +45,10 @@ const CarvanInfoComponent = () => {
           {resultData.caravan.name}
         </HeadTitle>
         <CarBoxButtonWrapper2 $MaxWidth>
-              <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>ADD TO CART</CarBoxButton>
-              <CarBoxButton $BgColorTransparent $colorWhite2 $Border1>COMPARE</CarBoxButton>
+        <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
+              <TransParentButton>ADD TO CART</TransParentButton>
+        </Link>
+              <TransParentButton>COMPARE</TransParentButton>
             </CarBoxButtonWrapper2>
       </MotorBgImage>
       <div style={{padding: '30px 0px 0px 0px'}}>
@@ -64,7 +68,7 @@ const CarvanInfoComponent = () => {
               <div>{resultData.caravan.type || "Data not found"}</div>
             </div>
             <NameOfCar $ColorBlue $Size30px>
-              {resultData.caravan.cost || "Data not found"}
+              {resultData.caravan.price || "Data not found"}
             </NameOfCar>
           </NameAndPriceWrapper>
           <DividerWrapper></DividerWrapper>
@@ -153,8 +157,9 @@ const CarvanInfoComponent = () => {
             <InfoTitle>Heating when driving</InfoTitle>
             <InfoText>{resultData.docs.heating}</InfoText>
             <CarBoxButtonWrapper2>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+            <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
+              <WhiteButton>ADD TO CART</WhiteButton></Link>
+              <WhiteButton>COMPARE</WhiteButton>
             </CarBoxButtonWrapper2>
           </DocsWrapper>
           <ImgWrapper>
@@ -164,8 +169,9 @@ const CarvanInfoComponent = () => {
             <InfoTitle>Heating when driving</InfoTitle>
             <InfoText>{resultData.docs.heating}</InfoText>
             <CarBoxButtonWrapper2>
-              <CarBoxButton>ADD TO CART</CarBoxButton>
-              <CarBoxButton>COMPARE</CarBoxButton>
+            <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
+              <WhiteButton>ADD TO CART</WhiteButton></Link>
+              <WhiteButton>COMPARE</WhiteButton>
             </CarBoxButtonWrapper2>
           </DocsWrapper>
         </ImageAndInfoContainer>

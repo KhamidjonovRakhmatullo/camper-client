@@ -4,12 +4,13 @@ export const NavbarContainer =styled.h1`
 display: flex;
 justify-content: space-around;
 align-items: center;
-padding: 22px 70px;
+padding: 18px 70px;
 background-color: white;
 /* border: 1px solid red; */
-/* position: fixed;
+position: fixed;
+/* position: sticky; */
 width: 100%;
-z-index: 1100; */
+z-index: 1100;
 box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
 @media only screen and (max-width: 600px){
    padding: 15px 30px;

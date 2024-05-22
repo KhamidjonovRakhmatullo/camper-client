@@ -5,7 +5,7 @@ export const HomeCarousel = styled.div`
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
   img {
     width: 100%;
-    max-height: 600px;
+    max-height: 700px;
   }
 `;
 

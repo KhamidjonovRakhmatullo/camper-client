@@ -4,12 +4,12 @@ import { BrandName, CarBox, CarBoxButton, CarBoxButtonWrapper, CarBoxContainer, 
 import star1 from '../assets/carStar.svg'
 import { Link } from 'react-router-dom';
 
-const ColumnCarBoxComponent = () => {
+const ColumnCarBoxComponent = ({exportedData}) => {
   const data = campcar.maindata.slice(-12);
   console.log("camp data:", data);
   return (
     <CarBoxContainer $flex $column $maxWidthForColumn>
-      {data.map((value, key) => { 
+      {exportedData.map((value, key) => { 
         return (
           <Link to={`${value.id}`} style={{textDecoration: "none"}}>
           <CarBox $flexBox key={key}>

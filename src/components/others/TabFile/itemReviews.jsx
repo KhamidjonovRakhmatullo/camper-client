@@ -11,7 +11,7 @@ import Select from '@mui/material/Select';
 
 const ItemReviewsComponent = () => {
   const data = campcar.maindata;
-  const data1 = data.slice(1, 5)
+  const data1 = data.slice(5, 9)
   console.log("data is:", data);
 
   const ITEM_HEIGHT = 35;
@@ -52,7 +52,7 @@ const ItemReviewsComponent = () => {
         <ItemReviewsAndSelect>
           <div style={{ display: "flex", gap: "10px" }}>
             <CostTitle>Premium Review</CostTitle>
-            <CostTitle $colorBlue>{data.length}</CostTitle>
+            <CostTitle $colorBlue>{data1.length}</CostTitle>
           </div>
           <FormControl sx={{ width: 177, }}>
           <InputLabel id="demo-multiple-name-label">Name</InputLabel>
@@ -66,7 +66,7 @@ const ItemReviewsComponent = () => {
             MenuProps={MenuProps}
           >
             {data.map((value, key) => (
-              <MenuItem
+              <MenuItem key={key}
                 style={getStyles(value, personName, theme)}
               >
                 {value.car.name}

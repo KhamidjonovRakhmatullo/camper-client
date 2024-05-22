@@ -20,6 +20,7 @@ import CreateAccountComponent from "./navbar/pages/createAccount";
 import CartComponent from "./cart/cart";
 import CheckBoxComponent from "./useState/checkBox";
 import ChatGPTComponent from "./useState/chatGPT";
+import CaravanCartComponent from "./cart/caravanCart";
 
 const RouterComponent = () => {
   const location = useLocation()
@@ -54,6 +55,7 @@ const RouterComponent = () => {
         <Route path="/createAccount" element={<CreateAccountComponent/>}/>
 
         <Route path="motor/:id/cart" element={<CartComponent/>}/>
+        <Route path="caravan/:id/cart" element={<CaravanCartComponent/>}/>
         
       </Routes>
      

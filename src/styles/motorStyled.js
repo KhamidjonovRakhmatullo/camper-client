@@ -12,7 +12,7 @@ export const MotorMainContainer = styled.div`
 export const MotorBgImage = styled.div`
   background-image: ${(props) =>
     props.$CaravanBg ? `url(${CaravanBgImg})` : `url(${MotorBgImg})`};
-  height: 600px;
+  height: 700px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;

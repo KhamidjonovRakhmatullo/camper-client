@@ -6,11 +6,9 @@ import {
   CarSortNavbarLeft,
   CarSortNavbarLeft_ItemAndButtons,
   CarSortNavbarRight,
-  ColumnButton,
   CostOfCarContainerHide,
   CostText,
   CostTitle,
-  GridButton,
   GridColumnButtonWrapper,
   MotorBgImage,
   MotorMainContainer,
@@ -21,8 +19,6 @@ import {
   StyledSelect,
 } from "../../styles/motorStyled";
 import ColumnCarBoxComponent from "./columnCarBox";
-import listColumn1 from "../assets/listColumn.svg";
-import listGrid1 from "../assets/listGrid.svg";
 import { campcar } from "../mock/mockdata";
 import GridCarBoxComponent from "./gridCarBox";
 import SortButton from "./pages/sortButton";
@@ -46,6 +42,12 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
+import ViewListIcon from '@mui/icons-material/ViewList';
+import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+
+
 const MotorComponent = () => {
   const data = campcar.maindata;
 ////grid and column
@@ -58,6 +60,16 @@ const MotorComponent = () => {
   const handleColumnClicked = () => {
     setActive(false);
   };
+
+
+///set active of grid and column buttons
+const [view, setView] = React.useState('list');
+
+const handleChange = (event, nextView) => {
+  setView(nextView);
+};
+
+
 ///////////////////////////////
 ////sidebar
  const [selectedLabel, setSelectedLabel] = useState([])
@@ -285,14 +297,20 @@ const MotorComponent = () => {
                   </CarSortNavbarLeft>
                 </SidebarItemNumberTablet>
 
-                <GridColumnButtonWrapper $hide>
-                  <GridButton onClick={handleGridClicked}>
-                    <img src={listGrid1} alt="img" />
-                  </GridButton>
-                  <ColumnButton onClick={handleColumnClicked}>
-                    <img src={listColumn1} alt="img" />
-                  </ColumnButton>
-                </GridColumnButtonWrapper>
+              <GridColumnButtonWrapper $hide>
+                <ToggleButtonGroup
+                   value={view}
+                   exclusive
+                   onChange={handleChange}
+                 >
+                   <ToggleButton value="list" aria-label="list" sx={{height: "30px", width: "40px"}}  onClick={handleGridClicked}>
+                     <ViewModuleIcon />
+                   </ToggleButton>
+                   <ToggleButton value="module" aria-label="module" sx={{height: "30px", width: "40px"}}  onClick={handleColumnClicked}>
+                   <ViewListIcon /> 
+                   </ToggleButton>
+                 </ToggleButtonGroup>
+               </GridColumnButtonWrapper>
               </CarSortNavbarLeft_ItemAndButtons>
 
               <CarSortNavbarRight>
@@ -300,8 +318,9 @@ const MotorComponent = () => {
                 <CostText $fontSize>Sort by</CostText>
                 <StyledSelect $padding>
                   <option>Select</option>
-                  <option>bb</option>
-                  <option>cc</option>
+                  <option>Last uploaded</option>
+                  <option>Low price</option>
+                  <option>High price</option>
                 </StyledSelect>
                 <StyledSelect>
                   <option>60</option>
@@ -310,14 +329,20 @@ const MotorComponent = () => {
                 </StyledSelect>
                 </SortByWrapper>
 
-                <GridColumnButtonWrapper>
-                  <GridButton onClick={handleGridClicked}>
-                    <img src={listGrid1} alt="img" />
-                  </GridButton>
-                  <ColumnButton onClick={handleColumnClicked}>
-                    <img src={listColumn1} alt="img" />
-                  </ColumnButton>
-                </GridColumnButtonWrapper>
+              <GridColumnButtonWrapper>
+                <ToggleButtonGroup
+                   value={view}
+                   exclusive
+                   onChange={handleChange}
+                 >
+                   <ToggleButton value="list" aria-label="list" sx={{height: "30px", width: "40px"}}  onClick={handleGridClicked}>
+                     <ViewModuleIcon />
+                   </ToggleButton>
+                   <ToggleButton value="module" aria-label="module" sx={{height: "30px", width: "40px"}}  onClick={handleColumnClicked}>
+                   <ViewListIcon /> 
+                   </ToggleButton>
+                 </ToggleButtonGroup>
+              </GridColumnButtonWrapper>
               </CarSortNavbarRight>
             </CarSortNavbar>
             <Border $width100 $margin0 $marginTop6></Border>

@@ -14,7 +14,7 @@ flex: 6;
 display: flex;
 justify-content: space-around;
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1100px){
     display: none;
 }
 `

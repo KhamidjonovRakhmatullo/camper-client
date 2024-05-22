@@ -3,6 +3,7 @@ import { NotFoundContainer } from '../../styles/styled'
 import { StdLogo } from "../../styles/NavStyled"
 import { CarBoxButton, Price } from '../../styles/motorStyled'
 import { useNavigate } from 'react-router-dom'
+import { WhiteButton } from '../../styles/carInfoStyle'
 
 const Notfound = () => {
     const navigate = useNavigate();
@@ -13,9 +14,9 @@ const Notfound = () => {
   return (
     <div>
         <NotFoundContainer>
-            <Price $fontSize80>404</Price>
+            <Price style={{fontSize: "55px"}}>404</Price>
             <StdLogo>Page Not Found </StdLogo>
-            <CarBoxButton onClick={handleBack} style={{padding: "16px 10%"}}>Back Home</CarBoxButton>
+           <WhiteButton $Padding onClick={handleBack}>Go Back</WhiteButton>
             <p style={{color: "#006DAB"}}>Click the button to go back</p>
         </NotFoundContainer>
     </div>

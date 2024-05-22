@@ -16,7 +16,7 @@ export default function TabsComponent() {
       aria-label="Placement indicator tabs"
       value={placement}
       onChange={(event, newValue) => setPlacement(newValue)}
-      sx={{ width: "100%", marginTop: "80px" }}
+      sx={{ width: "100%", marginTop: "80px"}}
     >
       <TabList
         underlinePlacement={placement}
@@ -25,7 +25,8 @@ export default function TabsComponent() {
           height: "60px",
           // display: 'flex',
           // justifyContent: "center",
-          // marginLeft: "-700px"
+          // marginLeft: "-700px",
+          // ...(window.innerWidth <= 600 && { marginLeft: "0px", justifyContent: "start" }),
           
         }}
       >

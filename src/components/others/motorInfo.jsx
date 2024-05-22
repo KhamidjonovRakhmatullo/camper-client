@@ -26,7 +26,7 @@ import comfort1 from "../assets/comfort.png";
 import tidying1 from "../assets/tidying.png";
 import ventilated1 from "../assets/ventilated.png";
 import heating1 from "../assets/heating.png";
-import { CarBoxButton, MotorBgImage } from "../../styles/motorStyled";
+import {  MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
 import img111 from '../assets/campCarOboi-5.jpg'
 
@@ -46,8 +46,8 @@ const MotorInfoComponent = () => {
         </HeadTitle>
         <CarBoxButtonWrapper2 $MaxWidth>
         <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
-              <TransParentButton $BgColorTransparent $colorWhite2 $Border1>ADD TO CART</TransParentButton></Link>
-              <TransParentButton $BgColorTransparent $colorWhite2 $Border1>COMPARE</TransParentButton>
+              <TransParentButton>ADD TO CART</TransParentButton></Link>
+              <TransParentButton>COMPARE</TransParentButton>
             </CarBoxButtonWrapper2>
       </MotorBgImage>
       <div style={{padding: '30px 0px 0px 0px'}}>

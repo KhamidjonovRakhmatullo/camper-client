@@ -20,7 +20,7 @@ export default function SignInComponent() {
   const [open, setOpen] = React.useState(false);
   return (
     <React.Fragment>
-      <div style={{ cursor: "pointer" }}>
+      <div style={{ cursor: "pointer", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <img
           src={user1}
           alt="user"
@@ -33,7 +33,7 @@ export default function SignInComponent() {
         aria-describedby="modal-desc"
         open={open}
         onClose={() => setOpen(false)}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center", margin: "0px 30px" }}
       >
         <Sheet
           variant="outlined"
@@ -104,7 +104,7 @@ export default function SignInComponent() {
                   borderRadius: "10px",
                 }}
               >
-                Sign in
+                <h3>SIGN IN</h3>
               </Button>
 
               <div style={{display: "flex", gap: "20px", padding :"0px 50px"}}>

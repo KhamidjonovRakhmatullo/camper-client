@@ -237,7 +237,7 @@ line-height: normal;
 
 export const WhiteButton =styled.button`
   width: 100%;
-  padding: 14px 4%;
+  padding: ${(props) => props.$Padding ? `12px 1%` : `14px 4%`};
   border-radius: 10px;
   background-color: #fff;
   border: 1px solid var(--blue, #006dab);

@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { campcar } from "../mock/mockdata";
+import { caravan } from "../mock/caravandata";
 import {
   CarouselImage,
   CartCarDescription,
@@ -31,11 +31,12 @@ import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const CartComponent = () => {
+const CaravanCartComponent = () => {
   const { id } = useParams();
   console.log("userId:", id);
-  const data = campcar.maindata.find((value) => value.id === parseInt(id));
+  const data = caravan.maindata.find((value) => value.id === parseInt(id));
   console.log("id Info:", data);
+  
 
   const responsive = {
     desktop: {
@@ -63,6 +64,7 @@ const CartComponent = () => {
         flex: "1",
         alignItems: "",
         backgroundColor: "#fafafa",
+        border: "1px solid black",
       }}
     >
       <CartContainer>
@@ -84,7 +86,7 @@ const CartComponent = () => {
               removeArrowOnDeviceType={["tablet", "mobile"]}
             >
               <CarouselImage>
-                <img src={data.car.photo || image1} alt="" />
+                <img src={data.caravan.photo || image1} alt="" />
               </CarouselImage>
               <CarouselImage>
                 <img src={image2} alt="" />
@@ -108,15 +110,15 @@ const CartComponent = () => {
             <div style={{ display: "flex", justifyContent: "center" }}>
               <PurchasePrice>
                 <p>Purchase Price</p>
-                <b>{data.car.cost}</b>
+                <b>{data.caravan.price || "no data"}</b>
               </PurchasePrice>
             </div>
           </CartLeftContainer>
 
           <CartRightContainer>
             <NameAndPriceWrapper>
-              <CartCarName>{data.car.name}</CartCarName>
-              <CartCarPrice>{data.car.cost}</CartCarPrice>
+              <CartCarName>{data.caravan.name}</CartCarName>
+              <CartCarPrice>{data.caravan.cost}</CartCarPrice>
             </NameAndPriceWrapper>
             <CartCarDescription>
               <h3>Description</h3>
@@ -255,4 +257,4 @@ const CartComponent = () => {
   );
 };
 
-export default CartComponent;
+export default CaravanCartComponent;

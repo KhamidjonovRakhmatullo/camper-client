@@ -14,9 +14,11 @@ export const NotFoundContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 600px;
+  padding: 0px 30px;
   button {
-    width: 30%;
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 5px;
+    max-width: 500px;
   }
 `;

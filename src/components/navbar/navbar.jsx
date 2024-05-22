@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import LeftMenuButton from "./pages/leftMenu";
 import RightMenuButton from "./pages/RightMenu";
 import SignInComponent from "./pages/signIn";
+import Badge from '@mui/material/Badge';
 
 const NavbarComponent = () => {
   return (
@@ -54,17 +55,20 @@ const NavbarComponent = () => {
         </NavItemWrapper2>
 
         <NavRightWrapper>
-          <img src={cart1} alt="cart" />
+      
+           <Badge badgeContent={4} color="primary">
+              <img src={cart1} alt="cart" />
+          </Badge>
           <SignInComponent/>
           <div style={{ display: "flex", gap: "5px" }}>
            <NavbarP>En</NavbarP>
             <img src={grommet1} alt="icon" />
           </div>
         </NavRightWrapper>
-        <MenuImg $DisplayFlex $gap>
+         <MenuImg $DisplayFlex $gap>
             <img src={cart1} alt="cart" />
             <RightMenuButton/>
-          </MenuImg>
+        </MenuImg>
       </NavbarContainer>
   );
 };
