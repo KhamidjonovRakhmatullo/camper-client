@@ -22,7 +22,7 @@ export default function SortButton() {
   const list = (size) => (
     <Box
       role="presentation"
-      onClick={toggleDrawer(size, false)}
+      onClick={toggleDrawer(size, true)}
       onKeyDown={toggleDrawer(size, false)}
     >
       <div style={{padding: "40px 20px"}}>

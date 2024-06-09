@@ -22,6 +22,9 @@ export const MotorBgImage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 600px) {
+    height: 500px;
+  }
 `;
 
 // main container

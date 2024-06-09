@@ -26,7 +26,7 @@ const HomeComponent = () => {
           showThumbs={false}
           infinite
           autoPlay
-          // autoPlaySpeed={4000}
+          // autoPlaySpeed={120}
           // transitionDuration={3000}
           // onChange={onChange}
           // onClickItem={onClickItem}

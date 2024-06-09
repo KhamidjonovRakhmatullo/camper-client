@@ -26,6 +26,7 @@ export default function SortButton() {
       onKeyDown={toggleDrawer(size, false)}
     >
       <div style={{padding: "40px 20px"}}>
+        {/* calling side bar */}
       <SideBarComponent/>
       </div>
     </Box>

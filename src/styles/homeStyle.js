@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const HomeCarousel = styled.div`
+  margin-top: 84px;
   width: 100%;
+  @media only screen and (max-width: 600px) {
+    margin-top: 66px;
+  }
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
   img {
     width: 100%;
+    height: 100%;
     max-height: 700px;
   }
 `;
@@ -178,8 +183,7 @@ export const PopupVideo = styled.div`
   padding: 20px 25px 30px 25px;
   width: 100%;
   @media only screen and (max-width: 700px) {
-  padding: 10px 15px 20px 15px;
-   
+    padding: 10px 15px 20px 15px;
   }
 `;
 

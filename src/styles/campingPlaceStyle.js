@@ -91,14 +91,14 @@ export const CampPlaceInfoContainer = styled.div`
 `
 
 export const CampPlaceInfoContainer2 = styled.div`
-  padding: 0px 100px 0px 100px;
+  padding: 80px 100px 0px 100px;
   width: 100%;
   max-width: 1390px;
   @media only screen and (max-width: 1024px) {
-    padding: 0px 70px 0px 70px;
+    padding: 80px 70px 0px 70px;
   }
   @media only screen and (max-width: 700px) {
-    padding: 0px 30px 0px 30px;
+    padding: 60px 30px 0px 30px;
   }
 `;
 

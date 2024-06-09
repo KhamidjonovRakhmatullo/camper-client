@@ -318,9 +318,8 @@ const handleChange = (event, nextView) => {
                 <CostText $fontSize>Sort by</CostText>
                 <StyledSelect $padding>
                   <option>Select</option>
-                  <option>Last uploaded</option>
-                  <option>Low price</option>
-                  <option>High price</option>
+                  <option>a </option>
+                  <option>b </option>
                 </StyledSelect>
                 <StyledSelect>
                   <option>60</option>
