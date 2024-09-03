@@ -14,7 +14,6 @@ jobs:
           password: ${{ secrets.PASS }}
           port: 22
           script: |
-            pm2 stop camper.rakhmatulloh
             cd camper-client/
             git pull origin main
             rm -rf ./build
@@ -23,4 +22,3 @@ jobs:
             npm i
             npm run build
             cp -rf ./build/* /var/www/camper.rakhmatulloh.uz
-            pm2 restart camper.rakhmatulloh
