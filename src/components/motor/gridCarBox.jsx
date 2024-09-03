@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { campcar } from "../mock/mockdata";
 import {
   BrandName,
@@ -14,37 +14,52 @@ import {
 } from "../../styles/motorStyled";
 import star1 from "../assets/carStar.svg";
 import { Link } from "react-router-dom";
+import axios from 'axios'
+import img2 from "../assets/img-8.png";
 
-const GridCarBoxComponent = ({exportedData}) => {
-  const data = campcar.maindata;
-  // console.log("camp data:", data);
+const GridCarBoxComponent = () => {
+
+  const [dataList, setDataList] = useState([])
+  
+  useEffect(() => {
+    fetchData();
+  });
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:5050/api/motor");
+      setDataList(response.data);
+    } catch (error) {
+      console.log("Fetch data is NOT successfull", error);
+    }
+  };
   return (
 
     <div style={{display: 'flex', justifyContent: "center", alignItems: 'center'}}>
       <CarBoxContainer>
-        {exportedData.map((value, key) => {
+        {dataList.map((value, key) => {
           return (
             <Link to={`${value.id}`} style={{textDecoration: "none"}}>
               <CarBox $maxWidth key={key}>
                 <CarBoxImage $hight150px>
                   <img
-                    src={value.car.photo || "no photo"}
-                    alt="no photo1"
+                    src={img2}
+                    alt="no photo"
                     style={{ width: "100%" }}
                   />
                 </CarBoxImage>
                 <CarBoxInfo>
                   <CostText $fontSize $fontWeight>
-                    {value.car.name || "no data"}
+                    {value.name || "no data"}
                   </CostText>
                   <BrandName>
-                    {value.car.company || "no data"}
+                    {value.company || "no data"}
                     <CarBoxRateWrapper>
-                      <p> {value.car.rate || "no data"}</p>
+                      <p> {value.rate || "no data"}</p>
                       <img src={star1} alt="starIcon" />
                     </CarBoxRateWrapper>
                   </BrandName>
-                  <Price>{value.car.cost || "no data"}</Price>
+                  <Price>{value.cost || "no data"}</Price>
                   <CarBoxButtonWrapper>
                     <CarBoxButton>ORDER</CarBoxButton>
                     <CarBoxButton $paddingRwnL>COMPARE</CarBoxButton>

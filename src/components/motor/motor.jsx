@@ -50,7 +50,14 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 const MotorComponent = () => {
   const data = campcar.maindata;
-////grid and column
+
+  // State for selected checkboxes
+  const [selectedLabels, setSelectedLabels] = useState([]);
+
+  // State for input search query
+  const [searchQuery1, setSearchQuery1] = useState("");
+
+  // State for active view (grid or column)
   const [active, setActive] = useState(true);
 
   const handleGridClicked = () => {
@@ -61,40 +68,43 @@ const MotorComponent = () => {
     setActive(false);
   };
 
+  // Handle checkbox change
+  const handleCheckBoxChange = (labelName) => {
+    const isSelected = selectedLabels.includes(labelName);
+    setSelectedLabels(
+      isSelected
+        ? selectedLabels.filter((name) => name !== labelName)
+        : [...selectedLabels, labelName]
+    );
+  };
 
-///set active of grid and column buttons
-const [view, setView] = React.useState('list');
+  // Filter data based on selected labels and search query
+  const filteredData = data
+    .filter(
+      (item) =>
+        selectedLabels.length === 0 ||
+        selectedLabels.includes(item.car.company) ||
+        selectedLabels.includes(item.car.license) ||
+        selectedLabels.includes(item.car.people) ||
+        selectedLabels.includes(item.car.location)
+    )
+    .filter((item) =>
+      searchQuery1.length === 0 ||
+      item.car.name.toLowerCase().includes(searchQuery1)
+    );
 
-const handleChange = (event, nextView) => {
-  setView(nextView);
-};
+  // Handle input search query change
+  const handleFilteredData = (e) => {
+    const searchQuery = e.target.value.toLowerCase();
+    setSearchQuery1(searchQuery);
+  };
 
+  // Handle view change (grid or column)
+  const [view, setView] = useState("list");
 
-///////////////////////////////
-////sidebar
- const [selectedLabel, setSelectedLabel] = useState([])
-
- const handleCheckBoxChange = (labelName) => {
-  const isSelected = selectedLabel.includes(labelName)
-  setSelectedLabel(
-    isSelected 
-    ? selectedLabel.filter((itsName) => itsName !== labelName)
-    : [...selectedLabel, labelName]
-  )
- }
-
- const filteredData = data.filter(
-  (item) => 
-  selectedLabel.length === 0 ||
-  selectedLabel.includes(item.car.company)||
-  selectedLabel.includes(item.car.license)||
-  selectedLabel.includes(item.car.people)||
-  selectedLabel.includes(item.car.location)
- )
-////////////////////////////
-
-  
-   console.log ("filtered data", filteredData)
+  const handleChange = (event, nextView) => {
+    setView(nextView);
+  };
       
   return (
     <MotorMainContainer>
@@ -294,6 +304,7 @@ const handleChange = (event, nextView) => {
                   <CarSortNavbarLeft>
                     <CostTitle>Items</CostTitle>
                     <CostTitle $colorBlue>{filteredData.length}</CostTitle>
+                    <input type="text" name="" id="" onChange={handleFilteredData}/>
                   </CarSortNavbarLeft>
                 </SidebarItemNumberTablet>
 
