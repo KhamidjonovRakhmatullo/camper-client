@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { campcar } from "../mock/mockdata";
+import axios from "axios";
 import {
   CarBoxButtonWrapper2,
   CarInfoContainer,
@@ -26,158 +26,129 @@ import comfort1 from "../assets/comfort.png";
 import tidying1 from "../assets/tidying.png";
 import ventilated1 from "../assets/ventilated.png";
 import heating1 from "../assets/heating.png";
-import {  MotorBgImage } from "../../styles/motorStyled";
+import { MotorBgImage } from "../../styles/motorStyled";
 import TabsComponent from "./TabFile/tab";
-import img111 from '../assets/campCarOboi-5.jpg'
+import img111 from '../assets/campCarOboi-5.jpg';
 
 const MotorInfoComponent = () => {
-  let { id } = useParams();
-  console.log("userId:", id);
-  const resultData = campcar.maindata.find(
-    (value) => value.id === parseInt(id)
-  );
-  console.log("id Info:", resultData);
+  const [motor, setMotor] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchMotorData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5050/api/motor/${id}`);
+        setMotor(response.data);
+      } catch (error) {
+        console.error("Error fetching motor data:", error);
+      }
+    };
+
+    fetchMotorData();
+  }, [id]);
+
+  if (!motor) {
+    return <div>Loading...</div>; // Add loading spinner or message
+  }
 
   return (
     <CarInfoContainer>
-       <MotorBgImage  style={{backgroundImage: `url(${img111})`}}>
-        <HeadTitle>
-          {resultData.car.name}
-        </HeadTitle>
+      <MotorBgImage style={{ backgroundImage: `url(${img111})` }}>
+        <HeadTitle>{motor.name}</HeadTitle>
         <CarBoxButtonWrapper2 $MaxWidth>
-        <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
-              <TransParentButton>ADD TO CART</TransParentButton></Link>
-              <TransParentButton>COMPARE</TransParentButton>
-            </CarBoxButtonWrapper2>
+          <Link to="cart" style={{ textDecoration: "none", width: "100%" }}>
+            <TransParentButton>ADD TO CART</TransParentButton>
+          </Link>
+          <TransParentButton>COMPARE</TransParentButton>
+        </CarBoxButtonWrapper2>
       </MotorBgImage>
-      <div style={{padding: '30px 0px 0px 0px'}}>
-      <ImageAndInfoContainer $AlignCenter>
-        <InfoWrapper2>
-        <ImageWrapper>
-          <img src={resultData.car.photo || "Data not found"} alt="car image" />
-        </ImageWrapper>
-        </InfoWrapper2>
-        <InfoWrapper2>
-        <InfoWrapper>
-          <NameAndPriceWrapper>
-            <div>
-              <NameOfCar $MarginBottom10px>
-                {resultData.car.name || "Data not found"}
-              </NameOfCar>
-              <div>{resultData.car.type || "Data not found"}</div>
-            </div>
-            <NameOfCar $ColorBlue $Size30px>
-              {resultData.car.cost || "Data not found"}
-            </NameOfCar>
-          </NameAndPriceWrapper>
-          <DividerWrapper></DividerWrapper>
-          <OtherInfosContainer>
-            <OtherInfosWrapper>
-              <CompanyName $Color000 $ Size18px>
-                Company
-              </CompanyName>
-              <CompanyName $Color000 $ Size18px>
-                People
-              </CompanyName>
-              <CompanyName $Color000 $ Size18px>
-                License type
-              </CompanyName>
-            </OtherInfosWrapper>
-
-            <OtherInfosWrapper>
-              <CompanyName>{resultData.car.company}</CompanyName>
-              <CompanyName>{resultData.car.people}</CompanyName>
-              <CompanyName>{resultData.car.license}</CompanyName>
-            </OtherInfosWrapper>
-          </OtherInfosContainer>
-        </InfoWrapper>
-        </InfoWrapper2>
-      </ImageAndInfoContainer>
-
-      <div style={{ marginTop: "70px" }}>
-        <ImageAndInfoContainer>
-          <DocsWrapper>
-            <InfoTitle>Comfort</InfoTitle>
-            <InfoText>{resultData.docs.comfort}</InfoText>
-          </DocsWrapper>
-          <ImgWrapper>
-            <img src={comfort1} alt="img" />
-          </ImgWrapper>
-          <DocsWrapper $hideORshow>
-            <InfoTitle>Comfort</InfoTitle>
-            <InfoText>{resultData.docs.comfort}</InfoText>
-          </DocsWrapper>
+      <div style={{ padding: '30px 0px 0px 0px' }}>
+        <ImageAndInfoContainer $AlignCenter>
+          <InfoWrapper2>
+            <ImageWrapper>
+              <img src={motor.photo || "Data not found"} alt="car image11" />
+            </ImageWrapper>
+          </InfoWrapper2>
+          <InfoWrapper2>
+            <InfoWrapper>
+              <NameAndPriceWrapper>
+                <div>
+                  <NameOfCar $MarginBottom10px>{motor.name || "Data not found"}</NameOfCar>
+                  <div>{motor.type || "Data not found"}</div>
+                </div>
+                <NameOfCar $ColorBlue $Size30px>{motor.cost || "Data not found"}</NameOfCar>
+              </NameAndPriceWrapper>
+              <DividerWrapper />
+              <OtherInfosContainer>
+                <OtherInfosWrapper>
+                  <CompanyName $Color000 $Size18px>Company</CompanyName>
+                  <CompanyName $Color000 $Size18px>People</CompanyName>
+                  <CompanyName $Color000 $Size18px>License type</CompanyName>
+                </OtherInfosWrapper>
+                <OtherInfosWrapper>
+                  <CompanyName>{motor.company}</CompanyName>
+                  <CompanyName>{motor.people}</CompanyName>
+                  <CompanyName>{motor.license}</CompanyName>
+                </OtherInfosWrapper>
+              </OtherInfosContainer>
+            </InfoWrapper>
+          </InfoWrapper2>
         </ImageAndInfoContainer>
-
-        <ImageAndInfoContainer>
-          <ImgWrapper>
-            <img src={tidying1} alt="img" />
-          </ImgWrapper>
-          <DocsWrapper>
-            <InfoTitle>Tidying away is child’s play!</InfoTitle>
-            <InfoText>{resultData.docs.tidying}</InfoText>
-          </DocsWrapper>
-          <DocsWrapper $hideORshow>
-            <InfoTitle>Tidying away is child’s play!</InfoTitle>
-            <InfoText>{resultData.docs.tidying}</InfoText>
-          </DocsWrapper>
-        </ImageAndInfoContainer>
-
-        <ImageAndInfoContainer>
-          <DocsWrapper>
-            <InfoTitle>Ventilated , Lit up</InfoTitle>
-            <InfoText>{resultData.docs.comfort}</InfoText>
-          </DocsWrapper>
-          <ImgWrapper>
-            <img src={ventilated1} alt="img" />
-          </ImgWrapper>
-          <DocsWrapper $hideORshow>
-            <InfoTitle>Ventilated , Lit up</InfoTitle>
-            <InfoText>{resultData.docs.comfort}</InfoText>
-          </DocsWrapper>
-        </ImageAndInfoContainer>
-
-        <ImageAndInfoContainer>
-          <ImgWrapper>
-            <img src={comfort1} alt="img" />
-          </ImgWrapper>
-          <DocsWrapper>
-            <InfoTitle>Tidying away is child’s play!</InfoTitle>
-            <InfoText>{resultData.docs.tidying}</InfoText>
-          </DocsWrapper>
-          <DocsWrapper $hideORshow>
-            <InfoTitle>Easy access</InfoTitle>
-            <InfoText>{resultData.docs.access}</InfoText>
-          </DocsWrapper>
-        </ImageAndInfoContainer>
-
-        <ImageAndInfoContainer>
-          <DocsWrapper>
-            <InfoTitle>Heating when driving</InfoTitle>
-            <InfoText>{resultData.docs.heating}</InfoText>
-            <CarBoxButtonWrapper2>
-            <Link to={`cart`} style={{textDecoration: "none", width: "100%"}}>
-              <WhiteButton>ADD TO CART</WhiteButton></Link>
-              <WhiteButton>COMPARE</WhiteButton>
-            </CarBoxButtonWrapper2>
-          </DocsWrapper>
-          <ImgWrapper>
-            <img src={heating1} alt="img" />
-          </ImgWrapper>
-          <DocsWrapper $hideORshow>
-            <InfoTitle>Heating when driving</InfoTitle>
-            <InfoText>{resultData.docs.heating}</InfoText>
-            <CarBoxButtonWrapper2>
-            <Link to={`cart`} style={{textDecoration: "none",width: "100%"}}>
-              <WhiteButton>ADD TO CART</WhiteButton>
-            </Link>
-              <WhiteButton>COMPARE</WhiteButton>
-            </CarBoxButtonWrapper2>
-          </DocsWrapper>
-        </ImageAndInfoContainer>
+        <div style={{ marginTop: "70px" }}>
+          <ImageAndInfoContainer>
+            <DocsWrapper>
+              <InfoTitle>Comfort</InfoTitle>
+              <InfoText>{motor.docs?.comfort || "Data not found"}</InfoText>
+            </DocsWrapper>
+            <ImgWrapper>
+              <img src={comfort1} alt="Comfort" />
+            </ImgWrapper>
+          </ImageAndInfoContainer>
+          <ImageAndInfoContainer>
+            <ImgWrapper>
+              <img src={tidying1} alt="Tidying" />
+            </ImgWrapper>
+            <DocsWrapper>
+              <InfoTitle>Tidying away is child’s play!</InfoTitle>
+              <InfoText>{motor.docs?.tidying || "Data not found"}</InfoText>
+            </DocsWrapper>
+          </ImageAndInfoContainer>
+          <ImageAndInfoContainer>
+            <DocsWrapper>
+              <InfoTitle>Ventilated, Lit up</InfoTitle>
+              <InfoText>{motor.docs?.ventilated || "Data not found"}</InfoText>
+            </DocsWrapper>
+            <ImgWrapper>
+              <img src={ventilated1} alt="Ventilated" />
+            </ImgWrapper>
+          </ImageAndInfoContainer>
+          <ImageAndInfoContainer>
+            <ImgWrapper>
+              <img src={comfort1} alt="Comfort" />
+            </ImgWrapper>
+            <DocsWrapper>
+              <InfoTitle>Easy access</InfoTitle>
+              <InfoText>{motor.docs?.access || "Data not found"}</InfoText>
+            </DocsWrapper>
+          </ImageAndInfoContainer>
+          <ImageAndInfoContainer>
+            <DocsWrapper>
+              <InfoTitle>Heating when driving</InfoTitle>
+              <InfoText>{motor.docs?.heating || "Data not found"}</InfoText>
+              <CarBoxButtonWrapper2>
+                <Link to="cart" style={{ textDecoration: "none", width: "100%" }}>
+                  <WhiteButton>ADD TO CART</WhiteButton>
+                </Link>
+                <WhiteButton>COMPARE</WhiteButton>
+              </CarBoxButtonWrapper2>
+            </DocsWrapper>
+            <ImgWrapper>
+              <img src={heating1} alt="Heating" />
+            </ImgWrapper>
+          </ImageAndInfoContainer>
+        </div>
       </div>
-      </div>
-      <TabsComponent></TabsComponent>
+      <TabsComponent />
     </CarInfoContainer>
   );
 };

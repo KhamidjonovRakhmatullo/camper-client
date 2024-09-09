@@ -121,7 +121,7 @@ const MotorComponent = () => {
           Our Ranges
         </CostTitle>
         <Price $fontSize80 $colorWhiteH1>
-          Motors.
+          Motors..
         </Price>
       </MotorBgImage>
       {/* all of components which are under the Main background image */}

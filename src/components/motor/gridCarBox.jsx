@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { campcar } from "../mock/mockdata";
 import {
   BrandName,
   CarBox,
@@ -23,7 +22,7 @@ const GridCarBoxComponent = () => {
   
   useEffect(() => {
     fetchData();
-  });
+  }, []);
 
   const fetchData = async () => {
     try {
@@ -39,12 +38,12 @@ const GridCarBoxComponent = () => {
       <CarBoxContainer>
         {dataList.map((value, key) => {
           return (
-            <Link to={`${value.id}`} style={{textDecoration: "none"}}>
+            <Link to={`${value._id}`} style={{textDecoration: "none"}}>
               <CarBox $maxWidth key={key}>
                 <CarBoxImage $hight150px>
                   <img
                     src={img2}
-                    alt="no photo"
+                    alt="no photo1"
                     style={{ width: "100%" }}
                   />
                 </CarBoxImage>
